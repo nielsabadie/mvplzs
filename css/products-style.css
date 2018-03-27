@@ -64,7 +64,7 @@ GENERAL STYLE */
 
 
 /* CONTENT PRODUCTS */
-	
+
 	#grid .products .product {
 		max-width: 23.5% !important;
 		margin: 5px !important;
@@ -74,7 +74,7 @@ GENERAL STYLE */
 	}
 
 	@media (min-width: 1200px) {
-	
+
 		#grid .products .product {
 			flex: calc(20% - 10px) !important;
 			max-width: calc(20% - 10px) !important;
@@ -122,7 +122,7 @@ GENERAL STYLE */
 	.home-grid .products .product:after {
 		width: 0 !important;
 	}
-	
+
 	@media (min-width: 1200px) {
 		.home-grid .products .product {
 			flex: calc(16.66% - 10px) !important;
@@ -142,11 +142,11 @@ GENERAL STYLE */
 			flex: calc(25% - 10px) !important;
 			max-width: calc(25% - 10px) !important;
 		}
-		
+
 		#content #secondary.shop-sidebar>.widget:not(.widget_techmarket_products_filter){
 			display: block;
 		}
-		
+
 		#secondary #techmarket_product_categories_widget-1 {
 			display: none !important;
 		}
@@ -157,11 +157,11 @@ GENERAL STYLE */
 			flex: calc(50% - 10px) !important;
 			max-width: calc(50% - 10px) !important;
 		}
-		
+
 		#content #secondary.shop-sidebar>.widget:not(.widget_techmarket_products_filter){
 			display: block;
 		}
-		
+
 		#secondary #techmarket_product_categories_widget-1 {
 			display: none !important;
 		}
@@ -174,9 +174,9 @@ GENERAL STYLE */
 		}
 	}
 
-	
 
-	
+
+
 
 	.home-grid .section-header {display: none !important;}
 
@@ -191,7 +191,7 @@ GENERAL STYLE */
 		border: 0px solid #ececec;
 		box-shadow: 0px 0px 2px 1px rgba( 0,0,0, 0.3 );
 		margin: 10px 0px 0px 0px !important;
-		display: none !important;
+		
 	}
 
 	.product-inner .ajax_add_to_cart {
@@ -327,8 +327,8 @@ p.stars:hover a:before {
 		font-family: var(--font-family1);
     	font-weight: bold;
 	}
-	
-	.list-view ins { 
+
+	.list-view ins {
 		text-align: center;
 	}
 
@@ -472,7 +472,7 @@ p.stars:hover a:before {
     margin-left: 35px;
 	margin-bottom: 0;
 }
-	
+
 .summary .product-actions form {
 	margin: 0;
 	width: 100%;
@@ -589,7 +589,7 @@ p.stars:hover a:before {
 }
 
 @media (min-width: 1200px) {
-	
+
 	.dokan-single-store .product {
 		flex: calc(20% - 10px) !important;
     	max-width: calc(20% - 10px) !important;
