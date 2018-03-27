@@ -1,0 +1,66 @@
+@import url("css/general-style.css");
+@import url("css/navigation-style.css");
+@import url("css/my-account-style.css");
+@import url("css/products-style.css");
+@import url("css/blog-style.css");
+@import url("css/forum-style.css");
+@import url("css/styles-strubi.css");
+
+/*
+
+++++      ++++    ++++ ++++++++++++ ++++    ++++   ++++++++++
+++++      ++++    ++++ ++++++++++++ ++++    ++++ ++++++++++
+++++      ++++    ++++      ++++++  ++++    ++++   +++++
+++++      ++++    ++++   +++++      ++++    ++++       +++++
++++++++++ ++++    ++++ ++++++++++++ ++++    ++++    +++++++++
++++++++++ ++++++++++++ ++++++++++++ ++++++++++++ ++++++++++
+
+*/
+
+/*
+
+Theme Name:   	Techmarket Child
+
+Theme URI:    	https://transvelo.github.io/techmarket/
+
+Author:         shaikrilwan
+
+Author URI:     https://themeforest.net/user/shaikrilwan/portfolio
+
+Description:  	This is the child theme for the techmarket theme
+
+Template:     	techmarket
+
+Version:      	1.1
+
+License:      	GNU General Public License v2 or later
+
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+
+Text Domain:  	techmarket-child
+
+Tags:         	e-commerce, two-columns, left-sidebar, right-sidebar, custom-colors, custom-menu, featured-images, full-width-template, threaded-comments, rtl-language-support, footer-widgets, sticky-post, theme-options
+
+*/
+
+
+/* LUZUS VARIABLES CSS SETTINGS */
+
+:root {
+	--primary-color      : #084399;
+	--secondary-color    : #3AB5E7;
+	--tertiary-color     : #5BDDB9;
+	--off-white          : #FAFAFA;
+	--light-grey         : #eaeaea;
+	--light-grey2        : #f6f6f6;
+	--normal-grey        : #515151;
+	--dark-grey          : #333333;
+	--red-alert          : #DD0003;
+	--green-success      : #5BDDB9;
+	--blue-info          : #084399;
+	--orange-warning     : #FF9700;
+	--font-family1       : "Avenir Next", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	--font-family2       : 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	--font-family3       : 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+

@@ -1,0 +1,32 @@
+/* product tabs */
+
+.payment-tab ul,
+
+.delivery-tab ul {
+
+    list-style-type: none;
+
+}
+
+
+
+.payment-tab ul li:before,
+
+
+
+/* .payment-tab */
+
+.payment-tab .payment-cards img {
+
+    width: 100px;
+
+    height: auto;
+
+    display: inline-block;
+
+}
+
+
+
+/* .delivery-tab */
+
