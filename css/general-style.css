@@ -34,7 +34,7 @@ html, body {
 }
 
 body {
-	background-color: red;
+	background-color: var(--light-grey2);
 }
 
 .site-footer {
