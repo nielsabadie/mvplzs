@@ -1,4 +1,2 @@
 # mvplzs
-## theme child
-
 MVP
