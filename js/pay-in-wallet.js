@@ -4,7 +4,8 @@ jQuery(document).ready(function($){
     var payoutInput = $('#total-without-fees-payout');
     console.log($("#submit-payout-all"));
 
-    //Gestion du rechargement du compte désactivé dans le front pour le moment
+    //console.log($('.total-wallet')[0].text());
+
     payinInput.on('input',function(e){
         console.log(payinInput.val());
         if(payinInput.val()) {
@@ -28,14 +29,11 @@ jQuery(document).ready(function($){
         }
     });
 
-    //gestion du virement vers le compte bancaire commission à 0 pour le moment
     payoutInput.on('input',function(e){
         console.log(payoutInput.val());
         if(payoutInput.val() && payoutInput.val() >= 2) {
             var payin = parseFloat(payoutInput.val()).toFixed(2);
-            
-            //commission à 0
-            var fees = 0;
+            var fees = 1;
             fees = fees > 50 ? 50.00 : fees.toFixed(2);
             var total = (parseFloat(payin) - parseFloat(fees));
             $('#fees-payout').text(fees);
