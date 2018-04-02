@@ -990,7 +990,6 @@ function product_page_payment_services_details() {
         <a class="linkDark" style="display: inline-block; font-size: 1.1em; font-family: var(--font-family1); font-weight: bold;" href="/comment-ca-marche/" title="">Protection garantie par Luzus</a>
         <ul>
             <li>Achats en ligne 100% sécurisés</li>
-            <li>Suivi en temps réel de la livraison</li>
             <li>Paiement déclenché après réception du produit</li>
             <li>Remboursement intégral des objets non-conformes</li>
             <li id="description-detaillee">Service clients par chat ou email</li>
