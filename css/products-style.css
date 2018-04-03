@@ -190,8 +190,13 @@ GENERAL STYLE */
     margin-top: 20px;
 }
 
-.yith-wcwl-add-to-wishlist .add_to_wishlist::before {
+.yith-wcwl-add-to-wishlist .add_to_wishlist::before,
+.compareIcon i {
     color: var(--off-white);
+}
+
+.compareIcon i {
+    font-size: 1.5em;
 }
 
 .yith-wcwl-add-to-wishlist .yith-wcwl-wishlistexistsbrowse a::before,

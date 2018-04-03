@@ -1743,7 +1743,7 @@ function addCompareIconOnProductListing () {
 	global $product;
 	$productId = $product->id;
     ?>
-        <div class="yith-wcwl-add-to-wishlist">
+        <div class="yith-wcwl-add-to-wishlist compareIcon">
         <?php $yithCompare->add_compare_link($productId, array('button_or_link' => 'link', 'button_text' => '<i class="tm tm-compare"></i>')); ?>
         </div>
     <?php
