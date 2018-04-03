@@ -1736,8 +1736,17 @@ add_action( 'wp_ajax_update_account_bank_wire', 'updateAccountBankWire' );
 add_action( 'wp_ajax_nopriv_update_account_bank_wire', 'updateAccountBankWire' );
 
 
+
 function addCompareIconOnProductListing () {
-    echo '<div class="yith-wcwl-add-to-wishlist" >TEST <i class="tm tm-compare"></i></div>';
+    $yithCompare = new YITH_Woocompare_Frontend;
+	//var_dump($yithCompare);
+	global $product;
+	$productId = $product->id;
+    ?>
+        <div>
+        <?php $yithCompare->add_compare_link($productId, array('button_or_link' => 'link', 'button_text' => '<i class="tm tm-compare"></i>')); ?>
+        </div>
+    <?php
 }
 
 add_action ( 'woocommerce_before_shop_loop_item_title', 'addCompareIconOnProductListing' );
