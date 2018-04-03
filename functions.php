@@ -1734,3 +1734,9 @@ function updateAccountBankWire() {
 
 add_action( 'wp_ajax_update_account_bank_wire', 'updateAccountBankWire' );
 add_action( 'wp_ajax_nopriv_update_account_bank_wire', 'updateAccountBankWire' );
+
+function addCompareIconOnProductListing {
+    echo 'TEST <div class="yith-wcwl-add-to-wishlist" ><i class="tm tm-compare"></i></div>';
+}
+
+add_action ( 'woocommerce_before_shop_loop_item_title', 'addCompareIconOnProductListing' );
