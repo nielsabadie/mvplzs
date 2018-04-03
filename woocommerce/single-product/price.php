@@ -149,6 +149,9 @@ singleProductAttribute($product, 'pa_megapixels', 'Débloqué tout opérateur');
 
 echo '</div>';
 ?>
-<!--<a style="color: var(--normal-grey);" href="#description-detaillee" title="Description détaillée">Description détaillée</a>-->
+<?php $yithCompare = new YITH_Woocompare_Frontend;?>
+<?php var_dump($yithCompare);?>
+
+<a href="" alt="">+ Comparer</a>
 
 <p style="margin-top: 15px; margin-bottom: 0px !important" class="price"><?php echo $product->get_price_html(); ?></p>

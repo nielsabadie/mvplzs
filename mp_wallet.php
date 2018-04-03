@@ -37,7 +37,7 @@ ob_start();
     }
 
     if(!$wallets) {
-	return '<br><p>Non Wallet</p>';
+	return '<br><p>Aucun Wallet configuré</p>';
 
 	}
 	else {
