@@ -149,10 +149,11 @@ singleProductAttribute($product, 'pa_megapixels', 'Débloqué tout opérateur');
 
 echo '</div>';
 ?>
-<?php $yithCompare = new YITH_Woocompare_Frontend;?>
-<?php //var_dump($yithCompare);?>
-<?php //$productId = $product->get_id();?>
 
-<? $yithCompare->add_coompare_link($productId, 'button_text');?>
+<?php $yithCompare = new YITH_Woocompare_Frontend;?>
+<?php 
+	$productId = $product->get_id();
+	$yithCompare->add_compare_link($productId, array('button_or_link' => 'link', 'button_text' => '+ Comparer'));
+?>
 
 <p style="margin-top: 15px; margin-bottom: 0px !important" class="price"><?php echo $product->get_price_html(); ?></p>
