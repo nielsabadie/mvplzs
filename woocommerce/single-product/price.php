@@ -92,7 +92,7 @@ function singleProductAttribute(WC_Product $productObject, $attribute, $text) {
     }
 }
 
-echo '<div>';
+echo '<div class="w-100">';
 
 /*echo '<pre>';
 var_dump($product);
@@ -150,7 +150,7 @@ singleProductAttribute($product, 'pa_megapixels', 'Débloqué tout opérateur');
 echo '</div>';
 ?>
 
-<div>
+<div class="w-100">
 	<?php $yithCompare = new YITH_Woocompare_Frontend;?>
 	<?php 
 		$productId = $product->get_id();
