@@ -793,6 +793,11 @@ p {
     font-size: 1em !important;
 }
 
+.hoverHelper {
+    position: absolute;
+    right: 0px;
+}
+
 .hoverHelper div {
     background: #ffffff;
     border-radius: 2px;
