@@ -79,7 +79,7 @@ do_action('dokan_new_product_wrap_before');
 						<div class="container-fluid">
 							<form id="newProductForm" class="dokan-form-container" method="post">
                                 <div class="row">
-									<div class="col-sm-9 hoverHelperArea">
+									<div class="col-sm-8 hoverHelperArea">
 											<div class="product-edit-container dokan-clearfix">
 												<div class="dokan-form-group">
 													<label for="" class="control-label">Photos du produit
@@ -151,7 +151,7 @@ do_action('dokan_new_product_wrap_before');
 												<button type="submit" name="add_product" class="dokan-btn dokan-btn-default dokan-btn-theme" value="create_new"><?php esc_attr_e('Create Product', 'dokan-lite'); ?></button>
 											</div>
                                     </div>
-                                    <div class="col-sm-3 hoverHelper">
+                                    <div class="col-sm-4 hoverHelper">
                                         <div class="">
                                                 Nos conseils pour réussir vos photos :<br>
                                                 - Utilisez un arrière-plan <strong>neutre et clair</strong><br>
@@ -165,7 +165,7 @@ do_action('dokan_new_product_wrap_before');
 
 
 								<div class="row">
-									<div class="col-sm-9 hoverHelperArea">
+									<div class="col-sm-8 hoverHelperArea">
 										<div id="newProductTitle" class="dokan-form-group hoverHelperArea">
 											<label for="post_title" class="dokan-form-label infobulle">Titre de l’annonce
 												<div class="infobulle">
@@ -179,7 +179,7 @@ do_action('dokan_new_product_wrap_before');
 										</div>
 									</div>
 
-									<div class="col-sm-3 hoverHelper" style="display: none;">
+									<div class="col-sm-4 hoverHelper" style="display: none;">
 										<div id="hoverNewProductTitle" class="infobulletext hoverHelper">
 											<p>Un titre complet est composé des éléments suivants&nbsp;:<br><strong>Catégorie</strong> + <strong>Type</strong> + <strong>Marque</strong><br><br>
 
@@ -191,7 +191,7 @@ do_action('dokan_new_product_wrap_before');
 								</div>
 
 								<div class="row">
-									<div class="col-sm-9 hoverHelperArea">
+									<div class="col-sm-8 hoverHelperArea">
 										<div class="dokan-form-group hoverHelperArea">
 											<label for="post_content" class="control-label">Description détaillée
 											</label>
@@ -200,7 +200,7 @@ do_action('dokan_new_product_wrap_before');
 											value="<?= dokan_posted_textarea('post_content') ?>"></textarea>
 										</div>
 									</div>
-									<div class="col-sm-3 hoverHelper" style="display: none;">
+									<div class="col-sm-4 hoverHelper" style="display: none;">
 									
                                         <div class="hoverHelper">
                                             <p>
@@ -216,7 +216,7 @@ do_action('dokan_new_product_wrap_before');
 								</div>
 
 								<div class="row"><!--content-half-part dokan-product-meta-->
-									<div class="col-sm-9 hoverHelperArea">
+									<div class="col-sm-8 hoverHelperArea">
 										<div class="dokan-form-group">
 											<label for="product_brand" class="dokan-form-label">Marque</label>
 
@@ -239,12 +239,12 @@ do_action('dokan_new_product_wrap_before');
 										</div>
 									</div>
 
-									<div class="col-sm-3 hoverHelper">	
+									<div class="col-sm-4 hoverHelper">	
 									</div>
 								</div>
 
 								<div class="row">
-									<div class="col-sm-9 hoverHelperArea">
+									<div class="col-sm-8 hoverHelperArea">
 										<div class="dokan-form-group">
 
 											<label for="product_at" class="dokan-form-label">
@@ -273,7 +273,7 @@ do_action('dokan_new_product_wrap_before');
 										</div>	
 									</div>
 
-									<div class="col-sm-3 hoverHelper" style="display: none">
+									<div class="col-sm-4 hoverHelper" style="display: none">
                                         <div>
                                             <p><strong>Neuf :</strong> produit sous emballage d’origine, jamais ouvert.</p>
                                             <p><strong>Très bon état :</strong> produit intact absence de rayures, chocs et traces d’usures.</p>
@@ -285,7 +285,7 @@ do_action('dokan_new_product_wrap_before');
 								</div>
 
 								<div class="row">
-									<div class="col-sm-9 hoverHelperArea">
+									<div class="col-sm-8 hoverHelperArea">
 										<div class="dokan-form-group category-dropdown" data-category-index="1">
 											<label for="product_cat" class="dokan-form-label">Type de produit</label>
 											<?php
@@ -307,12 +307,12 @@ do_action('dokan_new_product_wrap_before');
 											?>
 										</div>
 									</div>
-									<div class="col-sm-3 hoverHelper">
+									<div class="col-sm-4 hoverHelper">
 									</div>
 								</div>
 
 								<div class="row">
-									<div class="col-sm-9 hoverHelperArea">
+									<div class="col-sm-8 hoverHelperArea">
 										<div class="dokan-form-group">
 											<div class="dokan-form-group dokan-clearfix dokan-price-container">
 												<div class="content-half-part">
@@ -339,12 +339,12 @@ do_action('dokan_new_product_wrap_before');
 											</div>
 										</div>						
 									</div>
-									<div class="col-sm-3 hoverHelper">
+									<div class="col-sm-4 hoverHelper">
 									</div>
 								</div>
 
 								<div class="row">
-									<div class="col-sm-9 hoverHelperArea">
+									<div class="col-sm-8 hoverHelperArea">
 										<div style="padding: 20px 0 20px 0" class="shipping-mode">
 											<h3>Modes de livraison</h3>
 											<div class="dokan-form-group-2">
@@ -403,7 +403,7 @@ do_action('dokan_new_product_wrap_before');
 											</div>
 										</div>	
 									</div>
-									<div class="col-sm-3 hoverHelper">
+									<div class="col-sm-4 hoverHelper">
 									</div>
 								</div>
 							</form>
