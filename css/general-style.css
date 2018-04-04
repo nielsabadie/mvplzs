@@ -844,7 +844,7 @@ input[type=submit] {
 /*WOOCCOMMERCE*/
 
 .widget {
-    margin: 0 0 0 30px;
+    margin: 0 0 30px 0;
 }
 
 .dokan-support-single-title h1 {
