@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* CSS Document
 
 ++++      ++++    ++++ ++++++++++++ ++++    ++++   ++++++++++
@@ -11,106 +12,104 @@
 GENERAL STYLE */
 
 :root {
-	--primary-color      : #084399;
-	--secondary-color    : #3AB5E7;
-	--tertiary-color     : #5BDDB9;
-	--off-white          : #FAFAFA;
-	--light-grey         : #eaeaea;
-	--light-grey2        : #f6f6f6;
-	--normal-grey        : #515151;
-	--dark-grey          : #333333;
-	--red-alert          : #DD0003;
-	--green-success      : #5BDDB9;
-	--blue-info          : #084399;
-	--orange-warning     : #FF9700;
-	--font-family1       : "Avenir Next", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	--font-family2       : 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	--font-family3       : 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    --primary-color: #084399;
+    --secondary-color: #3AB5E7;
+    --tertiary-color: #5BDDB9;
+    --off-white: #FAFAFA;
+    --light-grey: #eaeaea;
+    --light-grey2: #f6f6f6;
+    --normal-grey: #515151;
+    --dark-grey: #333333;
+    --red-alert: #DD0003;
+    --green-success: #5BDDB9;
+    --blue-info: #084399;
+    --orange-warning: #FF9700;
+    --font-family1: "Avenir Next", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    --font-family2: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    --font-family3: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
 
 /* -------- /title/ CSS --------*/
 
 
-
 /* -------- END /title/ CSS --------*/
 
 
-/*On my-account dashboard*/ #verif-box {
+/*On my-account dashboard*/
+
+#verif-box {
     margin: auto;
     padding: 20px 0;
     text-align: left;
 }
 
 
-
 /* VERIFICATION MODULE */
 
-
 .dokan-store-sidebar .widget {
-	margin-right: 15px;
-	padding: 20px;
-	background-color: #ffffff;
-	box-shadow: 1px 1px 2px 0px rgba( 0,0,0, 0.2 );
+    margin-right: 15px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
 }
 
 .dokan-store-sidebar .widget .widget-title {
-	font-family: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	color: #333333;
+    font-family: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: #333333;
 }
 
 #dokan-verification-list ul li {
-	min-width: 180px !important;
+    min-width: 180px !important;
 }
 
 @media (max-width:999px) {
-	#dokan-verification-list ul li {
-		min-width: 150px !important;
-	}
+    #dokan-verification-list ul li {
+        min-width: 150px !important;
+    }
 }
 
 #dokan-verification-list ul li span {
-	font-family: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	color: #333333;
+    font-family: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    color: #333333;
 }
 
 #dokan-verification-list .verification-icon:before {
-	margin-left: 20px;
+    margin-left: 20px;
 }
+
 
 /* END VERIFICATION MODULE */
 
 .woocommerce-MyAccount-navigation {
-	background-color: #FFFFFF;
-	box-shadow: 1px 1px 2px 0px rgba( 0,0,0, 0.2 );
-	transition: all 0.2s ease-out;
-	margin-bottom: 30px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
+    transition: all 0.2s ease-out;
+    margin-bottom: 30px;
 }
 
 .woocommerce-MyAccount-navigation:hover {
-	box-shadow: 2px 2px 4px 1px rgba( 0,0,0, 0.2 );
+    box-shadow: 2px 2px 4px 1px rgba( 0, 0, 0, 0.2);
 }
 
-.woocommerce-MyAccount-navigation, .dokan-dashboard-menu, p {
+.woocommerce-MyAccount-navigation,
+.dokan-dashboard-menu,
+p {
     font-family: var(--font-family1);
 }
 
 .woocommerce-MyAccount-navigation ul {
-	border: none !important;
-	margin-bottom: 0;
+    border: none !important;
+    margin-bottom: 0;
 }
 
 .woocommerce-MyAccount-navigation ul li {
-	border: none !important;
+    border: none !important;
 }
 
 .dokan-dashboard-menu a {
     font-size: 1em !important;
 }
-
-
-
-
 
 .woocommerce-message {
     color: var(--off-white);
@@ -146,17 +145,17 @@ GENERAL STYLE */
 
 .container-left {
     width: 63%;
-	border-radius: 3px;
+    border-radius: 3px;
     padding: 5%;
-	background-color: #FFFFFF;
-	margin-bottom: 30px;
-	box-shadow: 0px 0px 4px 0px rgba( 0,0,0, 0.2 );
-	transition: all 0.2s ease-out;
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 4px 0px rgba( 0, 0, 0, 0.2);
+    transition: all 0.2s ease-out;
 }
 
-	.container-left:hover {
-		box-shadow: 0px 0px 8px 1px rgba( 0,0,0, 0.2 );
-	}
+.container-left:hover {
+    box-shadow: 0px 0px 8px 1px rgba( 0, 0, 0, 0.2);
+}
 
 #avatar-my-account {
     margin-bottom: 20px
@@ -171,23 +170,24 @@ GENERAL STYLE */
     width: 100%;
     background-color: #ffffff;
     padding: 20% 12% 20% 12%;
-    box-shadow: 0px 0px 4px 0px rgba( 0,0,0, 0.2 );
-	border-radius: 3px;
-	transition: all 0.2s ease-out;
+    box-shadow: 0px 0px 4px 0px rgba( 0, 0, 0, 0.2);
+    border-radius: 3px;
+    transition: all 0.2s ease-out;
 }
 
-	#rex-form:hover {
-		box-shadow: 0px 0px 7px 0px rgba( 0,0,0, 0.2 );
-	}
+#rex-form:hover {
+    box-shadow: 0px 0px 7px 0px rgba( 0, 0, 0, 0.2);
+}
 
 #rex-form textarea {
     border: solid 2px #ececec;
 }
 
-#rex-form h3, .the_champ_sharing_title {
-	font-family: var(--font-family1) !important;
+#rex-form h3,
+.the_champ_sharing_title {
+    font-family: var(--font-family1) !important;
     font-weight: 700 !important;
-	color: var(--dark-grey);
+    color: var(--dark-grey);
 }
 
 #rex-form p {
@@ -200,46 +200,41 @@ GENERAL STYLE */
     width: 100%;
     background-color: #FFFFFF;
     padding: 15% 12% 15% 12%;
-    box-shadow: 0px 0px 4px 0px rgba( 0,0,0, 0.2 );
-	border-radius: 3px;
-	transition: all 0.2s ease-out;
+    box-shadow: 0px 0px 4px 0px rgba( 0, 0, 0, 0.2);
+    border-radius: 3px;
+    transition: all 0.2s ease-out;
 }
 
-	#share-luzus:hover {
-		box-shadow: 0px 0px 7px 0px rgba( 0,0,0, 0.2 );
-	}
+#share-luzus:hover {
+    box-shadow: 0px 0px 7px 0px rgba( 0, 0, 0, 0.2);
+}
 
 #share-luzus .the_champ_sharing_title {
     font-family: var(--font-family2);
 }
 
 @media (max-width: 768px) {
-
     #wrapper-my-account {
         width: 100%;
         display: block;
         margin: auto;
         padding: 0;
     }
-
     .container-left {
         width: 100%;
     }
-
     .container-right {
         width: 100%;
     }
-
     #rex-form {
         padding: 8% 12% 8% 12%;
     }
-
     #share-luzus {
         margin-top: 4%;
         padding: 8% 12% 8% 12%;
     }
-
 }
+
 
 /* END MY ACCOUNT DASHBOARD */
 
@@ -251,7 +246,9 @@ GENERAL STYLE */
     border: solid 2px #ececec;
 }
 
+
 /* END WOOCOMMERCE VIEW ORDER */
+
 
 /* START WOOCOMMERCE ORDER PRODUCT */
 
@@ -269,8 +266,8 @@ GENERAL STYLE */
     border: solid 1px #999999;
 }
 
-/* END WOOCOMMERCE ORDER PRODUCT */
 
+/* END WOOCOMMERCE ORDER PRODUCT */
 
 
 /* START MES INFORMATIONS */
@@ -280,7 +277,8 @@ GENERAL STYLE */
     border: solid 1px var(--dark-grey);
 }
 
-.my-account-details h2, .my-account-details h3 {
+.my-account-details h2,
+.my-account-details h3 {
     font-family: var(--font-family2);
 }
 
@@ -289,12 +287,12 @@ GENERAL STYLE */
     background-color: #ffffff !important;
     padding: 8% 10%;
     margin-top: 4%;
-    box-shadow: 1px 1px 2px 0px rgba( 0,0,0, 0.2 );
+    box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
     font-family: var(--font-family2);
 }
 
 #infos_personnelles {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 #delete-account {
@@ -308,7 +306,8 @@ GENERAL STYLE */
     padding: .79em 1.42em;
 }
 
-.annuler:hover, .annuler:active {
+.annuler:hover,
+.annuler:active {
     color: #ffffff;
     background-color: var(--primary-color);
 }
@@ -328,7 +327,7 @@ GENERAL STYLE */
     margin: 50px 0 20px 0;
     width: 100%;
     background-color: #fafafa;
-    box-shadow: 1px 1px 2px 0px rgba( 0,0,0, 0.2 );
+    box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
 }
 
 .navbar-infos-compte {
@@ -345,7 +344,6 @@ GENERAL STYLE */
     text-align: center;
     padding: 10px 20px;
     vertical-align: middle;
-
 }
 
 .navbar-infos-compte li:hover,
@@ -356,45 +354,44 @@ GENERAL STYLE */
     cursor: pointer;
 }
 
-.navbar-infos-compte li:hover {
-
-}
+.navbar-infos-compte li:hover {}
 
 @media (max-width: 1024px) {
-		.nav-infos-compte {
-			display: none !important;
-		}
-	}
+    .nav-infos-compte {
+        display: none !important;
+    }
+}
 
 
-	/* Infos personnelles */
-	
-	#infos_personnelles #user_newsletter {
-		padding: 5px;
-		border: 2px solid #eaeaea;
-		border-radius: 5px;
-	}
+/* Infos personnelles */
 
-	.link-label-luzus:before {
-		cursor: pointer;
-		line-height: 1.8 !important;
-		background-color: var(--tertiary-color);
-		border-radius: 15px;
-		color: #ffffff;
-		transition: all 0.3s ease-in;
-	}
+#infos_personnelles #user_newsletter {
+    padding: 5px;
+    border: 2px solid #eaeaea;
+    border-radius: 5px;
+}
 
-	.link-label-luzus:hover:before, .link-label-luzus:active:before, .link-label-luzus:focus:before {
-		background-color: var(--secondary-color);
-		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
-	}
+.link-label-luzus:before {
+    cursor: pointer;
+    line-height: 1.8 !important;
+    background-color: var(--tertiary-color);
+    border-radius: 15px;
+    color: #ffffff;
+    transition: all 0.3s ease-in;
+}
 
-	/* End infos personnelles */
+.link-label-luzus:hover:before,
+.link-label-luzus:active:before,
+.link-label-luzus:focus:before {
+    background-color: var(--secondary-color);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/* End infos personnelles */
+
 
 /* END MES INFORMATIONS */
-
-
-
 
 
 /* START SUPPORT LUZUS */
@@ -402,7 +399,7 @@ GENERAL STYLE */
 #container-tickets {
     width: 100%;
     padding-top: 2%;
-	padding-bottom: 4%;
+    padding-bottom: 4%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -415,92 +412,85 @@ GENERAL STYLE */
 #display-tickets {
     width: 60%;
     margin-left: 4%;
-	border-top: none;
-	padding: 20px 2%;
-	background-color: var(--off-white);
-	box-shadow: 1px 1px 2px 0px rgba( 0,0,0, 0.2 );
+    border-top: none;
+    padding: 20px 2%;
+    background-color: var(--off-white);
+    box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
 }
 
 @media (max-width: 767px) {
-
     #container-tickets {
         width: 100%;
         display: block;
     }
-
     #create-ticket {
         width: 100%;
         padding: 2%;
         display: block;
     }
-
     #display-tickets {
         width: 100%;
-		margin: 0;
+        margin: 0;
         padding: 2%;
         display: block;
     }
-	
-	#display-tickets thead tr {
-		border-top: none !important;
-		border-bottom-color: #f5f5f5 !important;
-	}
+    #display-tickets thead tr {
+        border-top: none !important;
+        border-bottom-color: #f5f5f5 !important;
+    }
 }
 
 .ticket-reply {
     width: 100%;
     margin-bottom: 5%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #ticket-reply-left {
-	width: 40%;
-	padding-right: 5%;
+    width: 40%;
+    padding-right: 5%;
 }
 
 #ticket-reply-right {
-	width: 51%;
-	padding: 20px 2%;
-	background-color: #F5F5F5;
-	box-shadow: 1px 1px 2px 0px rgba( 0,0,0, 0.2 );
+    width: 51%;
+    padding: 20px 2%;
+    background-color: #F5F5F5;
+    box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
 }
 
 #ticket-reply-right .clear {
-	border-top: solid 1px var(--light-grey);
+    border-top: solid 1px var(--light-grey);
 }
 
-#ticket-reply-right .pull-right, #ticket-reply-right .pull-left {
-	margin-bottom: 10px;
+#ticket-reply-right .pull-right,
+#ticket-reply-right .pull-left {
+    margin-bottom: 10px;
 }
 
-@media (max-width: 999px) { 
-	
-	.ticket-reply {
-		flex-direction: column;
-	}
-
-	#ticket-reply-left {
-		width: 100%;
-		padding: 2% 5%;
-	}
-
-	#ticket-reply-right {
-		width: 100%;
-		margin-top: 20px;
-		padding: 30px 5%;
-		background-color: #F5F5F5;
-		box-shadow: 1px 1px 2px 0px rgba( 0,0,0, 0 );
-	}
-
+@media (max-width: 999px) {
+    .ticket-reply {
+        flex-direction: column;
+    }
+    #ticket-reply-left {
+        width: 100%;
+        padding: 2% 5%;
+    }
+    #ticket-reply-right {
+        width: 100%;
+        margin-top: 20px;
+        padding: 30px 5%;
+        background-color: #F5F5F5;
+        box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0);
+    }
 }
 
 .entry-content .bg-success {
-	background-color: transparent !important;
-	color: var(--green-success) !important;
-	border-color: var(--green-success) !important;
-	margin-bottom: 20px !important;
+    background-color: transparent !important;
+    color: var(--green-success) !important;
+    border-color: var(--green-success) !important;
+    margin-bottom: 20px !important;
 }
 
 .text-reply {
@@ -512,24 +502,24 @@ GENERAL STYLE */
     width: 58%;
     padding: 5%;
     background-color: var(--off-white);
-    box-shadow: 1px 1px 2px 0px rgba( 0,0,0, 0.2 );
+    box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
 }
 
-#display-tickets table tr td:first-child, #display-tickets table tr th:first-child { 
-	display: none !important;
+#display-tickets table tr td:first-child,
+#display-tickets table tr th:first-child {
+    display: none !important;
 }
 
 #create-ticket .form-group textarea {
-	height: 200px;
+    height: 200px;
 }
+
 
 /* END SUPPORT LUZUS */
 
 
-
-
-
 /*DOKAN*/
+
 
 /*Dashboard*/
 
@@ -537,23 +527,22 @@ GENERAL STYLE */
     .dokan-dashboard-menu {
         border: solid 2px #ececec;
     }
-
     .dokan-dashboard-menu li {
         width: 100% !important;
     }
-
     .dokan-dashboard-menu li.dokan-common-links a {
         padding-top: 2% !important;
         padding-bottom: 2% !important;
     }
-
 }
 
 .fa-upload:before {
     content: "\f0d6";
 }
 
+
 /*END Dashboard*/
+
 
 /*PROFILE PROGRESS BAR*/
 
@@ -562,7 +551,9 @@ GENERAL STYLE */
     background-image: none;
 }
 
+
 /*END PROFILE PROGRESS BAR*/
+
 
 /*ALERT MESSAGES*/
 
@@ -590,7 +581,9 @@ GENERAL STYLE */
     border: none;
 }
 
+
 /*END ALERT MESSAGES*/
+
 
 /* DOKAN DASHBOARD */
 
@@ -633,7 +626,9 @@ GENERAL STYLE */
     font-weight: bold !important;
 }
 
+
 /* END DOKAN DASHBOARD */
+
 
 /*DOKAN "MES ANNONCES" */
 
@@ -665,9 +660,12 @@ GENERAL STYLE */
     background-color: var(--secondary-color) !important;
 }
 
+
 /* END DOKAN "MES ANNONCES" */
 
+
 /* START DOKAN HELP SECTION */
+
 
 /*********  MODIFICATION IN THE PLUGIN CSS INTERFACE (SETTINGS)*********/
 
@@ -688,7 +686,9 @@ GENERAL STYLE */
     font-family: var(--font-family1);
 }
 
+
 /* END DOKAN HELP SECTION */
+
 
 /* START DOKAN FORM */
 
@@ -696,7 +696,9 @@ GENERAL STYLE */
     padding: 10%;
 }
 
+
 /* END DOKAN FORM */
+
 
 /* START DOKAN PAYMENT FORM */
 
@@ -707,6 +709,7 @@ GENERAL STYLE */
 #infos-bancaires .dokan-w6 {
     width: 100%;
 }
+
 
 /* END DOKAN PAYMENT FORM */
 
@@ -725,63 +728,74 @@ GENERAL STYLE */
     font-size: 2em;
 }
 
+
 /*END DOKAN*/
 
 #unsubscribe-link {
-	color: var(--dark-grey);
-	border-color: var(--dark-grey);
-	margin-bottom: 30px;
+    color: var(--dark-grey);
+    border-color: var(--dark-grey);
+    margin-bottom: 30px;
 }
 
 #unsubscribe-link:hover {
-	color: var(--off-white) !important;
-	background-color: var(--dark-grey) !important;
+    color: var(--off-white) !important;
+    background-color: var(--dark-grey) !important;
 }
 
 
 /* USER STORE */
+
 .profile-info-summery-wrapper .profile-info-summery {
-	background-image: url(https://www.luzus.fr/wp-content/uploads/2018/03/background-bullet-lines-blue.png);
-	background-position: center -200px;
-	background-size: cover;
+    background-image: url(https://www.luzus.fr/wp-content/uploads/2018/03/background-bullet-lines-blue.png);
+    background-position: center -200px;
+    background-size: cover;
 }
 
 .profile-info-summery-wrapper .profile-info-summery .store-name {
-	color: #FFFFFF;
-	font-family: var(--font-family1);
-	font-weight: 900;
+    color: #FFFFFF;
+    font-family: var(--font-family1);
+    font-weight: 900;
 }
 
 .profile-info-summery-wrapper .profile-info-summery .dokan-store-info {
-	color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .profile-info-summery-wrapper .profile-info-summery .dokan-store-info .fa-star {
-	color: #FF9700;
+    color: #FF9700;
 }
 
 .dokan-store-tabs .dokan-share-btn-wrap {
-	display: none !important;
+    display: none !important;
 }
 
 .dokan-single-store #reviews {
-	background-color: #FFFFFF;
-	padding: 20px;
-	margin-bottom: 20px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .dokan-single-store #reviews ol {
-	margin-top: 10px !important;
+    margin-top: 10px !important;
 }
 
-.dokan-single-store #reviews .review_comment_container {padding-top: 10px;}
+.dokan-single-store #reviews .review_comment_container {
+    padding-top: 10px;
+}
 
 .dokan-single-store #reviews ol .description h4 {
-	font-family: var(--font-family2) !important;
-	font-size: 1em !important;
+    font-family: var(--font-family2) !important;
+    font-size: 1em !important;
 }
 
 .dokan-single-store #reviews ol .description p {
-	font-family: var(--font-family2) !important;
-	font-size: 1em !important;
+    font-family: var(--font-family2) !important;
+    font-size: 1em !important;
+}
+
+.hoverHelper div {
+    background: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px 1px rgba( 0, 0, 0, 0.2);
+    padding: 20px;
 }
