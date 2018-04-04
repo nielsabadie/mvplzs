@@ -141,17 +141,8 @@ do_action('dokan_new_product_wrap_before');
 
 											</div>
 
-
-											<?php do_action('dokan_new_product_form'); ?>
-
-											<hr>
-
-											<div class="dokan-form-group dokan-right">
-												<?php wp_nonce_field('dokan_add_new_product', 'dokan_add_new_product_nonce'); ?>
-												<button type="submit" name="add_product" class="dokan-btn dokan-btn-default dokan-btn-theme" value="create_new"><?php esc_attr_e('Create Product', 'dokan-lite'); ?></button>
-											</div>
                                     </div>
-                                    <div class="col-sm-4 hoverHelper">
+                                    <div class="col-sm-4 hoverHelper" style="display:none;">
                                         <div class="">
                                                 Nos conseils pour réussir vos photos :<br>
                                                 - Utilisez un arrière-plan <strong>neutre et clair</strong><br>
@@ -405,7 +396,16 @@ do_action('dokan_new_product_wrap_before');
 									</div>
 									<div class="col-sm-4 hoverHelper">
 									</div>
-								</div>
+                                </div>
+                                
+                                <?php do_action('dokan_new_product_form'); ?>
+
+                                <hr>
+
+                                <div class="dokan-form-group dokan-right">
+                                    <?php wp_nonce_field('dokan_add_new_product', 'dokan_add_new_product_nonce'); ?>
+                                    <button type="submit" name="add_product" class="dokan-btn dokan-btn-default dokan-btn-theme" value="create_new"><?php esc_attr_e('Create Product', 'dokan-lite'); ?></button>
+                                </div>
 							</form>
 						</div>
                         
