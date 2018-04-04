@@ -10,9 +10,9 @@
 
 
 
-jQuery(document).on('change', '.product-category-dropdown', function () {
+jQuery(document).on('change', '.product-category-dropdown', function() {
 
-  checkForSubCategory($(this).val(), $(this).parent().data('category-index'));
+    checkForSubCategory($(this).val(), $(this).parent().data('category-index'));
 
 });
 
@@ -28,27 +28,27 @@ jQuery(document).on('change', '.product-category-dropdown', function () {
 
  */
 
-function cleanSubCategories (currentCategoryIndex) {
+function cleanSubCategories(currentCategoryIndex) {
 
 
 
-  // Get an array of data category indexes superior to current category index
+    // Get an array of data category indexes superior to current category index
 
-  var $childCategories = $('.category-dropdown').filter(function () {
+    var $childCategories = $('.category-dropdown').filter(function() {
 
-    return $(this).attr('data-category-index') > currentCategoryIndex;
+        return $(this).attr('data-category-index') > currentCategoryIndex;
 
-  });
+    });
 
 
 
-  // Remove each of those dropdowns
+    // Remove each of those dropdowns
 
-  $childCategories.each(function () {
+    $childCategories.each(function() {
 
-    $(this).remove();
+        $(this).remove();
 
-  });
+    });
 
 }
 
@@ -64,9 +64,9 @@ function cleanSubCategories (currentCategoryIndex) {
 
  */
 
-function toggleCursorWaitStyle (wait) {
+function toggleCursorWaitStyle(wait) {
 
-  $('html, body').css('cursor', wait ? 'wait' : 'auto');
+    $('html, body').css('cursor', wait ? 'wait' : 'auto');
 
 }
 
@@ -84,53 +84,71 @@ function toggleCursorWaitStyle (wait) {
 
  */
 
-function checkForSubCategory (categoryId, dropdownIndex) {
+function checkForSubCategory(categoryId, dropdownIndex) {
 
-  toggleCursorWaitStyle(true);
+    toggleCursorWaitStyle(true);
 
-  var ajaxParameters = {
+    var ajaxParameters = {
 
-    'action': 'get_product_subcategories',
+        'action': 'get_product_subcategories',
 
-    'param': {
+        'param': {
 
-      categoryId: categoryId,
+            categoryId: categoryId,
 
-      dropdownIndex: dropdownIndex
-
-    }
-
-  };
-
-
-
-  cleanSubCategories(dropdownIndex);
-
-
-
-  $.post(ajaxurl, ajaxParameters, function (response) {
-
-      toggleCursorWaitStyle(false);
-
-      if (response) {
-
-        response = JSON.parse(response);
-
-        if (response.attributes || response.dropdownIndex < 2) {
-
-          $('#custom-product-attributes').empty().append(response.attributes);
+            dropdownIndex: dropdownIndex
 
         }
 
-        $('.category-dropdown[data-category-index="' + response.dropdownIndex + '"]').after(response.template);
+    };
 
-        $('.dokan-select2').select2();
 
-      }
 
-    }
+    cleanSubCategories(dropdownIndex);
 
-  );
+
+
+    $.post(ajaxurl, ajaxParameters, function(response) {
+
+            toggleCursorWaitStyle(false);
+
+            if (response) {
+
+                response = JSON.parse(response);
+
+                if (response.attributes || response.dropdownIndex < 2) {
+
+                    $('#custom-product-attributes').empty().append(response.attributes);
+
+                }
+
+                $('.category-dropdown[data-category-index="' + response.dropdownIndex + '"]').after(response.template);
+
+                $('.dokan-select2').select2();
+
+            }
+
+        }
+
+    );
 
 }
 
+
+
+
+/**
+
+ * Display Helper Information Module on add new product form
+
+ *
+
+ */
+
+
+$('.hoverHelperArea').each(function() {
+    $(this).hover(
+        function() { $(this).siblings().fadeIn(400); },
+        function() { $(this).siblings().fadeOut(200); }
+    );
+});
