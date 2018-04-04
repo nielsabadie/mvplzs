@@ -21,14 +21,6 @@ do_action('dokan_new_product_wrap_before');
         do_action('dokan_dashboard_content_before');
         do_action('dokan_before_new_product_content_area');
         ?>
-		<style>
-			.hoverHelper {
-				position: absolute;
-				right: 0px;
-				background: #ffffff;
-			}
-		
-		</style>
 
         <div class="dokan-dashboard-content">
 
