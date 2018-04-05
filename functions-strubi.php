@@ -16,8 +16,6 @@ require_once 'classes/Delivery.php';
 
  *
 
- * @author Lucas Strübi <lucas.strubi@gmail.com>
-
  */
 
 function get_product_subcategories()
@@ -77,8 +75,6 @@ add_action('wp_ajax_nopriv_get_product_subcategories', 'get_product_subcategorie
  * Uses new-products-scripts.js on modification.
 
  *
-
- * @author Lucas Strübi <lucas.strubi@gmail.com>
 
  * @param $currentPostId
 
@@ -472,10 +468,6 @@ function addProductCustomAttributes($category, $currentPostId = null)
 
  * Function hooked on new product / product edition.
 
- *
-
- * @author Lucas Strübi <lucas.strubi@gmail.com>
-
  * @param $productId
 
  */
@@ -537,8 +529,6 @@ add_action('save_post_product', 'onProductChange', 10, 3);
  * Will loop on given attributes and "update post meta" => add attributes in case of woocommerce
 
  *
-
- * @author Lucas Strübi <lucas.strubi@gmail.com>
 
  * @param $postId
 

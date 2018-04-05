@@ -895,7 +895,7 @@ function product_page_payment_services_details() {
             <li>Achats en ligne 100% sécurisés</li>
             <li>Paiement déclenché après réception du produit</li>
             <li>Remboursement intégral des objets non-conformes</li>
-            <li id="description-detaillee">Service clients par chat ou email</li>
+            <li>Service clients par chat ou email</li>
         </ul>
     </div>';
     return;
@@ -1222,9 +1222,7 @@ function um_edit_shipping_address_callback() {
         wp_json_encode ($return, 1);
         return wp_send_json_error($return);
     }
-
-
-
+    
     exit;
 }
 add_action( 'wp_ajax_nopriv_um_edit_shipping', 'um_edit_shipping_address_callback' );
