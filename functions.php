@@ -18,23 +18,7 @@ function remove_footer_credits_admin()
 
 add_filter('admin_footer_text', 'remove_footer_credits_admin');
 
-
-
-
-
-
 /* END CSS BACKOFFICE MODIFICATIONS */
-
-
-/* Techmarket display sale price on percent  */
-
-/*function techmarket_get_sale_flash( $html, $post, $product ) {
-    $html = '<span class="onsale">-' . techmarket_get_savings_on_sale( $product, 'percentage' ) . '</span>';
-
-    return apply_filters( 'techmarket_get_sale_flash', $html, $post, $product );
-}
-
-/* End Techmarket display sale price on percent  */
 
 /* HEADER TECHMARKET */
 
@@ -225,38 +209,6 @@ function submenu_dashbaord_settings_nav($sub_settings)
 /* END -> REMOVE DOKAN SUBMENU ITEMS */
 
 
-/* ADD NEW DOKAN SUBMENU ITEMS */
-
-/*add_filter( 'dokan_query_var_filter', 'dokan_load_retrait_menu' );
-function dokan_load_retrait_menu( $retrait_vars ) {
-    $retrait_vars['retrait'] = 'retrait';
-    return $retrait_vars;
-}
-
-add_filter( 'dokan_get_dashboard_settings_nav', 'add_new_sub_settings_dokan_add_seller_nav' );
-function add_new_sub_settings_dokan_add_seller_nav( $sub_settings ) {
-
-    $sub_settings['retrait'] = array(
-        'title' => __( 'Retrait', 'moncompte'),
-        'icon'  => '<i class="fa fa-money"></i>',
-        'url'   => '/dashboard/settings/retrait',
-        'pos'   => 51
-    );
-
-    return $sub_settings;
-}
-
-add_action( 'dokan_load_custom_template', 'dokan_load_retrait_template' );
-function dokan_load_retrait_template( $retrait_vars ) {
-    if ( isset( $retrait_vars['retrait'] ) ) {
-        require_once dirname( __FILE__ ). '/retrait.php';
-        exit();
-    }
-}*/
-
-/* END -> ADD NEW DOKAN SUBMENU ITEMS */
-
-
 /* MODIFY DOKAN SUBMENU ITEMS */
 
 function modify_sub_settings_dokan_add_seller_nav($sub_settings)
@@ -271,41 +223,6 @@ function modify_sub_settings_dokan_add_seller_nav($sub_settings)
 add_filter('dokan_get_dashboard_settings_nav', 'modify_sub_settings_dokan_add_seller_nav');
 
 /* END -> MODIFY DOKAN SUBMENU ITEMS */
-
-
-/* REMOVE DOKAN COMMON LINKS ITEMS */
-
-/* END REMOVE DOKAN COMMON LINKS ITEMS */
-
-
-/* ADD help menu on Dokan Dashboard */
-
-/*add_filter( 'dokan_query_var_filter', 'dokan_load_help_menu' );
-function dokan_load_help_menu( $query_vars ) {
-    $query_vars['help'] = 'help';
-    return $query_vars;
-}
-
-add_filter( 'dokan_get_dashboard_nav', 'dokan_add_help_menu' );
-function dokan_add_help_menu( $urls ) {
-    $urls['help'] = array(
-        'title' => __( 'Support LUZUS', 'dokan'),
-        'icon'  => '<i class="fa fa-life-ring"></i>',
-        'url'   => dokan_get_navigation_url( '/help' ),
-        'pos'   => 200
-    );
-    return $urls;
-}
-
-add_action( 'dokan_load_custom_template', 'dokan_load_template' );
-function dokan_load_template( $query_vars ) {
-    if ( isset( $query_vars['help'] ) ) {
-        require_once 'wp-content/themes/techmarket-child/dokan/help.php';
-        exit();
-    }
-}*/
-
-/* END -> ADD help menu on Dokan Dashboard */
 
 /* END MENU NAVIGATION DASHBOARD */
 
@@ -552,6 +469,7 @@ function woo_remove_product_tabs($tabs)
 {
 
     unset($tabs['more_seller_product']);
+    unset($tabs['specification']);
     unset($tabs['reviews']);
 
     return $tabs;
