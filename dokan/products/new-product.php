@@ -157,7 +157,7 @@ do_action('dokan_new_product_wrap_before');
 
 								<div class="row">
 									<div class="col-sm-8 hoverHelperArea">
-										<div id="newProductTitle" class="dokan-form-group hoverHelperArea">
+										<div id="newProductTitle" class="dokan-form-group">
 											<label for="post_title" class="dokan-form-label infobulle">Titre de l’annonce
 												<div class="infobulle">
 													<div class="infobulle">
@@ -183,7 +183,7 @@ do_action('dokan_new_product_wrap_before');
 
 								<div class="row">
 									<div class="col-sm-8 hoverHelperArea">
-										<div class="dokan-form-group hoverHelperArea">
+										<div class="dokan-form-group">
 											<label for="post_content" class="control-label">Description détaillée
 											</label>
 											<textarea class="post_content wp-editor-area" style="height: 150px" cols="40" name="post_content" id="post_content"
