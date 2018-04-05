@@ -19,6 +19,10 @@ function remove_footer_credits_admin()
 add_filter('admin_footer_text', 'remove_footer_credits_admin');
 
 
+
+
+
+
 /* END CSS BACKOFFICE MODIFICATIONS */
 
 
@@ -183,25 +187,6 @@ function moncompte_dokan_add_seller_nav($common_links)
 
 add_filter('dokan_dashboard_nav_common_link', 'moncompte_dokan_add_seller_nav');
 
-
-/* ADD DOKAN MENU ITEMS */
-
-/*function add_messages_dokan_add_seller_nav( $urls ) {
-
-    $urls['support'] = array(
-        'title' => __( 'Messages', 'support'),
-        'icon'  => '<i class="fa fa-commenting-o"></i>',
-        'url'   => 'https://luzus.fr/dashboard/support',
-        'pos'   => 51
-    );
-
-    return $urls;
-}
-
-add_filter( 'dokan_get_dashboard_nav', 'add_messages_dokan_add_seller_nav' );*/
-
-
-/* END ADD DOKAN MENU ITEMS */
 
 
 /* REMOVE DOKAN MENU ITEMS */
