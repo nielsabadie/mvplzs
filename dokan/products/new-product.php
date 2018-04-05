@@ -78,7 +78,117 @@ do_action('dokan_new_product_wrap_before');
                     if (dokan_is_seller_enabled(get_current_user_id())) { ?>
 						<div class="container-fluid">
 							<form id="newProductForm" class="dokan-form-container" method="post">
-                                <div class="row">
+							
+								<div class="row"><!--content-half-part dokan-product-meta-->
+									<div class="col-sm-8 hoverHelperArea">
+										<div class="dokan-form-group">
+											<label for="product_brand" class="dokan-form-label">Marque</label>
+
+											<?php
+											$category_args = array(
+												'show_option_none' => 'Sélectionnez une marque',
+												'hierarchical' => 1,
+												'hide_empty' => 0,
+												'parent' => 0,
+												'name' => 'pa_brand',
+												'taxonomy' => 'pa_brand',
+												'title_li' => '',
+												'class' => 'product_cat dokan-form-control dokan-select2',
+												'exclude' => '',
+											);
+
+											wp_dropdown_categories(apply_filters('dokan_product_cat_dropdown_args', $category_args));
+											?>
+
+										</div>
+										<hr>
+										<div class="dokan-form-group">
+
+											<label for="product_at" class="dokan-form-label">
+												État
+
+											</label>
+
+											<?php
+											$selected_at = dokan_posted_input('pa_etat');
+											$drop_down_at = array(
+												'show_option_none' => 'Sélectionnez un état',
+												'hierarchical' => 1,
+												'hide_empty' => 0,
+												'parent' => 0,
+												'name' => 'pa_etat',
+												'id' => 'pa_etat',
+												'taxonomy' => 'pa_etat',
+												'title_li' => '',
+												'class' => 'product_cat dokan-form-control dokan-select2',
+												'exclude' => '',
+												'selected' => $selected_at,
+											);
+											wp_dropdown_categories(apply_filters('dokan_product_at_dropdown_args', $drop_down_at));
+											?>
+
+										</div>
+										<hr>
+										<div class="dokan-form-group category-dropdown" data-category-index="1">
+											<label for="product_cat" class="dokan-form-label">Type de produit</label>
+											<?php
+											$selected_cat = dokan_posted_input('product_cat');
+											$category_args = array(
+												'show_option_none' => 'Sélectionnez un type',
+												'hierarchical' => 1,
+												'hide_empty' => 0,
+												'parent' => 0,
+												'name' => 'product_cat',
+												'taxonomy' => 'product_cat',
+												'title_li' => '',
+												'class' => 'product_cat dokan-form-control dokan-select2 product-category-dropdown',
+												'exclude' => '',
+												'selected' => $selected_cat,
+											);
+
+											wp_dropdown_categories(apply_filters('dokan_product_cat_dropdown_args', $category_args));
+											?>
+										</div>	
+									</div>
+
+									<div class="col-sm-4 hoverHelper">
+										<div>
+                                            <p><strong>Neuf :</strong> produit sous emballage d’origine, jamais ouvert.</p>
+                                            <p><strong>Très bon état :</strong> produit intact absence de rayures, chocs et traces d’usures.</p>
+                                            <p><strong>Bon état :</strong> présence de micro-rayures et légères traces d’usures (ex : frottement). Cet usure ne doit pas impacter le bon usage du produit.</p>
+                                            <p><strong>État moyen :</strong> appareil entièrement fonctionnel. Présence de rayures, de légères déformations ou de traces d’usures prononcées.</p>
+                                            <p><strong>Mauvais état :</strong> appareil présentant des dysfonctionnements ou ne fonctionnant pas peut importe l’état de l’enveloppe externe.</p>
+                                        </div>	
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-8 hoverHelperArea">
+										
+									</div>
+
+									<div class="col-sm-4 hoverHelper" style="display: none">
+                                        
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-8 hoverHelperArea">
+										
+									</div>
+									<div class="col-sm-4 hoverHelper">
+									</div>
+								</div>	
+							
+							
+							
+							
+							
+							
+							
+							
+							
+								<div class="row">
 									<div class="col-sm-8 hoverHelperArea">
 											<div class="product-edit-container dokan-clearfix">
 												<div class="dokan-form-group">
@@ -206,101 +316,7 @@ do_action('dokan_new_product_wrap_before');
 									</div>
 								</div>
 
-								<div class="row"><!--content-half-part dokan-product-meta-->
-									<div class="col-sm-8 hoverHelperArea">
-										<div class="dokan-form-group">
-											<label for="product_brand" class="dokan-form-label">Marque</label>
-
-											<?php
-											$category_args = array(
-												'show_option_none' => 'Sélectionnez une marque',
-												'hierarchical' => 1,
-												'hide_empty' => 0,
-												'parent' => 0,
-												'name' => 'pa_brand',
-												'taxonomy' => 'pa_brand',
-												'title_li' => '',
-												'class' => 'product_cat dokan-form-control dokan-select2',
-												'exclude' => '',
-											);
-
-											wp_dropdown_categories(apply_filters('dokan_product_cat_dropdown_args', $category_args));
-											?>
-
-										</div>
-									</div>
-
-									<div class="col-sm-4 hoverHelper">	
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-sm-8 hoverHelperArea">
-										<div class="dokan-form-group">
-
-											<label for="product_at" class="dokan-form-label">
-												État
-
-											</label>
-
-											<?php
-											$selected_at = dokan_posted_input('pa_etat');
-											$drop_down_at = array(
-												'show_option_none' => 'Sélectionnez un état',
-												'hierarchical' => 1,
-												'hide_empty' => 0,
-												'parent' => 0,
-												'name' => 'pa_etat',
-												'id' => 'pa_etat',
-												'taxonomy' => 'pa_etat',
-												'title_li' => '',
-												'class' => 'product_cat dokan-form-control dokan-select2',
-												'exclude' => '',
-												'selected' => $selected_at,
-											);
-											wp_dropdown_categories(apply_filters('dokan_product_at_dropdown_args', $drop_down_at));
-											?>
-
-										</div>	
-									</div>
-
-									<div class="col-sm-4 hoverHelper" style="display: none">
-                                        <div>
-                                            <p><strong>Neuf :</strong> produit sous emballage d’origine, jamais ouvert.</p>
-                                            <p><strong>Très bon état :</strong> produit intact absence de rayures, chocs et traces d’usures.</p>
-                                            <p><strong>Bon état :</strong> présence de micro-rayures et légères traces d’usures (ex : frottement). Cet usure ne doit pas impacter le bon usage du produit.</p>
-                                            <p><strong>État moyen :</strong> appareil entièrement fonctionnel. Présence de rayures, de légères déformations ou de traces d’usures prononcées.</p>
-                                            <p><strong>Mauvais état :</strong> appareil présentant des dysfonctionnements ou ne fonctionnant pas peut importe l’état de l’enveloppe externe.</p>
-                                        </div>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-sm-8 hoverHelperArea">
-										<div class="dokan-form-group category-dropdown" data-category-index="1">
-											<label for="product_cat" class="dokan-form-label">Type de produit</label>
-											<?php
-											$selected_cat = dokan_posted_input('product_cat');
-											$category_args = array(
-												'show_option_none' => 'Sélectionnez un type',
-												'hierarchical' => 1,
-												'hide_empty' => 0,
-												'parent' => 0,
-												'name' => 'product_cat',
-												'taxonomy' => 'product_cat',
-												'title_li' => '',
-												'class' => 'product_cat dokan-form-control dokan-select2 product-category-dropdown',
-												'exclude' => '',
-												'selected' => $selected_cat,
-											);
-
-											wp_dropdown_categories(apply_filters('dokan_product_cat_dropdown_args', $category_args));
-											?>
-										</div>
-									</div>
-									<div class="col-sm-4 hoverHelper">
-									</div>
-								</div>
+					
 
 								<div class="row">
 									<div class="col-sm-8 hoverHelperArea">
