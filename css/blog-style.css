@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* CSS Document
 
 ++++      ++++    ++++ ++++++++++++ ++++    ++++   ++++++++++
@@ -11,67 +12,62 @@
 GENERAL STYLE */
 
 :root {
-	--primary-color      : #084399;
-	--secondary-color    : #3AB5E7;
-	--tertiary-color     : #5BDDB9;
-	--off-white          : #FAFAFA;
-	--light-grey         : #eaeaea;
-	--light-grey2        : #f6f6f6;
-	--normal-grey        : #515151;
-	--dark-grey          : #333333;
-	--red-alert          : #DD0003;
-	--green-success      : #5BDDB9;
-	--blue-info          : #084399;
-	--orange-warning     : #FF9700;
-	--font-family1       : "Avenir Next", "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	--font-family2       : 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-	--font-family3       : 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    --primary-color: #084399;
+    --secondary-color: #3AB5E7;
+    --tertiary-color: #5BDDB9;
+    --off-white: #FAFAFA;
+    --light-grey: #eaeaea;
+    --light-grey2: #f6f6f6;
+    --normal-grey: #515151;
+    --dark-grey: #333333;
+    --red-alert: #DD0003;
+    --green-success: #5BDDB9;
+    --blue-info: #084399;
+    --orange-warning: #FF9700;
+    --font-family1: "Avenir Next", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    --font-family2: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    --font-family3: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
 
 /* -------- /title/ CSS --------*/
 
 
-
 /* -------- END /title/ CSS --------*/
 
-
 .blog-grid article.post {
-	background-color: #FFFFFF;
-	padding-top: 15px !important;
-	padding-bottom: 15px !important;
-	margin: 0px 8px 8px 8px;
-	width: 30% !important;
-	border-radius: 3px;
-	box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+    background-color: #FFFFFF;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    margin: 0px 8px 8px 8px;
+    width: 30% !important;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
-
 #secondary.sidebar-blog .widget_categories ul li a:hover {
-
     color: var(--secondary-color);
 }
 
 @media (min-width: 1024px) {
-
     .single-post article.post {
         margin-right: 15%;
     }
 }
 
-.beta, h2 {
+.beta,
+h2 {
     font-size: 1.5em;
 }
 
-
-.sidebar-blog .widget {
-	background-color: #FFFFFF;
-	padding: 20px;
-	box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+.sidebar-blog.widget-area .widget {
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    margin: 0 0 30px 0;
 }
 
-.sidebar-blog .widget .search-form, .sidebar-blog .widget .search-form label {margin-bottom: 0;}
-
-
-
-
+.sidebar-blog .widget .search-form,
+.sidebar-blog .widget .search-form label {
+    margin-bottom: 0;
+}
