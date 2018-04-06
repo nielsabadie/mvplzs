@@ -1673,7 +1673,42 @@ function addNavigationHelpCenter () {
     </nav>
     <?php
 }
-
 add_shortcode('NavigationHelpCenter', 'addNavigationHelpCenter');
+
+
+function addHelpCenterCards () {
+    
+    $helpCenterArray = Array (
+        'content' => $helpCenterContent ,
+        'link'    => $helpCenterLink,
+    );
+
+    $helpCenterContent = Array (
+        'title' => Array ( 'Vendre sur Luzus', 'Acheter sur Luzus', 'Envoi & Livraison', 'Paiement & Transfert', 'Retours & Annulations', 'Evaluation & Notation', 'Confiance & Sécurité', 'Mon compte', 'Inscription & Connexion', 'Forum', 'Contact' ),
+        'infos' => Array ( 'Les tips pour optimiser vos ventes !', 'Comment dénicher la perle rare ?', 'Les infos sur la logistique.', 'Comment payer ou récupérer son argent.', 'Les détail sur les petites étoiles.', 'Notre objectif c\'est votre satisfaction.', 'Les détails sur le paramétrage de votre compte Luzus.','Comment s\'inscrire ou se connecter, c\'est par ici.','Utiliser de manière efficace le Forum !', 'La réponse à vos questions les plus spécifiques.' ),
+    );
+
+    $helpCenterLink = Array (
+        'name' => Array (  ),
+        'url'  => Array(  ),
+    );
+
+    for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) {
+        ?><div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <div style="padding:20px;" class="card-body">
+                    <h5 class="card-title"><?php $helpCenterArray['content']['title'] ?></h5>
+                    <p class="card-text"><?php $helpCenterArray['content']['infos'] ?></p>
+                    <a href="<?php $helpCenterArray['link']['url'] ?>" class="btn btn-primary"><?php $helpCenterArray['link']['url'] ?></a>
+                    </div>
+                </div>
+            </div>
+        </div><?php
+    }
+}
+add_shortcode('CardsHelpCenter', 'addHelpCenterCards');
+
+
 
 /* END HELP CENTER - CENTRE D'AIDE */
