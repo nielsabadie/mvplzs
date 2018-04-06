@@ -387,31 +387,8 @@ strong {
 
 /* CENTRE D'AIDE */
 
-.kc_vertical_tabs>.kc_wrapper>ul.ui-tabs-nav {
-    border: 1px solid #ddd;
-    border-right: 0px solid #ddd;
-}
-
-.kc-css-470697.kc_vertical_tabs>.kc_wrapper>ul.ui-tabs-nav {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-
-body.kc-css-system .kc-css-470697 .kc_tab {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-
-.kc-css-470697.kc_vertical_tabs>.kc_wrapper>ul.ui-tabs-nav li:first-child {
-    border-top-left-radius: 3px;
-}
-
-.kc-css-470697.kc_vertical_tabs>.kc_wrapper>ul.ui-tabs-nav li:last-child {
-    border-bottom-left-radius: 3px;
-}
-
-.kc_vertical_tabs>.kc_wrapper>ul.ui-tabs-nav>li {
-    border: none !important;
+#helpCenterCards .card {
+    padding: 20px 10px;
 }
 
 

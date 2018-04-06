@@ -1696,7 +1696,7 @@ function addHelpCenterCards () {
     //var_dump ($helpCenterArray);
     ?>
 
-    <div class="container">
+    <div id="helpCenterCards" class="container">
         <div class="row">
             <?php for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) {?>
                 <div class="card text-center col-lg-3 col-md-4 col-sm-6">
