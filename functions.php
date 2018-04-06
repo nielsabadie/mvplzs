@@ -1651,3 +1651,28 @@ function addCompareIconOnProductListing () {
 }
 
 add_action ( 'woocommerce_before_shop_loop_item_title', 'addCompareIconOnProductListing' );
+
+
+
+
+
+
+
+
+
+/* HELP CENTER - CENTRE D'AIDE */
+
+
+function addNavigationHelpCenter () {
+    ?>
+    <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+    <?php
+}
+
+add_shortcode('NavigationHelpCenter', 'addNavigationHelpCenter');
+
+/* END HELP CENTER - CENTRE D'AIDE */
