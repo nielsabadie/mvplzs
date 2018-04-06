@@ -1672,7 +1672,7 @@ function addNavigationHelpCenter () {
 
     $helpCenterLink = Array (
         'name' => Array ( 'Plus d\'infos' ),
-        'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
+        'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'evaluation-notation' , 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
     );
 
     $helpCenterArray = Array (
@@ -1683,7 +1683,7 @@ function addNavigationHelpCenter () {
     ?>
     <nav class="nav flex-column">
         <?php for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) { ?>
-            <a class="nav-link" href="<?php echo $helpCenterArray['link']['url'][$i] ?>"><?php echo $helpCenterArray['content']['title'][$i] ?></a>
+            <a class="nav-link" href="<?php echo $helpCenterArray['link']['url'][$i] ?>/"><?php echo $helpCenterArray['content']['title'][$i] ?></a>
         <?php
         }?>
     </nav>
@@ -1701,7 +1701,7 @@ function addHelpCenterCards () {
 
     $helpCenterLink = Array (
         'name' => Array ( 'Plus d\'infos' ),
-        'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
+        'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'evaluation-notation' , 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
     );
     
     $helpCenterArray = Array (
@@ -1719,7 +1719,7 @@ function addHelpCenterCards () {
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
                         <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
-                        <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
+                        <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>/" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
                     </div>
                 </div><?php
             }?>
