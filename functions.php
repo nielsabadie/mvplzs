@@ -1693,26 +1693,17 @@ function addHelpCenterCards () {
         'link'    => $helpCenterLink,
     );
 
-    var_dump ($helpCenterArray);
-    ?><br><hr><br><?php
-    var_dump($helpCenterArray['content']);
-    ?><br><hr><br><?php
-    var_dump($helpCenterArray['content']['title']);?>
-    <br><hr><br><?php
-    var_dump($helpCenterArray['content']['title'][0]);?>
-    <br><hr><br><?php
-    var_dump($helpCenterArray['content']['title'][1]);?>
+    //var_dump ($helpCenterArray);
+    ?>
 
     <div class="container">
         <div class="row">
             <?php for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) {?>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="card">
-                        <div style="padding:20px;" class="card-body">
-                        <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
-                        <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
-                        <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
-                        </div>
+                <div class="card col-lg-3 col-md-4 col-sm-6">
+                    <div style="padding:20px;" class="card-body">
+                    <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
+                    <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
+                    <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
                     </div>
                 </div><?php
             }?>
