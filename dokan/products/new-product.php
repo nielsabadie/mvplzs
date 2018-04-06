@@ -84,7 +84,7 @@ do_action('dokan_new_product_wrap_before');
 										<hr>
 										<br>
 										<div id="newProductCategory" class="dokan-form-group category-dropdown" data-category-index="1">
-											<label for="product_cat" class="dokan-form-label">Catégorie</label>
+											<label for="product_cat" class="dokan-form-label">Type de produit</label>
 											<?php
 											$selected_cat = dokan_posted_input('product_cat');
 											$category_args = array(
