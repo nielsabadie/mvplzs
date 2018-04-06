@@ -1684,8 +1684,8 @@ function addHelpCenterCards () {
     );
 
     $helpCenterLink = Array (
-        'name' => Array (  ),
-        'url'  => Array(  ),
+        'name' => Array ( 'Plus d\'infos' ),
+        'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
     );
     
     $helpCenterArray = Array (
@@ -1711,7 +1711,7 @@ function addHelpCenterCards () {
                     <div style="padding:20px;" class="card-body">
                     <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
                     <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
-                    <a href="<?php echo $helpCenterArray['link']['url'] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['url'] ?></a>
+                    <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
                     </div>
                 </div>
             </div><?php
