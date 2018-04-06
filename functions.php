@@ -1682,9 +1682,7 @@ function addNavigationHelpCenter () {
 
     ?>
     <nav class="nav flex-column">
-        <?php for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) {
-            '<a class="nav-link" href="https://luzus.fr/centre-aide/' . echo $helpCenterArray['link']['url'][$i] . '/">' . echo $helpCenterArray['content']['title'][$i] . '</a>';
-        }?>
+        
     </nav>
     <?php
 }
