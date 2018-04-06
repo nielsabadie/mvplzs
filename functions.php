@@ -1665,11 +1665,12 @@ add_action ( 'woocommerce_before_shop_loop_item_title', 'addCompareIconOnProduct
 
 function addNavigationHelpCenter () {
     ?>
-    <ul class="nav nav-pills nav-stacked">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-    </ul>
+    <nav class="nav flex-column">
+        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" href="#">Disabled</a>
+    </nav>
     <?php
 }
 
