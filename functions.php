@@ -1703,23 +1703,25 @@ function addHelpCenterCards () {
     <br><hr><br><?php
     var_dump($helpCenterArray['content']['title'][1]);?>
 
-
-    <div class="row">
-        <?php for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) {?>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card">
-                    <div style="padding:20px;" class="card-body">
-                    <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
-                    <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
-                    <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
+    <div class="container">
+        <div class="row">
+            <?php for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) {?>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <div style="padding:20px;" class="card-body">
+                        <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
+                        <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
+                        <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
+                        </div>
                     </div>
-                </div>
-            </div><?php
-        }?>
+                </div><?php
+            }?>
+        </div>
     </div><?php
 }
 add_shortcode('CardsHelpCenter', 'addHelpCenterCards');
 
 
+?>
 
 /* END HELP CENTER - CENTRE D'AIDE */
