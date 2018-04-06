@@ -1700,10 +1700,10 @@ function addHelpCenterCards () {
         <div class="row">
             <?php for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) {?>
                 <div class="card text-center col-lg-3 col-md-4 col-sm-6">
-                    <div style="padding:20px;" class="card-body">
-                    <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
-                    <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
-                    <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
+                        <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
+                        <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>" class="btn btn-primary"><?php echo $helpCenterArray['link']['name'][0] ?></a>
                     </div>
                 </div><?php
             }?>
