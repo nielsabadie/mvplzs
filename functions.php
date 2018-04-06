@@ -1675,6 +1675,11 @@ function addNavigationHelpCenter () {
         'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
     );
 
+    $helpCenterArray = Array (
+        'content' => $helpCenterContent ,
+        'link'    => $helpCenterLink,
+    );
+
     ?>
     <nav class="nav flex-column">
         <?php for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) { ?>
