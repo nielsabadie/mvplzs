@@ -269,19 +269,19 @@ p.stars:hover a:before {
 
 #secondary .widget.widget_layered_nav ul li a:before {
     color: #515151;
-    content: '\f204';
+    /*content: '\f204';*/
     font-size: 20px;
 }
 
 #secondary .widget.widget_layered_nav ul li a:hover:before {
     color: var(--primary-color);
-    content: '\f204';
+    /*content: '\f204';*/
     font-size: 20px;
 }
 
 #secondary .widget.widget_layered_nav ul li.chosen a:before {
     color: var(--tertiary-color);
-    content: '\f205';
+    /*content: '\f205';*/
     font-size: 20px;
 }
 
