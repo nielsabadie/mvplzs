@@ -1713,6 +1713,4 @@ function addHelpCenterCards () {
 add_shortcode('CardsHelpCenter', 'addHelpCenterCards');
 
 
-?>
-
 /* END HELP CENTER - CENTRE D'AIDE */
