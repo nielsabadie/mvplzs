@@ -1680,7 +1680,7 @@ function addHelpCenterCards () {
 
     $helpCenterContent = Array (
         'title' => Array ( 'Vendre sur Luzus', 'Acheter sur Luzus', 'Envoi & Livraison', 'Paiement & Transfert', 'Retours & Annulations', 'Evaluation & Notation', 'Confiance & Sécurité', 'Mon compte', 'Inscription & Connexion', 'Forum', 'Contact' ),
-        'infos' => Array ( 'Les tips pour optimiser vos ventes !', 'Comment dénicher la perle rare ?', 'Les infos sur la logistique.', 'Comment payer ou récupérer son argent.', 'Les détail sur les petites étoiles.', 'Notre objectif c\'est votre satisfaction.', 'Les détails sur le paramétrage de votre compte Luzus.','Comment s\'inscrire ou se connecter, c\'est par ici.','Utiliser de manière efficace le Forum !', 'La réponse à vos questions les plus spécifiques.' ),
+        'infos' => Array ( 'Les tips pour optimiser vos ventes !', 'Comment dénicher la perle rare ?', 'Les infos sur la logistique.', 'Comment payer ou récupérer son argent.', 'Un problème avec un produit ?' , 'Les détail sur les petites étoiles.', 'Notre objectif c\'est votre satisfaction.', 'Les détails sur le paramétrage de votre compte Luzus.','Comment s\'inscrire ou se connecter, c\'est par ici.','Utiliser de manière efficace le Forum !', 'La réponse à vos questions les plus spécifiques.' ),
     );
 
     $helpCenterLink = Array (
