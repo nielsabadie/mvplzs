@@ -777,6 +777,32 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		</div>
 	</div>
 
+	<?php
+	$mp = mpAccess::getInstance();
+	$user_id = get_current_user_id();
+	$mp_user_id = $mp->set_mp_user($user_id);
+
+	if ( $mp_user_id ) {
+
+
+		if($mp->get_mp_user($mp_user_id)->KYCLevel == "REGULAR") {
+			echo '
+		<div class="dokan-alert dokan-alert-success" id="d_v_address_feedback">
+			Votre compte est verifié
+		</div>
+		';
+
+		} else {
+
+			?>
+			<p>	Pour utiliser convenablement votre porte-feuille nous devons vérifier votre compte via Mangopay</p>
+			<?php
+			echo do_shortcode('[kyc_doc_user_infos]');
+
+			echo do_shortcode('[kyc_doc_upload_form]');
+		}
+	} ?>
+
 </div>
 
 <div id="charte-bonne-conduite" class="my-account-details">
@@ -921,37 +947,6 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			</div>
 		</div>
 	</div>
-</div>
-
-<div id="verification-mango" class="my-account-details">
-	<h2>Vérification du profil mangopay</h2>
-
-	<?php
-	$mp = mpAccess::getInstance();
-	$user_id = get_current_user_id();
-	$mp_user_id = $mp->set_mp_user($user_id);
-
-	if ( $mp_user_id ) {
-
-
-		if($mp->get_mp_user($mp_user_id)->KYCLevel == "REGULAR") {
-			echo '
-		<div class="dokan-alert dokan-alert-success" id="d_v_address_feedback">
-			Votre compte est verifié
-		</div>
-		';
-
-		} else {
-
-			?>
-			<p>	Pour utiliser convenablement votre porte-feuille nous devons vérifier votre compte via Mangopay</p>
-			<?php
-			echo do_shortcode('[kyc_doc_user_infos]');
-
-			echo do_shortcode('[kyc_doc_upload_form]');
-		}
-	} ?>
-
 </div>
 
 <div class="container-fluid">
