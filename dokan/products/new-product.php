@@ -209,7 +209,7 @@ do_action('dokan_new_product_wrap_before');
 
 								<div class="row">
 									<div class="col-sm-8 hoverHelperArea">
-										<h2>Combien de sous sous ?</h2>
+										<h2>Fixez votre prix</h2>
 										<hr>
 										<br>
 										<div class="dokan-form-group">
