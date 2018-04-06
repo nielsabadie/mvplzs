@@ -1677,11 +1677,6 @@ add_shortcode('NavigationHelpCenter', 'addNavigationHelpCenter');
 
 
 function addHelpCenterCards () {
-    
-    $helpCenterArray = Array (
-        'content' => $helpCenterContent ,
-        'link'    => $helpCenterLink,
-    );
 
     $helpCenterContent = Array (
         'title' => Array ( 'Vendre sur Luzus', 'Acheter sur Luzus', 'Envoi & Livraison', 'Paiement & Transfert', 'Retours & Annulations', 'Evaluation & Notation', 'Confiance & Sécurité', 'Mon compte', 'Inscription & Connexion', 'Forum', 'Contact' ),
@@ -1691,6 +1686,11 @@ function addHelpCenterCards () {
     $helpCenterLink = Array (
         'name' => Array (  ),
         'url'  => Array(  ),
+    );
+    
+    $helpCenterArray = Array (
+        'content' => $helpCenterContent ,
+        'link'    => $helpCenterLink,
     );
 
     for ($i = 0 ; $i < count ( $helpCenterArray['content']['title'] ); $i++) {
