@@ -1662,22 +1662,23 @@ add_action ( 'woocommerce_before_shop_loop_item_title', 'addCompareIconOnProduct
 
 /* HELP CENTER - CENTRE D'AIDE */
 
-$helpCenterContent = Array (
-    'title' => Array ( 'Vendre sur Luzus', 'Acheter sur Luzus', 'Envoi & Livraison', 'Paiement & Transfert', 'Retours & Annulations', 'Evaluation & Notation', 'Confiance & Sécurité', 'Mon compte', 'Inscription & Connexion', 'Forum', 'Contact' ),
-    'infos' => Array ( 'Les tips pour optimiser vos ventes !', 'Comment dénicher la perle rare ?', 'Les infos sur la logistique.', 'Comment payer ou récupérer son argent.', 'Un problème avec un produit ?' , 'Les détail sur les petites étoiles.', 'Notre objectif c\'est votre satisfaction.', 'Les détails sur le paramétrage de votre compte Luzus.','Comment s\'inscrire ou se connecter, c\'est par ici.','Utiliser de manière efficace le Forum !', 'La réponse à vos questions les plus spécifiques.' ),
-);
-
-$helpCenterLink = Array (
-    'name' => Array ( 'Plus d\'infos' ),
-    'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'evaluation-notation' , 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
-);
-
-$helpCenterArray = Array (
-    'content' => $helpCenterContent ,
-    'link'    => $helpCenterLink,
-);
 
 function addNavigationHelpCenter () {
+
+    $helpCenterContent = Array (
+        'title' => Array ( 'Vendre sur Luzus', 'Acheter sur Luzus', 'Envoi & Livraison', 'Paiement & Transfert', 'Retours & Annulations', 'Evaluation & Notation', 'Confiance & Sécurité', 'Mon compte', 'Inscription & Connexion', 'Forum', 'Contact' ),
+        'infos' => Array ( 'Les tips pour optimiser vos ventes !', 'Comment dénicher la perle rare ?', 'Les infos sur la logistique.', 'Comment payer ou récupérer son argent.', 'Un problème avec un produit ?' , 'Les détail sur les petites étoiles.', 'Notre objectif c\'est votre satisfaction.', 'Les détails sur le paramétrage de votre compte Luzus.','Comment s\'inscrire ou se connecter, c\'est par ici.','Utiliser de manière efficace le Forum !', 'La réponse à vos questions les plus spécifiques.' ),
+    );
+
+    $helpCenterLink = Array (
+        'name' => Array ( 'Plus d\'infos' ),
+        'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'evaluation-notation' , 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
+    );
+
+    $helpCenterArray = Array (
+        'content' => $helpCenterContent ,
+        'link'    => $helpCenterLink,
+    );
 
     ?>
     <nav class="nav flex-column">
@@ -1691,6 +1692,21 @@ add_shortcode('NavigationHelpCenter', 'addNavigationHelpCenter');
 
 
 function addHelpCenterCards () {
+
+    $helpCenterContent = Array (
+        'title' => Array ( 'Vendre sur Luzus', 'Acheter sur Luzus', 'Envoi & Livraison', 'Paiement & Transfert', 'Retours & Annulations', 'Evaluation & Notation', 'Confiance & Sécurité', 'Mon compte', 'Inscription & Connexion', 'Forum', 'Contact' ),
+        'infos' => Array ( 'Les tips pour optimiser vos ventes !', 'Comment dénicher la perle rare ?', 'Les infos sur la logistique.', 'Comment payer ou récupérer son argent.', 'Un problème avec un produit ?' , 'Les détail sur les petites étoiles.', 'Notre objectif c\'est votre satisfaction.', 'Les détails sur le paramétrage de votre compte Luzus.','Comment s\'inscrire ou se connecter, c\'est par ici.','Utiliser de manière efficace le Forum !', 'La réponse à vos questions les plus spécifiques.' ),
+    );
+
+    $helpCenterLink = Array (
+        'name' => Array ( 'Plus d\'infos' ),
+        'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'evaluation-notation' , 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
+    );
+    
+    $helpCenterArray = Array (
+        'content' => $helpCenterContent ,
+        'link'    => $helpCenterLink,
+    );
 
     //var_dump ($helpCenterArray);
     ?>
