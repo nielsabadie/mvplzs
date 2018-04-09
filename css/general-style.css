@@ -894,9 +894,8 @@ input[type=submit] {
     background-color: #fafafa;
 }
 
-#helpCenterCards .card .fa {
-    font-size: 5em;
-    padding: 10px;
+#helpCenterCards .card img {
+    margin: 20px auto;
 }
 
 
