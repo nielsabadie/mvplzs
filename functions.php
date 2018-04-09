@@ -1717,8 +1717,8 @@ function addHelpCenterCards () {
                 <div class="card text-center col-lg-3 col-md-4 col-sm-6">
                     <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>/">
                         <div class="card-body">
-                            <i class="fa fa-truck"></i>
                             <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
+                            <i class="fa fa-truck"></i>
                             <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
                         </div>
                     </a>
