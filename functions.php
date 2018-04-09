@@ -1666,8 +1666,44 @@ add_action ( 'woocommerce_before_shop_loop_item_title', 'addCompareIconOnProduct
 function addNavigationHelpCenter () {
 
     $helpCenterContent = Array (
-        'title' => Array ( 'Vendre sur Luzus', 'Acheter sur Luzus', 'Envoi & Livraison', 'Paiement & Transfert', 'Retours & Annulations', 'Evaluation & Notation', 'Confiance & Sécurité', 'Mon compte', 'Inscription & Connexion', 'Forum', 'Contact' ),
-        'infos' => Array ( 'Les tips pour optimiser vos ventes !', 'Comment dénicher la perle rare ?', 'Les infos sur la logistique.', 'Comment payer ou récupérer son argent.', 'Un problème avec un produit ?' , 'Les détail sur les petites étoiles.', 'Notre objectif c\'est votre satisfaction.', 'Les détails sur le paramétrage de votre compte Luzus.','Comment s\'inscrire ou se connecter, c\'est par ici.','Utiliser de manière efficace le Forum !', 'La réponse à vos questions les plus spécifiques.' ),
+        'title' => Array ( 
+            'Vendre sur Luzus', 
+            'Acheter sur Luzus', 
+            'Envoi & Livraison', 
+            'Paiement & Transfert', 
+            'Retours & Annulations', 
+            'Evaluation & Notation', 
+            'Confiance & Sécurité', 
+            'Mon compte', 
+            'Inscription & Connexion', 
+            'Forum', 
+            'Contact' ),
+
+        'infos' => Array ( 
+            'Les tips pour optimiser vos ventes !', 
+            'Comment dénicher la perle rare ?', 
+            'Les infos sur la logistique.', 
+            'Comment payer ou récupérer son argent.', 
+            'Un problème avec un produit ?' , 
+            'Les détail sur les petites étoiles.', 
+            'Notre objectif c\'est votre satisfaction.', 
+            'Les détails sur le paramétrage de votre compte Luzus.',
+            'Comment s\'inscrire ou se connecter, c\'est par ici.',
+            'Utiliser de manière efficace le Forum !', 
+            'La réponse à vos questions les plus spécifiques.' ),
+
+        'iconUrl'  => Array ( 
+            'https://www.luzus.fr/wp-content/uploads/2018/03/open-store.svg',
+            'https://www.luzus.fr/wp-content/uploads/2018/04/bag.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/04/truck.svg',
+            'https://www.luzus.fr/wp-content/uploads/2018/04/credit-card2.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/04/road-indications.svg',
+            'https://www.luzus.fr/wp-content/uploads/2018/03/star.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/03/Field.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/03/smartphone.svg',
+            'https://www.luzus.fr/wp-content/uploads/2018/04/devices.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/04/conversation-bubbles.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/04/writing.svg' ),
     );
 
     $helpCenterLink = Array (
@@ -1694,15 +1730,51 @@ add_shortcode('NavigationHelpCenter', 'addNavigationHelpCenter');
 function addHelpCenterCards () {
 
     $helpCenterContent = Array (
-        'title' => Array ( 'Vendre sur Luzus', 'Acheter sur Luzus', 'Envoi & Livraison', 'Paiement & Transfert', 'Retours & Annulations', 'Evaluation & Notation', 'Confiance & Sécurité', 'Mon compte', 'Inscription & Connexion', 'Forum', 'Contact' ),
-        'infos' => Array ( 'Les tips pour optimiser vos ventes !', 'Comment dénicher la perle rare ?', 'Les infos sur la logistique.', 'Comment payer ou récupérer son argent.', 'Un problème avec un produit ?' , 'Les détail sur les petites étoiles.', 'Notre objectif c\'est votre satisfaction.', 'Les détails sur le paramétrage de votre compte Luzus.','Comment s\'inscrire ou se connecter, c\'est par ici.','Utiliser de manière efficace le Forum !', 'La réponse à vos questions les plus spécifiques.' ),
+        'title' => Array ( 
+            'Vendre sur Luzus', 
+            'Acheter sur Luzus', 
+            'Envoi & Livraison', 
+            'Paiement & Transfert', 
+            'Retours & Annulations', 
+            'Evaluation & Notation', 
+            'Confiance & Sécurité', 
+            'Mon compte', 
+            'Inscription & Connexion', 
+            'Forum', 
+            'Contact' ),
+
+        'infos' => Array ( 
+            'Les tips pour optimiser vos ventes !', 
+            'Comment dénicher la perle rare ?', 
+            'Les infos sur la logistique.', 
+            'Comment payer ou récupérer son argent.', 
+            'Un problème avec un produit ?' , 
+            'Les détail sur les petites étoiles.', 
+            'Notre objectif c\'est votre satisfaction.', 
+            'Les détails sur le paramétrage de votre compte Luzus.',
+            'Comment s\'inscrire ou se connecter, c\'est par ici.',
+            'Utiliser de manière efficace le Forum !', 
+            'La réponse à vos questions les plus spécifiques.' ),
+
+        'iconUrl'  => Array ( 
+            'https://www.luzus.fr/wp-content/uploads/2018/03/open-store.svg',
+            'https://www.luzus.fr/wp-content/uploads/2018/04/bag.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/04/truck.svg',
+            'https://www.luzus.fr/wp-content/uploads/2018/04/credit-card2.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/04/road-indications.svg',
+            'https://www.luzus.fr/wp-content/uploads/2018/03/star.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/03/Field.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/03/smartphone.svg',
+            'https://www.luzus.fr/wp-content/uploads/2018/04/devices.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/04/conversation-bubbles.svg', 
+            'https://www.luzus.fr/wp-content/uploads/2018/04/writing.svg' ),
     );
 
     $helpCenterLink = Array (
         'name' => Array ( 'Plus d\'infos' ),
         'url'  => Array( 'vendre', 'acheter', 'envoi-livraison', 'paiement-transfert', 'retours-annulations', 'evaluation-notation' , 'confiance-securite', 'mon-compte', 'inscription-connexion', 'forum', 'contact' ),
     );
-    
+
     $helpCenterArray = Array (
         'content' => $helpCenterContent ,
         'link'    => $helpCenterLink,
@@ -1718,7 +1790,7 @@ function addHelpCenterCards () {
                     <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>/">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
-                            <img src="" alt="<?php echo $helpCenterArray['content']['title'][$i] ?>" width="50px"/>
+                            <img src="<?php echo $helpCenterArray['content']['iconUrl'][$i] ?" alt="<?php echo $helpCenterArray['content']['title'][$i] ?>" width="50px"/>
                             <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
                         </div>
                     </a>
@@ -1731,3 +1803,5 @@ add_shortcode('CardsHelpCenter', 'addHelpCenterCards');
 
 
 /* END HELP CENTER - CENTRE D'AIDE */
+
+
