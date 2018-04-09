@@ -896,7 +896,7 @@ input[type=submit] {
     background-color: #eaeaea;
 }
 
-#helpCenterMenu i {
+#helpCenterMenu .fa {
     font-size: 5em;
     padding: 10px;
 }
