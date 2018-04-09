@@ -889,14 +889,14 @@ input[type=submit] {
     color: var(--secondary-color);
 }
 
-#helpCenterCards card:hover {
+#helpCenterCards .card:hover {
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
     cursor: pointer;
     background-color: #eaeaea;
 }
 
-#helpCenterCards .fa {
+#helpCenterCards .card .fa {
     font-size: 5em;
     padding: 10px;
 }
