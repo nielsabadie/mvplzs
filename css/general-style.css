@@ -867,3 +867,19 @@ input[type=submit] {
 .boxShadow {
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
 }
+
+
+/* HelpCenter CSS */
+
+#helpCenterMenu {
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+#helpCenterMenu a {
+    font-size: 1em;
+}
+
+
+/* End HelpCenter CSS */
