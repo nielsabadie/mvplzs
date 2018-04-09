@@ -805,33 +805,33 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 </div>
 
-<div id="charte-bonne-conduite" class="my-account-details">
+<!--<div id="charte-bonne-conduite" class="my-account-details">
 	<h2>Charte de bonne conduite</h2>
 	<div class="container-fluid">
 		<div class="row">
 			<p style="display: inline-block">Charte de bonne conduite acceptée: </p>
-			<?php
+			<?php/*
 			if ($user_meta['charte_bonne_conduite'][0] > 0) {
 				echo '<div id="non-newsletter" style="display: inline-block; margin-left: 5px;"><i style="color: #00DD03" class="fa fa-check" aria-hidden="true"></i> <p style="display: inline-block; ">Oui</p></div>';
 
 			} else {
 				echo '<div id="non-newsletter" style="display: inline-block; margin-left: 5px;"><i style="color: #DD0003" class="fa fa-times" aria-hidden="true"></i> <p style="display: inline-block;">Non</p></div>';
-			}
+			}*/
 			?>
 		</div>
 
 		<div class="row">
-			<?php
+			<?php/*
 			if ($user_meta['charte_bonne_conduite'][0] > 0) {
 				echo '<a class="discret-link" href="#" title="Voir la charte"><i class="fa fa-eye" aria-hidden="true"></i> Voir la charte de bonne conduite</a>';
 
 			} else {
 				echo '<a class="discret-link" href="#" title="Signer la charte"><i class="fa fa-pencil" aria-hidden="true"></i> Signer la charte de bonne conduite</a>';
-			}
+			}*/
 			?>
 		</div>
 	</div>
-</div>
+</div>-->
 
 <div id="infos-bancaires" class="my-account-details">
 	<h2>Mes informations bancaires</h2>
