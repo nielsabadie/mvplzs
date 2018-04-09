@@ -1790,7 +1790,7 @@ function addHelpCenterCards () {
                     <a href="<?php echo $helpCenterArray['link']['url'][$i] ?>/">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $helpCenterArray['content']['title'][$i] ?></h5>
-                            <img src="<?php echo $helpCenterArray['content']['iconUrl'][$i] ?" alt="<?php echo $helpCenterArray['content']['title'][$i] ?>" width="50px"/>
+                            <img src="<?php echo $helpCenterArray['content']['iconUrl'][$i] ?>" alt="<?php echo $helpCenterArray['content']['title'][$i] ?>" width="50px"/>
                             <p class="card-text"><?php echo $helpCenterArray['content']['infos'][$i] ?></p>
                         </div>
                     </a>
