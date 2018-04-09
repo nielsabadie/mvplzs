@@ -882,7 +882,7 @@ input[type=submit] {
 }
 
 #helpCenterMenu a:hover {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
 }
 
 
