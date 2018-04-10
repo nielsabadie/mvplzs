@@ -498,11 +498,11 @@ p.stars:hover a:before {
 
 .summary .product-actions-wrapper .single_add_to_cart_button {
     background-color: var(--primary-color);
-    padding: 5px;
+    padding: 12px !important;
     font-size: 1.05em;
     border: 0;
     color: #FFFFFF;
-    font-weight: 500;
+    font-weight: bold;
     font-family: var(--font-family1);
     text-transform: uppercase !important;
 }
