@@ -643,12 +643,12 @@ p.stars:hover a:before {
     border: 0px !important;
 }
 
-.wpc-reply-link {
-    color: var(--primary-color);
+.wpc-comment-footer {
+    color: var(--primary-color) !important;
 }
 
-.wpc-reply-link:hover {
-    color: var(--secondary-color);
+.wpc-comment-footer:hover {
+    color: var(--secondary-color) !important;
 }
 
 .wpc-comment-label {
