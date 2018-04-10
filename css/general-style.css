@@ -186,14 +186,14 @@ strong {
 /* BUTTONS */
 
 .btn-second,
-wpc_comm_submit {
+.wpc_comm_submit {
     background-color: transparent!important;
     color: #084399;
     border: 2px solid #084399;
 }
 
 .btn-second:hover,
-wpc_comm_submit:hover {
+.wpc_comm_submit:hover {
     background-color: #084399 !important;
     border: 2px solid #084399;
     color: #ffffff !important;
