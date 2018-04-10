@@ -331,7 +331,7 @@ strong {
 .alert-success,
 .dokan-alert-success,
 .woocommerce-success,
-.wpcf7-validation-errors {
+{
     background-color: transparent !important;
     border: none !important;
     border-radius: 0 !important;
@@ -369,7 +369,8 @@ strong {
 .alert-danger,
 .dokan-alert-danger,
 .woocommerce-danger,
-.woocommerce-error {
+.woocommerce-error,
+.wpcf7-validation-errors {
     background-color: transparent !important;
     border: none !important;
     border-radius: 0 !important;
