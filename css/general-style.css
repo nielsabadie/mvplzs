@@ -185,15 +185,13 @@ strong {
 
 /* BUTTONS */
 
-.btn-second,
-.wishlist_table .button {
+.btn-second {
     background-color: transparent!important;
     color: #084399;
     border: 2px solid #084399;
 }
 
-.btn-second:hover,
-.wishlist_table .button:hover {
+.btn-second:hover {
     background-color: #084399 !important;
     border: 2px solid #084399;
     color: #ffffff !important;
