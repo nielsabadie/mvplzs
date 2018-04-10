@@ -1806,6 +1806,9 @@ add_shortcode('CardsHelpCenter', 'addHelpCenterCards');
 
 
 function  addStoreButton() {
-    return printf( '<a style="margin-bottom: 20px; font-size: 0.7em; display:block;" class="btn btn-secondary" href="%s">%s</a>', dokan_get_store_url( $author->ID ),'Voir ma boutique' );
+    global $product;
+	$author     = get_user_by( 'id', $product->post->post_author );
+
+    return printf( '<a class="btn btn-primary" href="%s">%s</a>', dokan_get_store_url( $author->ID ),'Voir ma boutique' );
 } 
 add_action( 'dokan_dashboard_left_widgets', 'addStoreButton' );
