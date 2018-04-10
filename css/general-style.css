@@ -186,14 +186,14 @@ strong {
 /* BUTTONS */
 
 .btn-second,
-.wishlist_table .product-add-to-cart {
+.wishlist_table .product-add-to-cart button {
     background-color: transparent!important;
     color: #084399;
     border: 2px solid #084399;
 }
 
 .btn-second:hover,
-.wishlist_table .product-add-to-cart:hover {
+.wishlist_table .product-add-to-cart button:hover {
     background-color: #084399 !important;
     border: 2px solid #084399;
     color: #ffffff !important;
