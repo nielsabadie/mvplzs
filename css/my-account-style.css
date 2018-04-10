@@ -824,3 +824,32 @@ p {
 
 
 /* END ADD NEW PRODUCT FORM */
+
+#dashboardMyAccount {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#dashboardMyAccount li {
+    list-style: none;
+    text-align: center;
+    margin: auto;
+}
+
+.badge {
+    padding: 0.8em 0.8em;
+}
+
+.badge-primary {
+    background-color: var(--primary-color);
+}
+
+.badge-secondary {
+    background-color: var(--secondary-color);
+}
+
+.badge-tertiary {
+    background-color: var(--tertiary-color);
+}
