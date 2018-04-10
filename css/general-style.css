@@ -190,6 +190,7 @@ strong {
     background-color: transparent!important;
     color: #084399 !important;
     border: 2px solid #084399 !important;
+    border-radius: 3px;
 }
 
 .btn-second:hover,

@@ -636,6 +636,29 @@ p.stars:hover a:before {
     }
 }
 
+
+/* WOODISCUZ PLUGIN CSS */
+
 #woopcomm {
     border: 0px !important;
 }
+
+.wpc-reply-link {
+    color: var(--primary-color);
+}
+
+.wpc-reply-link:hover {
+    color: var(--secondary-color);
+}
+
+.wpc-comment-label {
+    background-color: var(--tertiary-color);
+    color: #000000;
+}
+
+.wpc-comment-label:before {
+    content: '$';
+}
+
+
+/* END WOODISCUZ PLUGIN CSS */
