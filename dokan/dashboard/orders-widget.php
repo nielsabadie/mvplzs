@@ -13,8 +13,7 @@
 
 <div class="dashboard-widget orders">
     <div class="widget-title"><i class="fa fa-shopping-cart"></i> <?php _e( 'Orders', 'dokan-lite' ); ?></div>
-
-    <div class="content-half-part">
+    <div>
         <ul class="list-unstyled list-count">
             <!--<li>
                 <a href="<?php// echo $orders_url; ?>">
@@ -52,9 +51,6 @@
                 </a>
             </li>-->
         </ul>
-    </div>
-    <div class="content-half-part">
-        <canvas id="order-stats"></canvas>
     </div>
 </div> <!-- .orders -->
 
