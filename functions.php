@@ -1809,4 +1809,4 @@ function  addStoreButton() {
 
     return printf( '<a class="btn btn-primary" href="%s">%s</a>', dokan_get_store_url( $userId ),'Voir ma boutique' );
 } 
-add_action( 'dokan_dashboard_left_widgets', 'addStoreButton' );
+add_action( 'dokan_dashboard_left_widgets', 'addStoreButton', 90 );
