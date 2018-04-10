@@ -643,21 +643,26 @@ p.stars:hover a:before {
     border: 0px !important;
 }
 
-.wpc-comment-footer {
+#woopcomm .wpc-comment-footer a,
+#woopcomm .wpc-comment-footer span {
     color: var(--primary-color) !important;
 }
 
-.wpc-comment-footer:hover {
+#woopcomm .wpc-comment-footer:hover {
     color: var(--secondary-color) !important;
 }
 
-.wpc-comment-label {
-    background-color: var(--tertiary-color);
+#woopcomm .wpc-comment-label {
+    background-color: var(--tertiary-color) !important;
     color: #000000;
 }
 
-.wpc-comment-label:before {
+#woopcomm .wpc-comment-label:before {
     content: '$';
+}
+
+#woopcomm .wpc-comment-author {
+    color: var(--dark-grey);
 }
 
 
