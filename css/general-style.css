@@ -900,3 +900,15 @@ input[type=submit] {
 
 
 /* End HelpCenter CSS */
+
+.deleteAccount {
+    background-color: var(--red-alert);
+}
+
+.deleteAccount:hover {
+    background-color: var(--secondary-color);
+}
+
+.deleteAccount:hover::before {
+    content: '😭';
+}
