@@ -304,6 +304,7 @@ p {
     background-color: var(--primary-color);
     height: 100%;
     padding: .79em 1.42em;
+    border-radius: 5px !important;
 }
 
 .wpcf7-form {
