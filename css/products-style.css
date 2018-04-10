@@ -635,3 +635,7 @@ p.stars:hover a:before {
         max-width: calc(100% - 10px) !important;
     }
 }
+
+#woopcomm {
+    border: 0px !important;
+}
