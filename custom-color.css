@@ -532,14 +532,14 @@
 		    border-color: #3ab5e7;
 		}
 		
-		input[type=submit] .deleteAccount {
+		.deleteAccount {
 		    background-color: var(--red-alert);
 		}
 		
-		input[type=submit] .deleteAccount:hover {
+		.deleteAccount:hover {
 		    background-color: var(--secondary-color);
 		}
 		
-		input[type=submit] .deleteAccount:hover::before {
+		.deleteAccount:hover::before {
 		    content: '😭';
 		}
