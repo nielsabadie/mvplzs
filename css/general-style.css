@@ -330,7 +330,8 @@ strong {
 
 .alert-success,
 .dokan-alert-success,
-.woocommerce-success {
+.woocommerce-success,
+.wpcf7-validation-errors {
     background-color: transparent !important;
     border: none !important;
     border-radius: 0 !important;
