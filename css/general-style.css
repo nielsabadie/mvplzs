@@ -188,14 +188,14 @@ strong {
 .btn-second,
 .wpc_comm_submit {
     background-color: transparent!important;
-    color: #084399;
-    border: 2px solid #084399;
+    color: #084399 !important;
+    border: 2px solid #084399 !important;
 }
 
 .btn-second:hover,
 .wpc_comm_submit:hover {
     background-color: #084399 !important;
-    border: 2px solid #084399;
+    border: 2px solid #084399 !important;
     color: #ffffff !important;
 }
 
