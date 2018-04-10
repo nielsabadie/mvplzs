@@ -530,11 +530,11 @@
 		    color: #ffffff;
 		    cursor: pointer;
 		    border-color: #3ab5e7;
-		    border-radius: 5px !important;
 		}
 		
 		.deleteAccount {
 		    background-color: var(--red-alert) !important;
+		    border-radius: 5px !important;
 		}
 		
 		.deleteAccount:hover {
