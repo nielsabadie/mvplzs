@@ -533,11 +533,11 @@
 		}
 		
 		.deleteAccount {
-		    background-color: var(--red-alert);
+		    background-color: var(--red-alert) !important;
 		}
 		
 		.deleteAccount:hover {
-		    background-color: var(--secondary-color);
+		    background-color: var(--secondary-color) !important;
 		}
 		
 		.deleteAccount:hover::before {
