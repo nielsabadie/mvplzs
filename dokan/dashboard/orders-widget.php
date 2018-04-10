@@ -16,11 +16,11 @@
 
     <div class="content-half-part">
         <ul class="list-unstyled list-count">
-            <li>
-                <a href="<?php echo $orders_url; ?>">
-                    <span class="title"><?php _e( 'Total', 'dokan-lite' ); ?></span> <span class="count"><?php echo $orders_count->total; ?></span>
+            <!--<li>
+                <a href="<?php// echo $orders_url; ?>">
+                    <span class="title"><?php// _e( 'Total', 'dokan-lite' ); ?></span> <span class="count"><?php// echo $orders_count->total; ?></span>
                 </a>
-            </li>
+            </li>-->
             <li>
                 <a href="<?php echo add_query_arg( array( 'order_status' => 'wc-completed' ), $orders_url ); ?>" style="color: <?php echo $order_data[0]['color']; ?>">
                     <span class="title"><?php _e( 'Completed', 'dokan-lite' ); ?></span> <span class="count"><?php echo number_format_i18n( $orders_count->{'wc-completed'}, 0 ); ?></span>
@@ -36,21 +36,21 @@
                     <span class="title"><?php _e( 'Processing', 'dokan-lite' ); ?></span> <span class="count"><?php echo number_format_i18n( $orders_count->{'wc-processing'}, 0 );; ?></span>
                 </a>
             </li>
-            <li>
-                <a href="<?php echo add_query_arg( array( 'order_status' => 'wc-cancelled' ), $orders_url ); ?>" style="color: <?php echo $order_data[3]['color']; ?>">
-                    <span class="title"><?php _e( 'Cancelled', 'dokan-lite' ); ?></span> <span class="count"><?php echo number_format_i18n( $orders_count->{'wc-cancelled'}, 0 ); ?></span>
+           <!-- <li>
+                <a href="<?php// echo add_query_arg( array( 'order_status' => 'wc-cancelled' ), $orders_url ); ?>" style="color: <?php// echo $order_data[3]['color']; ?>">
+                    <span class="title"><?php// _e( 'Cancelled', 'dokan-lite' ); ?></span> <span class="count"><?php// echo number_format_i18n( $orders_count->{'wc-cancelled'}, 0 ); ?></span>
                 </a>
             </li>
-            <!--<li>
+            <li>
                 <a href="<?php/* echo add_query_arg( array( 'order_status' => 'wc-refunded' ), $orders_url ); ?>" style="color: <?php echo $order_data[4]['color']; ?>">
                     <span class="title"><?php _e( 'Refunded', 'dokan-lite' ); ?></span> <span class="count"><?php echo number_format_i18n( $orders_count->{'wc-refunded'}, 0 ); */?></span>
                 </a>
-            </li>-->
-            <li>
-                <a href="<?php echo add_query_arg( array( 'order_status' => 'wc-on-hold' ), $orders_url ); ?>" style="color: <?php echo $order_data[5]['color']; ?>">
-                    <span class="title"><?php _e( 'On hold', 'dokan-lite' ); ?></span> <span class="count"><?php echo number_format_i18n( $orders_count->{'wc-on-hold'}, 0 ); ?></span>
-                </a>
             </li>
+            <li>
+                <a href="<?php// echo add_query_arg( array( 'order_status' => 'wc-on-hold' ), $orders_url ); ?>" style="color: <?php// echo $order_data[5]['color']; ?>">
+                    <span class="title"><?php// _e( 'On hold', 'dokan-lite' ); ?></span> <span class="count"><?php// echo number_format_i18n( $orders_count->{'wc-on-hold'}, 0 ); ?></span>
+                </a>
+            </li>-->
         </ul>
     </div>
     <div class="content-half-part">
