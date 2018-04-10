@@ -502,9 +502,9 @@ p.stars:hover a:before {
     font-size: 1.05em;
     border: 0;
     color: #FFFFFF;
-    font-weight: 800;
+    font-weight: 500;
     font-family: var(--font-family1);
-    text-transform: capitalize !important;
+    text-transform: uppercase !important;
 }
 
 .summary .product-actions-wrapper .single_add_to_cart_button:hover {
