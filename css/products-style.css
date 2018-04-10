@@ -661,8 +661,12 @@ p.stars:hover a:before {
     content: '$';
 }
 
-#woopcomm .wpc-comment-author {
+#woopcomm .wpc-comment-author a {
     color: var(--dark-grey);
+}
+
+#woopcomm .wpc-comment-author a:hover {
+    color: var(--secondary-color);
 }
 
 
