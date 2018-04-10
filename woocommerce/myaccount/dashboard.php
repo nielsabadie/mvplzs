@@ -85,6 +85,8 @@ $dokanDashboardPosts = $dokanDashboard->post_counts;
 					</span>
 				</li>
 			</ul>
+
+			<?php do_action( 'myaccount_dashboard_after' ); ?>
 			
 			
 			<?php if (is_user_logged_in() &&  empty($seller_profile['dokan_verification']['facebook']) && (empty($seller_profile['dokan_verification']['google'])) && empty($seller_profile['dokan_verification']['twitter'])) { ?>
