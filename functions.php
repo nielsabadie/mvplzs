@@ -1805,3 +1805,7 @@ add_shortcode('CardsHelpCenter', 'addHelpCenterCards');
 /* END HELP CENTER - CENTRE D'AIDE */
 
 
+function  addStoreButton() {
+    return printf( '<a style="margin-bottom: 20px; font-size: 0.7em; display:block;" class="btn btn-secondary" href="%s">%s</a>', dokan_get_store_url( $author->ID ),'Voir ma boutique' );
+} 
+add_action( 'dokan_dashboard_left_widgets', 'addStoreButton' );
