@@ -33,7 +33,7 @@ $dokanDashboardCount = $dokanDashboard->orders_count;
 $dokanDashboardPosts = $dokanDashboard->post_counts;
 //var_dump($dokanDashboard);
 //var_dump($dokanDashboard->orders_count);
-var_dump($dokanDashboardPosts);
+//var_dump($dokanDashboardPosts);
 ?>
 
 <div id="wrapper-my-account">
