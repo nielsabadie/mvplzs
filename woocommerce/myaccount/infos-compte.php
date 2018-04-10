@@ -953,7 +953,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<div class="row" style="padding-bottom: 16px; padding-top: 20px;">
 		<div class="col-sm-12 no-padding-left">
 
-			<a id="unsubscribe-link" class="btn btn-default .btn-sm btn-second" href="/desinscription" title="Me désinscrire">
+			<a id="unsubscribe-link" class="btn btn-default .btn-sm btn-second" href="https://www.luzus.fr/mon-compte/infos-compte/desinscription/" title="Me désinscrire">
 				<i class="fa fa-trash" aria-hidden="true"></i> Supprimer mon compte
 			</a>
 
