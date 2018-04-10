@@ -307,13 +307,13 @@ p {
 }
 
 .wpcf7-form {
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
 }
 
 .annuler:hover,
 .annuler:active {
     color: #ffffff;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 #pourquoi-desinscription label {
