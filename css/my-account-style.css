@@ -301,9 +301,13 @@ p {
 
 .annuler {
     color: #ffffff;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     height: 100%;
     padding: .79em 1.42em;
+}
+
+.wpcf7-form {
+    margin-bottom: 0px;
 }
 
 .annuler:hover,

@@ -539,7 +539,3 @@
 		.deleteAccount:hover {
 		    background-color: var(--secondary-color) !important;
 		}
-		
-		.deleteAccount:hover:before {
-		    content: '😭';
-		}
