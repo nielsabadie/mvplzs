@@ -754,6 +754,9 @@ p {
 .dokan-single-store .dokan-store-tabs ul {
     background-color: #ffffff;
     border: 0px !important;
+}
+
+#dokan-content #storeHeader {
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
