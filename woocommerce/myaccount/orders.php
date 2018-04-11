@@ -37,7 +37,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 				
 				<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number">
 					<span style="text-align: center" class="nobr">
-						La merveille
+						Titre de l'annonce
 					</span>
 				</th>
 			
@@ -122,7 +122,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 									if ( ! empty( $actions ) ) {
 										foreach ( $actions as $key => $action ) {
-											echo '<a href="' . esc_url( $action['url'] ) . '" class="link ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
+											echo '<a href="' . esc_url( $action['url'] ) . '" class="linkDark ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 										}
 									}
 									?>
