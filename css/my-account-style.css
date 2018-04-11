@@ -886,7 +886,8 @@ p {
 
 /* MODAL CREATE CONVERSATION */
 
-.mfp-content .dokan-support-intro-user {
+.mfp-content .dokan-support-intro-user,
+.mfp-content .dokan-select {
     display: none !important;
 }
 
