@@ -146,24 +146,24 @@ function checkForSubCategory(categoryId, dropdownIndex) {
  */
 
 
-jQuery('document').ready(function($)) {
-$('#newProductCategory').hover(function() { $('#hoverNewProductCategory').delay(100).fadeIn(400); }, function() { $('#hoverNewProductCategory').fadeOut(100); });
+jQuery('document').ready(function($) {
+    $('#newProductCategory').hover(function() { $('#hoverNewProductCategory').delay(100).fadeIn(400); }, function() { $('#hoverNewProductCategory').fadeOut(100); });
 
-$('#newProductCondition').hover(function() { $('#hoverNewProductCondition').delay(100).fadeIn(400); }, function() { $('#hoverNewProductCondition').fadeOut(100); });
+    $('#newProductCondition').hover(function() { $('#hoverNewProductCondition').delay(100).fadeIn(400); }, function() { $('#hoverNewProductCondition').fadeOut(100); });
 
-$('#newProductTitle').hover(function() { $('#hoverNewProductTitle').delay(100).fadeIn(400); }, function() { $('#hoverNewProductTitle').fadeOut(100); });
+    $('#newProductTitle').hover(function() { $('#hoverNewProductTitle').delay(100).fadeIn(400); }, function() { $('#hoverNewProductTitle').fadeOut(100); });
 
-$('#newProductDescription').hover(function() { $('#hoverNewProductDescription').delay(100).fadeIn(400); }, function() { $('#hoverNewProductDescription').fadeOut(100); });
+    $('#newProductDescription').hover(function() { $('#hoverNewProductDescription').delay(100).fadeIn(400); }, function() { $('#hoverNewProductDescription').fadeOut(100); });
 
-$('#newProductOriginalPrice').hover(function() { $('#hoverNewProductOriginalPrice').delay(100).fadeIn(400); }, function() { $('#hoverNewProductOriginalPrice').fadeOut(100); });
+    $('#newProductOriginalPrice').hover(function() { $('#hoverNewProductOriginalPrice').delay(100).fadeIn(400); }, function() { $('#hoverNewProductOriginalPrice').fadeOut(100); });
 
-$('#newProductYourPrice').hover(function() { $('#hoverNewProductYourPrice').delay(100).fadeIn(400); }, function() { $('#hoverNewProductYourPrice').fadeOut(100); });
+    $('#newProductYourPrice').hover(function() { $('#hoverNewProductYourPrice').delay(100).fadeIn(400); }, function() { $('#hoverNewProductYourPrice').fadeOut(100); });
 
-$('#newProductShippingMode').hover(function() { $('#hoverNewProductShippingMode').delay(100).fadeIn(400); }, function() { $('#hoverNewProductShippingMode').fadeOut(100); });
+    $('#newProductShippingMode').hover(function() { $('#hoverNewProductShippingMode').delay(100).fadeIn(400); }, function() { $('#hoverNewProductShippingMode').fadeOut(100); });
 
-var marginToHeight = $('#firstShippingZone').outerHeight();
+    var marginToHeight = $('#firstShippingZone').outerHeight();
 
-$('#newProductShippingWeight').hover(function() { $('#hoverNewProductShippingWeight').css('marginTop', marginToHeight).delay(100).fadeIn(400); }, function() { $('#hoverNewProductShippingWeight').fadeOut(100).css('marginTop', 0); });
+    $('#newProductShippingWeight').hover(function() { $('#hoverNewProductShippingWeight').css('marginTop', marginToHeight).delay(100).fadeIn(400); }, function() { $('#hoverNewProductShippingWeight').fadeOut(100).css('marginTop', 0); });
 
-$('#newProductPicture').hover(function() { $('#hoverNewProductPicture').delay(100).fadeIn(400); }, function() { $('#hoverNewProductPicture').fadeOut(100); });
+    $('#newProductPicture').hover(function() { $('#hoverNewProductPicture').delay(100).fadeIn(400); }, function() { $('#hoverNewProductPicture').fadeOut(100); });
 });
