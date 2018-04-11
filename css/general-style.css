@@ -176,6 +176,11 @@ strong {
     text-decoration: underline;
 }
 
+.textWriteStyle {
+    color: var(--normal-grey);
+    font-family: 'Just Another Hand', Verdana, Geneva, Tahoma, sans-serif
+}
+
 
 /* -------- END GLOBAL TEXT CSS --------*/
 
