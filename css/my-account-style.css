@@ -910,7 +910,7 @@ p {
 }
 
 .dokan-order-action .dokan-btn:hover,
-.dokan-support-customer-listing .dokan-support-table .dokan-btn {
+.dokan-support-customer-listing .dokan-support-table .dokan-btn:hover {
     color: var(--tertiary-color) !important;
 }
 
