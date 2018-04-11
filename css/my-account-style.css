@@ -897,6 +897,11 @@ p {
 
 /* END STORE SUPPORT */
 
+.dokan-order-action .dokan-btn:hover,
+.dokan-support-customer-listing .dokan-support-table .dokan-btn:hover {
+    color: var(--tertiary-color) !important;
+}
+
 .dokan-order-action .dokan-btn,
 .dokan-support-customer-listing .dokan-support-table .dokan-btn {
     background-color: transparent !important;
@@ -907,11 +912,6 @@ p {
     text-align: center !important;
     font-size: 1em;
     font-weight: bold;
-}
-
-.dokan-order-action .dokan-btn:hover,
-.dokan-support-customer-listing .dokan-support-table .dokan-btn:hover {
-    color: var(--tertiary-color) !important;
 }
 
 .dokan-table-striped>tbody>tr:nth-of-type(odd) {
