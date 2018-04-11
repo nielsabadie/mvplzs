@@ -114,7 +114,7 @@ $userNickname = $userData->display_name;
                         <?php } ?> 
                     </div> <!-- .profile-info -->
                     <div id="userDescription" class="profile-info">
-                         <p class="textWriteStyle"><?php !empty($userMeta['user_description'][0]) ?  esc_html($userMeta['user_description'][0]) : $userNickname . 'n\'a pas encore écrit son message de présentation.';?> / <?php empty($userMeta['user_description'][0]) ?  esc_html($userMeta['user_description'][0]) : $userNickname . 'n\'a pas encore écrit son message de présentation.';?><p>
+                         <p class="textWriteStyle"><?php echo esc_html( !empty($userMeta['user_description'][0]) ? $userMeta['user_description'][0] : $userNickname . 'n\'a pas encore écrit son message de présentation.';?> / <?php empty($userMeta['user_description'][0]) ?  esc_html($userMeta['user_description'][0]) : $userNickname . 'n\'a pas encore écrit son message de présentation.' );?><p>
                     </div>
                 </div><!-- .profile-info-summery -->
             </div><!-- .profile-info-summery-wrapper -->
