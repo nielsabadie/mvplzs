@@ -896,3 +896,15 @@ p {
 
 
 /* END STORE SUPPORT */
+
+.dokan-order-action .dokan-btn {
+    background-color: transparent;
+    padding: 0;
+    margin: auto;
+    color: var(--dark-grey);
+    border: 0px;
+}
+
+.dokan-order-action .dokan-btn:hover {
+    color: var(--tertiary-color);
+}
