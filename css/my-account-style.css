@@ -898,7 +898,7 @@ p {
 /* END STORE SUPPORT */
 
 .dokan-order-action .dokan-btn,
-.dokan-support-customer-listing .dokan-btn {
+.dokan-support-customer-listing .dokan-support-table .dokan-btn {
     background-color: transparent !important;
     padding: 0;
     margin: auto !important;
@@ -910,7 +910,7 @@ p {
 }
 
 .dokan-order-action .dokan-btn:hover,
-.dokan-support-customer-listing .dokan-btn {
+.dokan-support-customer-listing .dokan-support-table .dokan-btn {
     color: var(--tertiary-color) !important;
 }
 
