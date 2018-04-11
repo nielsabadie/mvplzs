@@ -750,10 +750,11 @@ p {
 
 /* USER STORE */
 
-.profile-info-summery-wrapper .profile-info-summery {
+.profile-info-summery-wrapper .profile-info-summery,
+.dokan-single-store .dokan-store-tabs ul {
     background-color: #ffffff;
-    border: 0px;
-    border-radius: 3px;
+    border: 0px !important;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .profile-info-summery-wrapper .profile-info-summery .store-name {
