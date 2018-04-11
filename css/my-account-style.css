@@ -751,19 +751,19 @@ p {
 /* USER STORE */
 
 .profile-info-summery-wrapper .profile-info-summery {
-    background-image: url(https://www.luzus.fr/wp-content/uploads/2018/03/background-bullet-lines-blue.png);
-    background-position: center -200px;
-    background-size: cover;
+    background-color: #ffffff;
+    border: 0px;
+    border-radius: 3px;
 }
 
 .profile-info-summery-wrapper .profile-info-summery .store-name {
-    color: #FFFFFF;
+    color: var(--primary-color);
     font-family: var(--font-family1);
     font-weight: 900;
 }
 
 .profile-info-summery-wrapper .profile-info-summery .dokan-store-info {
-    color: #FFFFFF;
+    color: var(--dark-grey);
 }
 
 .profile-info-summery-wrapper .profile-info-summery .dokan-store-info .fa-star {

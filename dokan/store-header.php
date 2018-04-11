@@ -29,8 +29,21 @@ if ( 'layout3' === $profile_layout ) {
     $no_banner_class_tabs = '';
 }
 
+$userId = $store_user->get_id();
+//var_dump($userId);
+$userMeta = get_user_meta($userId);
+$userData = get_userdata($userId);
+//var_dump($userData);
+$userCity = $userMeta['billing_city'][0];
+$userRegistrationDate = $userData->user_registered;
+$userNickname = $userData->display_name;
 ?>
+
+<?php //var_dump($store_user);?>
+
 <div class="profile-frame<?php echo $no_banner_class; ?>">
+    
+    
 
     <div class="profile-info-box profile-layout-<?php echo $profile_layout; ?>">
         <?php if ( $store_user->get_banner() ) { ?>
@@ -54,21 +67,22 @@ if ( 'layout3' === $profile_layout ) {
                 </div>
 
                 <div class="profile-info">
+                   
                     <?php if ( ! empty( $store_user->get_shop_name() ) && 'default' !== $profile_layout ) { ?>
-                        <h1 class="store-name"><?php echo esc_html( $store_user->get_shop_name() ); ?></h1>
+                        <h1 class="store-name"><?php echo esc_html(  ); ?></h1>
                     <?php } ?>
 
                     <ul class="dokan-store-info">
                         <?php if ( isset( $store_address ) && !empty( $store_address ) ) { ?>
-                            <li class="dokan-store-address"><i class="fa fa-truck"></i>
-                                <?php echo $store_address; ?>
+                            <li class="dokan-store-address"><i class="fa fa-map-marker"></i>
+                                <?php echo esc_html($userCity); ?>
                             </li>
                         <?php } ?>
 
                         <?php if ( !empty( $store_user->get_phone() ) ) { ?>
-                            <li class="dokan-store-phone">
-                                <i class="fa fa-mobile"></i>
-                                <a href="tel:<?php echo esc_html( $store_user->get_phone() ); ?>"><?php echo esc_html( $store_user->get_phone() ); ?></a>
+                            <li class="dokan-store-register">
+                                <i class="fa fa-calendar"></i>
+                                <p><?php echo esc_html(date( "d/m/Y", strtotime( $userRegistrationDate ) )); ?></p>
                             </li>
                         <?php } ?>
 
