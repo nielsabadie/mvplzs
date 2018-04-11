@@ -879,3 +879,19 @@ p {
 
 
 /* END MES ACHATS (ORDERS) */
+
+
+/* STORE SUPPORT */
+
+
+/* MODAL CREATE CONVERSATION */
+
+.mfp-content .dokan-support-intro-user {
+    display: none !important;
+}
+
+
+/* END MODAL CREATE CONVERSATION */
+
+
+/* END STORE SUPPORT */
