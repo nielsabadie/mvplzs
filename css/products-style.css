@@ -657,10 +657,6 @@ p.stars:hover a:before {
     color: #000000;
 }
 
-#woopcomm .wpc-comment-label:before {
-    content: '😎 ';
-}
-
 #woopcomm .wpc-comment-author a {
     color: var(--dark-grey);
 }
