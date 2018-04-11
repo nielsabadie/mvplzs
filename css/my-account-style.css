@@ -911,3 +911,13 @@ p {
 .dokan-order-action .dokan-btn:hover {
     color: var(--tertiary-color) !important;
 }
+
+.dokan-table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: transparent !important;
+}
+
+.dokan-orders-area {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 3px 0px rgba( 0, 0, 0, 0.2);
+}
