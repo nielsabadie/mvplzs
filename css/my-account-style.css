@@ -900,11 +900,12 @@ p {
 .dokan-order-action .dokan-btn {
     background-color: transparent;
     padding: 0;
-    margin: auto;
-    color: var(--dark-grey);
-    border: 0px;
+    margin: auto !important;
+    color: var(--dark-grey) !important;
+    border: 0px !important;
+    text-align: center !important;
 }
 
 .dokan-order-action .dokan-btn:hover {
-    color: var(--tertiary-color);
+    color: var(--tertiary-color) !important;
 }
