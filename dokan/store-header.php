@@ -77,19 +77,14 @@ $userNickname = $userData->display_name;
                                 </li>
                             <?php } ?>
 
-                            <?php if ( !empty( $store_user->get_phone() ) ) { ?>
+                            <?php if ( !empty( $userRegistrationDate ) ) { ?>
                                 <li class="dokan-store-register">
                                     <i class="fa fa-calendar"></i>
                                     <p><?php echo esc_html(date( "d/m/Y", strtotime( $userRegistrationDate ) )); ?></p>
                                 </li>
                             <?php } ?>
 
-                            <?php if ( $store_user->show_email() == 'yes' ) { ?>
-                                <li class="dokan-store-email">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <a href="mailto:<?php echo antispambot( $store_user->get_email() ); ?>"><?php echo antispambot( $store_user->get_email() ); ?></a>
-                                </li>
-                            <?php } ?>
+
 
                             <li class="dokan-store-rating">
                                 <i class="fa fa-star"></i>
