@@ -113,7 +113,7 @@ $userNickname = $userData->display_name;
                             </div>
                         <?php } ?> 
                     </div> <!-- .profile-info -->
-                    <div id="userDescription">
+                    <div id="userDescription" class="profile-info">
                          <p class="textWriteStyle"><?php echo esc_html($userMeta['user_description'][0]);?><p>
                     </div>
                 </div><!-- .profile-info-summery -->
