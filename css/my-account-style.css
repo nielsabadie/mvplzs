@@ -897,7 +897,8 @@ p {
 
 /* END STORE SUPPORT */
 
-.dokan-order-action .dokan-btn {
+.dokan-order-action .dokan-btn,
+.dokan-support-customer-listing .dokan-btn {
     background-color: transparent !important;
     padding: 0;
     margin: auto !important;
@@ -908,7 +909,8 @@ p {
     font-weight: bold;
 }
 
-.dokan-order-action .dokan-btn:hover {
+.dokan-order-action .dokan-btn:hover,
+.dokan-support-customer-listing .dokan-btn {
     color: var(--tertiary-color) !important;
 }
 
@@ -917,8 +919,14 @@ p {
 }
 
 .dokan-orders-area,
-.dokan-product-listing-area {
+.dokan-product-listing-area,
+.dokan-support-customer-listing,
+.dokan-support-topic-wrapper {
     background-color: #ffffff;
     padding: 20px !important;
     box-shadow: 0px 0px 3px 0px rgba( 0, 0, 0, 0.2);
+}
+
+.order-reference {
+    display: none !important;
 }
