@@ -191,7 +191,7 @@ if ( $user_orders ) {
     (function($){
         $(document).ready(function(){
             $('.datepicker').datepicker({
-                dateFormat: 'd-m-yy'
+                dateFormat: 'yy-m-d'
             });
         });
     })(jQuery);
