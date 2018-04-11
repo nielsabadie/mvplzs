@@ -756,13 +756,14 @@ p {
     border: 0px !important;
 }
 
-.profile-info-summery-wrapper .profile-info {
+.profile-info-summery-wrapper .profile-info ul {
     margin-left: 2em;
     padding-left: 0;
 }
 
 .profile-info-summery-wrapper #userDescription p {
     font-size: 1em;
+    margin-left: 2em;
 }
 
 #dokan-content #storeHeader {
