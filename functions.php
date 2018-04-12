@@ -11,6 +11,50 @@
 
 /* START CSS BACKOFFICE MODIFICATIONS */
 
+
+remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
+remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
+
+function button_checkout_cart () {
+	echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="btn btn-primary btn-cart">' . esc_html__( 'Checkout', 'woocommerce' ) . '</a>';
+}
+
+function button_view_cart_link () {
+	echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="small-link">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
+}
+
+add_action( 'woocommerce_widget_shopping_cart_buttons', 'button_checkout_cart', 10 );
+add_action( 'woocommerce_widget_shopping_cart_buttons', 'button_view_cart_link', 20 );
+
+
+
+
+
+function woocommerce_template_loop_product_description () {
+	
+	global $product;
+	//var_dump($product->post);
+	$productId = $product->get_id();
+	$productTitle = $product->post->post_title;
+	$productDescription = $product->post->post_content;
+	$maxDescriptionLength = 200;
+	$limitedDescription = substr($productDescription, 0, $maxDescriptionLength).' ...';
+	$productUrl = get_permalink( $productId );
+	
+	echo 
+		'<div class="productDescription" style="margin-top: 10px">
+			<a href="' . $productUrl . '" title="' . $productTitle . '">'
+			. esc_html($limitedDescription) . 
+			'</a>
+		</div>';
+	
+	return;
+}
+
+add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop_product_description', 30 );
+
+
+
 function remove_footer_credits_admin()
 {
     return '<a href="https://luzus.fr><i class="fa fa-rocket"></i>LUZUS.fr</a>';
