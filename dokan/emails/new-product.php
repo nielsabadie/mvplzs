@@ -823,7 +823,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="https://gallery.mailchimp.com/e1031ebce9cb9ba11d774c28b/images/b17c9117-12ca-4ac5-a262-518dccdab68e.png" width="128" style="max-width:128px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="https://www.luzus.fr/wp-content/uploads/2018/04/luzus-intro.gif" width="254px" style="max-width:254px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
