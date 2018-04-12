@@ -12,6 +12,14 @@
 /* START CSS BACKOFFICE MODIFICATIONS */
 
 
+function testTemplateEmail () {
+
+	include('wp-content/themes/techmarket-child/woocommerce/emails/customer-new-account.php');
+	
+}
+add_shortcode('testTemplate', 'testTemplateEmail');
+
+
 remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
 remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
 
