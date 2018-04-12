@@ -444,6 +444,10 @@ p.stars:hover a:before {
     box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
 }
 
+.widget_price_filter {
+    margin: 0 0 10px 0 !important;
+}
+
 .single-product-meta {
     margin-bottom: 5px;
 }
