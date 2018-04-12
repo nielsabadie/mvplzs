@@ -20,7 +20,7 @@ function button_checkout_cart () {
 }
 
 function button_view_cart_link () {
-	echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="small-link">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
+	echo '<a style="margin-top: 10px;" href="' . esc_url( wc_get_cart_url() ) . '" class="small-link">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
 }
 
 add_action( 'woocommerce_widget_shopping_cart_buttons', 'button_checkout_cart', 10 );

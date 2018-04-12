@@ -436,7 +436,8 @@ p.stars:hover a:before {
     font-weight: 300 !important;
 }
 
-.yith-woocommerce-ajax-product-filter {
+.yith-woocommerce-ajax-product-filter,
+.yith-woocompare-widget {
     background-color: #FFFFFF;
     padding: 20px;
     box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
@@ -667,3 +668,18 @@ p.stars:hover a:before {
 
 
 /* END WOODISCUZ PLUGIN CSS */
+
+.price_slider_wrapper button {
+    padding: 0.3em 0.8em;
+    background: transparent;
+    border-radius: 5px !important;
+    font-size: 1.1em;
+    font-family: var(--font-family1);
+    font-weight: 600;
+    border: 2px solid;
+}
+
+.price_slider_wrapper button:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
