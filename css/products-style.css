@@ -437,7 +437,8 @@ p.stars:hover a:before {
 }
 
 .yith-woocommerce-ajax-product-filter,
-.yith-woocompare-widget {
+.yith-woocompare-widget,
+.widget_price_filter {
     background-color: #FFFFFF;
     padding: 20px;
     box-shadow: 1px 1px 2px 0px rgba( 0, 0, 0, 0.2);
