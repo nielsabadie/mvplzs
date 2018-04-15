@@ -853,7 +853,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<div class="row">
 			<div class="col-sm-12 no-padding-left">
 				<p>
-					<strong>Nom :</strong></strong><span id="user_first_name"><?php echo $iban->OwnerName ?></span>
+					<strong>Nom : </strong></strong><span id="user_first_name"><?php echo $iban->OwnerName ?></span>
 				</p>
 			</div>
 
@@ -898,7 +898,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 	<div class="row" style="margin-top: 20px;">
 		<div class="col-sm-12 no-padding-left">
-			<button type="button" class="btn btn-default .btn-sm btn-second" data-toggle="modal" data-target="#modif-infos-bank"><?php echo $iban ? "Modifier" : "Ajouter"?> mes informations bancaire</button>
+			<button type="button" class="btn btn-default .btn-sm btn-second" data-toggle="modal" data-target="#modif-infos-bank"><?php echo $iban ? "Modifier" : "Ajouter"?> mes informations bancaires</button>
 		</div>
 
 	</div>
@@ -985,7 +985,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 				<!--<input type="submit" class="btn btn-inverse btn-small" style="float:none;" name="vendor_application_submit"
 					   value="<?php /*_e( 'Save', 'wcvendors' ); */?>"/>-->
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default .btn-sm btn-second" data-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-default .btn-sm btn-second" data-dismiss="modal">Fermer</button>
 				</div>
 
 <!--				</form>-->
