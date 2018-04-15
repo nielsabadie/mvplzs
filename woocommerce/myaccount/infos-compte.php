@@ -849,6 +849,68 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		$iban = $mp->get_bank_account($mp_user_id)[0];
 	} ?>
 
+	<div class="container-fluid" id="mes-infos-list">
+
+<div class="row" style="padding-bottom: 16px;">
+	<div class="col-sm-12 no-padding-left">
+		<?php
+		if ( is_user_logged_in() ):
+			$user_id = wp_get_current_user();
+
+			if ( ($user_id instanceof WP_User) ) {
+				echo get_avatar( $user_id->ID, 64 );
+			}
+
+		endif;
+		?>
+
+		<a href="/mon-compte/photo-profil" class="discreet_button" title="Modifier ma photo de profil">Modifier</a>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-sm-6 no-padding-left">
+		<p>
+			<strong>Nom :</strong></strong><span id="user_first_name"><?php echo $iban->OwnerName ?></span>
+		</p>
+	</div>
+
+	<div class="col-sm-6 no-padding-left">
+		<p>
+			<strong>Adresse ligne 1 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine1 ?></span>
+		</p>
+		<p>
+			<strong>Adresse ligne 2 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine2 ?></span>
+		</p>
+		<p>
+			<strong>Code Postal : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->PostalCode ?></span>
+		</p>
+		<p>
+			<strong>Ville : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->City ?></span>
+		</p>
+	</div>
+	
+	<div class="col-sm-6 no-padding-left">
+		<p>
+			<strong>IBAN : </strong><span id="billing_phone"><?php echo $iban->Details->IBAN?></span>
+		</p>
+	</div>
+
+	<div class="col-sm-6 no-padding-left">
+		<p>
+			<strong>BIC : </strong><?php echo $iban->Details->BIC ?>
+		</p>
+	</div>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+	<div class="col-sm-12 no-padding-left">
+		<button type="button" class="btn btn-default .btn-sm btn-second" data-toggle="modal" data-target="#modif-infos">Modifier mes informations</button>
+	</div>
+</div>
+
+</div>
 
 	<div class="row" style="margin-top: 20px;">
 		<div class="col-sm-12 no-padding-left">
@@ -872,7 +934,6 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 					--><?php /*do_action("wcvendors_shop_settings_saved") ;*/?>
 
 					<form id="edit_bank_form" method="POST">
-
 						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group">
