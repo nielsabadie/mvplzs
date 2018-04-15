@@ -588,7 +588,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 <div id="verification" class="my-account-details">
 	<h2>Vérification du profil</h2>
 
-	<p>La vérification de votre profil sera visible sur votre <a style="color: #084399" target="_blank" href="<?php echo dokan_get_store_url( get_current_user_id() ); ?>">boutique en ligne</a>.</p>
+	<p>La vérification de votre profil sera visible sur votre <a style="color: #084399" target="_blank" href="<?php echo dokan_get_store_url( get_current_user_id() ); ?>">boutique</a>.</p>
 
 	<div class="dokan-dashboard-wrap">
 		<?php dokan_get_template( 'dashboard-nav.php', array( 'active_menu' => 'settings/verification' ) ); ?>
