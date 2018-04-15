@@ -667,10 +667,6 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			<?php } ?>
 
 			<div class="dokan-panel dokan-panel-default">
-				<div class="dokan-panel-heading clickable">
-					<strong><?php _e( 'Social Profiles', 'dokan' ); ?></strong>
-				</div>
-
 				<div class="dokan-panel-body">
 					<div class="dokan-verify-links">
 						<?php
@@ -712,8 +708,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 										<?php echo do_shortcode('[kyc_doc_upload_form]');?>
 									</div>
 									<div class="modal-footer">
-										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-										<button type="button" class="btn btn-primary">Save changes</button>
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
 									</div>
 									</div>
 								</div>
@@ -1001,7 +996,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 						<div class="row">
 							<div class="col-md-12">
-								<div id="banner-edit-bankwire" class="alert" style="display: none; margin-top: 30px">
+								<div id="banner-edit-bankwire" class="alert alert-info" style="display: none; margin-top: 30px">
 								</div>
 							</div>
 						</div>
