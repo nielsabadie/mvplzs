@@ -674,6 +674,57 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 				<div class="dokan-panel-body">
 					<div class="dokan-verify-links">
 						<?php
+						$mp = mpAccess::getInstance();
+						$user_id = get_current_user_id();
+						$mp_user_id = $mp->set_mp_user($user_id);
+
+						if ( $mp_user_id ) {
+
+
+							if($mp->get_mp_user($mp_user_id)->KYCLevel == "REGULAR") {
+								echo '
+							<div class="dokan-alert dokan-alert-success" id="d_v_address_feedback">
+								Votre compte est verifié
+							</div>
+							';
+
+							} else {
+
+								echo do_shortcode('[kyc_doc_user_infos]');
+
+								?>
+								<!-- Button trigger modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#verifyIdModal">
+								Vérifier mon compte
+								</button>
+
+								<!-- Modal -->
+								<div class="modal fade" id="verifyIdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered" role="document">
+									<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLongTitle">Vérifier mon identité</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<?php echo do_shortcode('[kyc_doc_upload_form]');?>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-primary">Save changes</button>
+									</div>
+									</div>
+								</div>
+								</div>
+							
+							<?php	
+							}
+						} ?>
+
+
+						<?php
 
 						$configured_providers = array();
 
@@ -776,32 +827,6 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			</div>
 		</div>
 	</div>
-
-	<?php
-	$mp = mpAccess::getInstance();
-	$user_id = get_current_user_id();
-	$mp_user_id = $mp->set_mp_user($user_id);
-
-	if ( $mp_user_id ) {
-
-
-		if($mp->get_mp_user($mp_user_id)->KYCLevel == "REGULAR") {
-			echo '
-		<div class="dokan-alert dokan-alert-success" id="d_v_address_feedback">
-			Votre compte est verifié
-		</div>
-		';
-
-		} else {
-
-			?>
-			<p>	Pour utiliser convenablement votre porte-feuille nous devons vérifier votre compte via Mangopay</p>
-			<?php
-			echo do_shortcode('[kyc_doc_user_infos]');
-
-			echo do_shortcode('[kyc_doc_upload_form]');
-		}
-	} ?>
 
 </div>
 
