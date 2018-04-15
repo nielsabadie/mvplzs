@@ -850,71 +850,51 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	} ?>
 
 	<div class="container-fluid" id="mes-infos-list">
+		<div class="row">
+			<div class="col-sm-12 no-padding-left">
+				<p>
+					<strong>Nom :</strong></strong><span id="user_first_name"><?php echo $iban->OwnerName ?></span>
+				</p>
+			</div>
 
-<div class="row" style="padding-bottom: 16px;">
-	<div class="col-sm-12 no-padding-left">
-		<?php
-		if ( is_user_logged_in() ):
-			$user_id = wp_get_current_user();
+			<div class="col-sm-6 no-padding-left">
+				<p>
+					<strong>Adresse ligne 1 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine1 ?></span>
+				</p>
+				
+			</div>
 
-			if ( ($user_id instanceof WP_User) ) {
-				echo get_avatar( $user_id->ID, 64 );
-			}
+			<div class="col-sm-6 no-padding-left">
+				<p>
+					<strong>Adresse ligne 2 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine2 ?></span>
+				</p>
+			</div>
 
-		endif;
-		?>
+			<div class="col-sm-6 no-padding-left">
+				<p>
+					<strong>Code Postal : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->PostalCode ?></span>
+				</p>
+			</div>
 
-		<a href="/mon-compte/photo-profil" class="discreet_button" title="Modifier ma photo de profil">Modifier</a>
+			<div class="col-sm-6 no-padding-left">
+				<p>
+					<strong>Ville : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->City ?></span>
+				</p>
+			</div>
+
+			<div class="col-sm-12 no-padding-left">
+				<p>
+					<strong>IBAN : </strong><span id="billing_phone"><?php echo $iban->Details->IBAN?></span>
+				</p>
+			</div>
+
+			<div class="col-sm-12 no-padding-left">
+				<p>
+					<strong>BIC : </strong><?php echo $iban->Details->BIC ?>
+				</p>
+			</div>
+		</div>
 	</div>
-</div>
-
-
-<div class="row">
-	<div class="col-sm-12 no-padding-left">
-		<p>
-			<strong>Nom :</strong></strong><span id="user_first_name"><?php echo $iban->OwnerName ?></span>
-		</p>
-	</div>
-
-	<div class="col-sm-6 no-padding-left">
-		<p>
-			<strong>Adresse ligne 1 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine1 ?></span>
-		</p>
-		
-	</div>
-
-	<div class="col-sm-6 no-padding-left">
-		<p>
-			<strong>Adresse ligne 2 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine2 ?></span>
-		</p>
-	</div>
-
-	<div class="col-sm-6 no-padding-left">
-		<p>
-			<strong>Code Postal : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->PostalCode ?></span>
-		</p>
-	</div>
-
-	<div class="col-sm-6 no-padding-left">
-		<p>
-			<strong>Ville : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->City ?></span>
-		</p>
-	</div>
-
-	<div class="col-sm-12 no-padding-left">
-		<p>
-			<strong>IBAN : </strong><span id="billing_phone"><?php echo $iban->Details->IBAN?></span>
-		</p>
-	</div>
-
-	<div class="col-sm-12 no-padding-left">
-		<p>
-			<strong>BIC : </strong><?php echo $iban->Details->BIC ?>
-		</p>
-	</div>
-</div>
-
-</div>
 
 	<div class="row" style="margin-top: 20px;">
 		<div class="col-sm-12 no-padding-left">
