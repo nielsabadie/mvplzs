@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* CSS Document
+
+++++      ++++    ++++ ++++++++++++ ++++    ++++   ++++++++++
+++++      ++++    ++++ ++++++++++++ ++++    ++++ ++++++++++
+++++      ++++    ++++      ++++++  ++++    ++++   +++++
+++++      ++++    ++++   +++++      ++++    ++++       +++++
++++++++++ ++++    ++++ ++++++++++++ ++++    ++++    +++++++++
++++++++++ ++++++++++++ ++++++++++++ ++++++++++++ ++++++++++
+
+GENERAL STYLE */
+
+:root {
+    --primary-color: #084399;
+    --secondary-color: #3AB5E7;
+    --tertiary-color: #5BDDB9;
+    --off-white: #FAFAFA;
+    --light-grey: #eaeaea;
+    --light-grey2: #f6f6f6;
+    --normal-grey: #515151;
+    --dark-grey: #333333;
+    --red-alert: #DD0003;
+    --green-success: #5BDDB9;
+    --blue-info: #084399;
+    --orange-warning: #FF9700;
+    --font-family1: "Avenir Next", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    --font-family2: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    --font-family3: 'Oxygen', Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+
+/*  MEDIA UPLOADER  */
+
+.media-modal {
+	outline: none !important;
+	z-index: 999999 !important;
+}
+
+.media-modal-content {
+	width: 60%;
+	min-width: 280px;
+    margin: auto;
+    background-color: var(--light-grey) !important;
+}
+
+.media-modal .wp-core-ui .attachment.details {
+	box-shadow: inset 0 0 0 3px #fff,inset 0 0 0 7px #3ab5e7;
+}
+
+.media-modal .wp-core-ui .attachment.details .check {
+	background-color: #3ab5e7	;
+	box-shadow: 0 0 0 1px #fff,0 0 0 2px #3ab5e7;
+}
+
+
+.media-modal .media-sidebar {
+	background-color: #fafafa;
+}
+
+.media-modal .media-router a {
+	color: var(--dark-grey);
+}
+
+.media-modal .media-router a:hover {
+	color: var(--normal-grey);
+}
+
+.media-modal-close {
+	color: #ffffff !important;
+}
+
+	.media-modal-close:hover {
+		color: var(--secondary-color);
+	}
+
+.media-modal .media-toolbar .media-button-select, .media-modal .upload-ui .button-hero, .wp-core-ui .button-primary {
+	background-color: #ffffff;
+	border: 1px solid var(--dark-grey) !important;
+	text-shadow: none !important;
+	color: var(--dark-grey);
+	text-decoration: none !important;
+	font-weight: bold;
+	font-family: var(--font-family1);
+	border-radius: 5px !important;
+	box-shadow: none !important;
+}
+
+.media-modal .media-toolbar .media-button-select:hover, .media-modal .upload-ui .button-hero:hover, .wp-core-ui .button-primary:hover {
+	background-color: var(--primary-color);
+	color: #ffffff;
+	border: 1px solid var(--primary-color) !important;
+}
+
+.attachment-info .filename, .attachment-info .uploaded, .attachment-info .file-size, .attachment-info .dimensions, .attachment-info .edit-attachment, .attachment-details .setting, .attachment-details h2, .compat-item, .upload-ui .upload-instructions, .media-toolbar .attachment-filters, .media-toolbar #media-search-input {
+	display: none !important;
+}
+
+/*  END MEDIA UPLOADER  */

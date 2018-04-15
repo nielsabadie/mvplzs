@@ -11,6 +11,102 @@
 
 /* START CSS BACKOFFICE MODIFICATIONS */
 
+/**
+ * Removes specified media tabs from the media uploader.
+ *
+ * @since 1.0.0
+ *
+ * @param array $tabs  Default media upload tabs.
+ * @return array $tabs Amended media upload tabs.
+ */
+
+
+/* SPECIFIC CSS FOR NO ADMIN */
+
+
+function no_admin_enqueue_styles() {
+
+    if( !current_user_can('administrator') ) {
+        wp_enqueue_style( 'noadmin', get_template_directory_uri().'-child/css/noadmin.css' );
+    }
+}
+
+add_action( 'wp_enqueue_scripts', 'no_admin_enqueue_styles' );
+
+/* END SPECIFIC CSS FOR NO ADMIN */
+
+
+/*  SETTINGS MEDIA UPLOADER  */
+
+	function limit_upload_size( $file ) { //restrict file upload size for no admin user
+
+		if (!current_user_can('administrator')) {
+
+			$file_size_limit = 1024*4; // 1MB in KB
+
+			// exclude admins
+			if ( ! current_user_can( 'manage_options' ) ) {
+
+				$current_size = $file['size'];
+				$current_size = $current_size / 1024; //get size in KB
+
+				if ( $current_size > $file_size_limit ) {
+					$file['error'] = sprintf( __( '🙀 OUPS: Votre photo dépasse la limite autorisée de %d KB.' ), $file_size_limit );
+				}
+
+			}
+
+		}
+		// Set the desired file size limit
+		return $file;
+
+	}
+	add_filter ( 'wp_handle_upload_prefilter', 'limit_upload_size', 10, 1 );
+
+
+
+	function restict_mime($mimes) { //restrict file type to upload for no admin user
+
+		if(!current_user_can('administrator')){
+			$mimes = array( 
+						'jpg|jpeg|jpe' => 'image/jpeg', 
+						'png' => 'image/png', 
+			); 
+		}
+		return $mimes;
+	}
+
+	add_filter('upload_mimes','restict_mime'); 
+
+
+
+	function wdm_custom_media_view_strings( $strings ) {
+		if (!current_user_can('administrator')) {
+			//unset($strings['mediaLibraryTitle']);
+			//unset($strings['insertMediaTitle']);
+			unset($strings['filterByDate']);
+			unset($strings['filterByType']);
+			unset($strings['searchMediaLabel']);
+			//unset($strings['uploadFilesTitle']);
+			unset($strings['dragInfo']);
+			unset($strings['attachmentDetails']);
+			unset($strings['setFeaturedImageTitle']);
+			unset($strings['setFeaturedImage']);
+			unset($strings['imageDetailsTitle']);
+			unset($strings['imageReplaceTitle']);
+			unset($strings['imageDetailsCancel']);
+			unset($strings['editImage']);
+			//unset($strings['']);
+		}
+
+    	return $strings;
+	}
+
+	add_filter('media_view_strings', 'wdm_custom_media_view_strings');
+
+
+/*  END SETTINGS MEDIA UPLOADER  */
+
 
 function testTemplateEmail () {
 
@@ -63,8 +159,7 @@ add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop
 
 
 
-function remove_footer_credits_admin()
-{
+function remove_footer_credits_admin() {
     return '<a href="https://luzus.fr><i class="fa fa-rocket"></i>LUZUS.fr</a>';
 }
 
