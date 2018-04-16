@@ -196,7 +196,7 @@ add_shortcode('testTemplate', 'testTemplateEmail');
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6644" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6644 animate-dropdown"><a title="Mes Messages" href="https://luzus.fr/mon-compte/support-tickets/"><i class="tm tm-feedback"></i> Mes Messages</a></li>
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6645" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6645 animate-dropdown"><a title="Mes Achats" href="https://luzus.fr/mon-compte/mes-achats/"><i class="tm tm-shopping-bag"></i> Mes Achats</a></li>
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a title="Mes informations" href="https://luzus.fr/mon-compte/infos-compte/"><i class="tm tm-listing-large"></i> Mes informations</a></li>
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a class="redLink" title="DÃ©connexion" href="https://luzus.fr/mon-compte/customer-logout/"><i class="tm tm-close"></i> DÃ©connexion</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a class="redLink" title="DÃ©connexion" href="https://luzus.fr/mon-compte/customer-logout/"><i class="tm tm-close"></i> Déconnexion</a></li>
 						</ul>
 					</li>
 
@@ -682,7 +682,7 @@ function my_woocommerce_edit_account_form()
 
     ?>
     <fieldset>
-        <legend>Informations complÃ©mentaires</legend>
+        <legend>Informations complémentaires</legend>
         <div class="row">
             <div class="col-sm-12 form-group">
 
@@ -698,7 +698,7 @@ function my_woocommerce_edit_account_form()
         <div class="row" id="user-nationality">
             <div class="col-sm-12 form-group">
                 <label for="user_nationality">
-                    NationalitÃ© / Lieu de naissance <span class="required">*</span>
+                    Nationalité / Lieu de naissance <span class="required">*</span>
                 </label>
 
                 <select id="dropdown-nationality" name="user_nationality" id="user_nationality" value="<?php echo $user_nationality; ?>" class="form-control dokan-form-control dokan-select2">
@@ -1031,8 +1031,8 @@ function product_page_payment_services_details() {
         <img style="display: inline-block; margin-right:5px;" src="https://www.luzus.fr/wp-content/uploads/2018/03/check.svg" width="25px" title="Logo-Protection-Luzus"/>
         <a class="linkDark" style="display: inline-block; font-size: 1.1em; font-family: var(--font-family1); font-weight: bold;" href="/comment-ca-marche/" title="">Protection garantie par Luzus</a>
         <ul>
-            <li>Achats en ligne 100% sÃ©curisÃ©s</li>
-            <li>Paiement dÃ©clenchÃ© aprÃ¨s rÃ©ception du produit</li>
+            <li>Achats en ligne 100% sécurisés</li>
+            <li>Paiement déclenché après réception du produit</li>
             <li>Remboursement intÃ©gral des objets non-conformes</li>
             <li>Service clients par chat ou email</li>
         </ul>
@@ -1350,13 +1350,13 @@ function um_edit_shipping_address_callback() {
             'ID' => $user_id,
         ) );
 
-        $message = '<i class="fa fa-check"></i> Vos informations ont Ã©tÃ© mises Ã  jour.';
+        $message = '<i class="fa fa-check"></i> Vos informations ont été mises à  jour.';
         $return = array('message' => $message);
         wp_json_encode ($return, 1);
         return wp_send_json_success($return);
 
     } elseif ( !empty($user_id) || !empty($shipping_first_name) || !empty($shipping_last_name) || !empty($shipping_address_1) || !empty($shipping_postcode) || !empty($shipping_city) ) {
-        $message = '<i class="fa fa-times"></i> Veuillez remplir tous les champs requis marquÃ©s par un *';
+        $message = '<i class="fa fa-times"></i> Veuillez remplir tous les champs requis marqués par un *';
         $return = array('message' => $message);
         wp_json_encode ($return, 1);
         return wp_send_json_error($return);
@@ -1390,7 +1390,7 @@ function um_edit_password_callback() {
 
 
     if ( !empty( $pass1 ) && !wp_check_password( $pass_cur, $current_user->user_pass, $current_user->ID ) ) {
-        $message = '<i class="fa fa-times"></i> Votre mot de passe actuel est erronÃ©.';
+        $message = '<i class="fa fa-times"></i> Votre mot de passe actuel est erroné.';
         $return = array('message' => $message);
 
         wp_json_encode ($return, 1);
@@ -1447,14 +1447,14 @@ function um_edit_password_callback() {
                 'user_pass' => $user->user_pass,
             ) );
 
-            $message = '<i class="fa fa-check"></i> Votre mot de passe a Ã©tÃ© modifiÃ© avec succÃ¨s.';
+            $message = '<i class="fa fa-check"></i> Votre mot de passe a été modifié avec succès.';
             $return = array('message' => $message);
             wp_json_encode ($return, 1);
             return wp_send_json_success($return);
 
         } else {
 
-            $message = '<i class="fa fa-times"></i> Votre nouveau mot de passe doit contenir :<ul><li>Minimum 8 caractÃ¨res</li><li>Au moins une minuscule</li><li>Au moins une majuscule</li><li>Au moins un chiffre</li></ul>';
+            $message = '<i class="fa fa-times"></i> Votre nouveau mot de passe doit contenir :<ul><li>Minimum 8 caractères</li><li>Au moins une minuscule</li><li>Au moins une majuscule</li><li>Au moins un chiffre</li></ul>';
             $return = array('message' => $message);
             wp_json_encode ($return, 1);
             return wp_send_json_error($return);
@@ -1567,10 +1567,10 @@ function wooc_validate_extra_register_fields( $username, $email, $validation_err
         $validation_errors->add( 'user_birthday_error', __('Veuillez entrer une date de naissance valide','woocommerce') );
     }
     if ($age < 18)
-        $validation_errors->add( 'user_birthday_error', __('Vous devez Ãªtre majeur pour vous inscrire','woocommerce') );
+        $validation_errors->add( 'user_birthday_error', __('Vous devez être majeur pour vous inscrire','woocommerce') );
 
     if ($user_nationality != "FR")
-        $validation_errors->add( 'user_nationality_error', __('Vous devez rÃ©sider en France pour vous inscrire ' . $user_birthday,'woocommerce'));
+        $validation_errors->add( 'user_nationality_error', __('Vous devez résider en France pour vous inscrire ' . $user_birthday,'woocommerce'));
 
 
     return $validation_errors;
@@ -1689,7 +1689,7 @@ function new_action_add_shipping() {
     $shipping_number   = ( trim( stripslashes( $_POST['shipping_number'] ) ) );
     $shipped_date      = ( trim( $_POST['shipped_date'] ) );
 
-    $ship_info = 'Ajout du numÃ©ro de suivi: ' . $shipping_number . '<br />';
+    $ship_info = 'Ajout du numéro de suivi: ' . $shipping_number . '<br />';
 
     if ( $shipping_number == '' ){
         die();
@@ -1812,7 +1812,7 @@ function addNavigationHelpCenter () {
             'Paiement & Transfert', 
             'Retours & Annulations', 
             'Evaluation & Notation', 
-            'Confiance & SÃ©curitÃ©', 
+            'Confiance & Sécurité', 
             'Mon compte', 
             'Inscription & Connexion', 
             'Forum', 
@@ -1820,16 +1820,16 @@ function addNavigationHelpCenter () {
 
         'infos' => Array ( 
             'Les tips pour optimiser vos ventes !', 
-            'Comment dÃ©nicher la perle rare ?', 
+            'Comment dénicher la perle rare ?', 
             'Les infos sur la logistique.', 
-            'Comment payer ou rÃ©cupÃ©rer son argent.', 
+            'Comment payer ou récupérer son argent.', 
             'Un problÃ¨me avec un produit ?' , 
-            'Les dÃ©tail sur les petites Ã©toiles.', 
+            'Les détails sur les petites étoiles.', 
             'Notre objectif c\'est votre satisfaction.', 
-            'Les dÃ©tails sur le paramÃ©trage de votre compte Luzus.',
+            'Les détails sur le paramétrage de votre compte Luzus.',
             'Comment s\'inscrire ou se connecter, c\'est par ici.',
-            'Utiliser de maniÃ¨re efficace le Forum !', 
-            'La rÃ©ponse Ã  vos questions les plus spÃ©cifiques.' ),
+            'Utiliser de manière efficace le Forum !', 
+            'La réponse à vos questions les plus spécifiques.' ),
 
         'iconUrl'  => Array ( 
             'https://www.luzus.fr/wp-content/uploads/2018/03/open-store.svg',
@@ -1876,7 +1876,7 @@ function addHelpCenterCards () {
             'Paiement & Transfert', 
             'Retours & Annulations', 
             'Evaluation & Notation', 
-            'Confiance & SÃ©curitÃ©', 
+            'Confiance & Sécurité', 
             'Mon compte', 
             'Inscription & Connexion', 
             'Forum', 
@@ -1884,16 +1884,16 @@ function addHelpCenterCards () {
 
         'infos' => Array ( 
             'Les tips pour optimiser vos ventes !', 
-            'Comment dÃ©nicher la perle rare ?', 
+            'Comment dénicher la perle rare ?', 
             'Les infos sur la logistique.', 
-            'Comment payer ou rÃ©cupÃ©rer son argent.', 
-            'Un problÃ¨me avec un produit ?' , 
-            'Les dÃ©tail sur les petites Ã©toiles.', 
+            'Comment payer ou récupérer son argent.', 
+            'Un problème avec un produit ?' , 
+            'Les détails sur les petites étoiles.', 
             'Notre objectif c\'est votre satisfaction.', 
-            'Les dÃ©tails sur le paramÃ©trage de votre compte Luzus.',
+            'Les détails sur le paramétrage de votre compte Luzus.',
             'Comment s\'inscrire ou se connecter, c\'est par ici.',
-            'Utiliser de maniÃ¨re efficace le Forum !', 
-            'La rÃ©ponse Ã  vos questions les plus spÃ©cifiques.' ),
+            'Utiliser de manière efficace le Forum !', 
+            'La réponse à vos questions les plus spécifiques.' ),
 
         'iconUrl'  => Array ( 
             'https://www.luzus.fr/wp-content/uploads/2018/03/open-store.svg',
