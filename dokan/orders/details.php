@@ -43,12 +43,11 @@ if(get_post_meta($order_id, 'shipping-track', true)) {
     $result = json_decode( $request['body'] );
 	
 	if (empty($result->status)) {
-		$stateShipping = $result->code;
+        $stateShipping = $result->code;
+        
 	} else {
 		$stateShipping = $result->status;
 	}
-    
-	var_dump($stateShipping);
 }
 
 ?>
