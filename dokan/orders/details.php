@@ -9,19 +9,22 @@ if ( !dokan_is_seller_has_order( $current_user->ID, $order_id ) ) {
 }
 
 $statusColissimo = [
-    "PRIS_EN_CHARGE"        => "Pris en charge",
-    "EN_LIVRAISON"          => "En cour de livraison",
-    "EXPEDIE"               => "Expédié",
-    "A_RETIRER"             => "Colis a retiré",
-    "TRI_EFFECTUE"          => "Tri effectué",
-    "DISTRIBUE"             => "Distribué",
-    "LIVRE"                 => "Livré",
-    "DESTINATAIRE_INFORME"  => "Destinataire informé",
-    "RETOUR_DESTINATAIRE"   => "Colis retourné",
-    "ERREUR"                => "Colis est en erreur",
-    "INCONNU"               => "Inconnu",
-    "RESOURCE_NOT_FOUND"    => "Aucune correspondance"
+    "PRIS_EN_CHARGE"        => "Le colis est pris en charge, ou en cours de traitement",
+    "EN_LIVRAISON"          => "En cours de livraison",
+    "EXPEDIE"               => "Le colis est expédié",
+    "A_RETIRER"             => "Le colis est disponible, prêt à être retiré au point de retrait",
+    "TRI_EFFECTUE"          => "Le colis a été trié",
+    "DISTRIBUE"             => " <i class='fa fa-check'></i> Le colis a été distribué",
+    "LIVRE"                 => " <i class='fa fa-check'></i> Le colis a été livré",
+    "DESTINATAIRE_INFORME"  => "Le destinataire a été informé",
+    "RETOUR_DESTINATAIRE"   => "Le colis a été retourné",
+    "ERREUR"                => "La livraison du colis est en erreur",
+    "INCONNU"               => "Le statut est inconnu (une anomalie est possible)",
+    "RESOURCE_NOT_FOUND"    => "Aucune correspondance avec votre numéro de suivi",
+	"BAD_REQUEST"           => "Le numéro de suivi n'est pas reconnu"
 ];
+
+
 
 $statuses = wc_get_order_statuses();
 $order    = new WC_Order( $order_id );
@@ -30,15 +33,22 @@ $hide_customer_info = dokan_get_option( 'hide_customer_info', 'dokan_selling', '
 $stateShipping = '';
 // Si le numero de suivi existe, on récupère l'état de livraison pour colissimo
 if(get_post_meta($order_id, 'shipping-track', true)) {
-    $key = "DHxSRunzneb6G1HBzAMZ6UHoFPKqd0BrhbR9t5t8hJtDD5Qf25+dChEXqXH3mCCN" ;
-    $request = wp_remote_get('https://api.laposte.fr/suivi/v1/'.get_post_meta($order_id, 'shipping-track', true), array(
+    $key = "eMnpWPnCY3RE84j0MGyUom2nN9yT56IZ1ayRfZjDfuuEBLWcx25GlFsa2Hm6nFAQ" ;
+    $request = wp_remote_get('https://api.laposte.fr/suivi/v1/' . get_post_meta($order_id, 'shipping-track', true), array(
         'headers' => array(
             'X-Okapi-Key' => $key,
             'Content-Type' => 'application/json; charset=utf-8'
         )
     ));
     $result = json_decode( $request['body'] );
-    $stateShipping = $result->code;
+	
+	if (empty($result->status)) {
+		$stateShipping = $result->code;
+	} else {
+		$stateShipping = $result->status;
+	}
+    
+	var_dump($stateShipping);
 }
 
 ?>

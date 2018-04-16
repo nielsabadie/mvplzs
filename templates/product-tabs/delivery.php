@@ -21,15 +21,14 @@
         </li>
 
 
+        <?php //if ($product->get_attribute('pa_mondial_relay') === 'true') : ?>
 
-        <?php if ($product->get_attribute('pa_mondial_relay') === 'true') : ?>
-
-            <li>
+            <!--<li>
 				<img src="https://www.luzus.fr/wp-content/uploads/2018/03/mondial-relay-logo.png" title="Mondial Relay"/>
 				<span class="deliveryTitle">Mondial Relay</span> : L'expédition se fait sous 5 jours par Mondial Relay avec suivi. Ainsi, vous pouvez suivre à tout moment l’état d’avancement de votre colis.
-        	</li>
+        	</li>-->
 
-        <?php endif; ?>
+        <?php //endif; ?>
 
 
 

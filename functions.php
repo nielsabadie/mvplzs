@@ -9,103 +9,14 @@
  * Include all your custom code here
  */
 
-/* START CSS BACKOFFICE MODIFICATIONS */
 
-/**
- * Removes specified media tabs from the media uploader.
- *
- * @since 1.0.0
- *
- * @param array $tabs  Default media upload tabs.
- * @return array $tabs Amended media upload tabs.
- */
+function wpMail_set_content_type(){
 
+    return "text/html";
 
-/* SPECIFIC CSS FOR NO ADMIN */
-
-
-function no_admin_enqueue_styles() {
-
-    if( !current_user_can('administrator') ) {
-        wp_enqueue_style( 'noadmin', get_template_directory_uri().'-child/css/noadmin.css' );
-    }
 }
+add_filter( 'wp_mail_content_type','wpMail_set_content_type' );
 
-add_action( 'wp_enqueue_scripts', 'no_admin_enqueue_styles' );
-
-/* END SPECIFIC CSS FOR NO ADMIN */
-
-
-/*  SETTINGS MEDIA UPLOADER  */
-
-	function limit_upload_size( $file ) { //restrict file upload size for no admin user
-
-		if (!current_user_can('administrator')) {
-
-			$file_size_limit = 1024*4; // 1MB in KB
-
-			// exclude admins
-			if ( ! current_user_can( 'manage_options' ) ) {
-
-				$current_size = $file['size'];
-				$current_size = $current_size / 1024; //get size in KB
-
-				if ( $current_size > $file_size_limit ) {
-					$file['error'] = sprintf( __( '🙀 OUPS: Votre photo dépasse la limite autorisée de %d KB.' ), $file_size_limit );
-				}
-
-			}
-
-		}
-		// Set the desired file size limit
-		return $file;
-
-	}
-	add_filter ( 'wp_handle_upload_prefilter', 'limit_upload_size', 10, 1 );
-
-
-
-	function restict_mime($mimes) { //restrict file type to upload for no admin user
-
-		if(!current_user_can('administrator')){
-			$mimes = array( 
-						'jpg|jpeg|jpe' => 'image/jpeg', 
-						'png' => 'image/png', 
-			); 
-		}
-		return $mimes;
-	}
-
-	add_filter('upload_mimes','restict_mime'); 
-
-
-
-	function wdm_custom_media_view_strings( $strings ) {
-		if (!current_user_can('administrator')) {
-			//unset($strings['mediaLibraryTitle']);
-			//unset($strings['insertMediaTitle']);
-			unset($strings['filterByDate']);
-			unset($strings['filterByType']);
-			unset($strings['searchMediaLabel']);
-			//unset($strings['uploadFilesTitle']);
-			unset($strings['dragInfo']);
-			unset($strings['attachmentDetails']);
-			unset($strings['setFeaturedImageTitle']);
-			unset($strings['setFeaturedImage']);
-			unset($strings['imageDetailsTitle']);
-			unset($strings['imageReplaceTitle']);
-			unset($strings['imageDetailsCancel']);
-			unset($strings['editImage']);
-			//unset($strings['']);
-		}
-
-    	return $strings;
-	}
-
-	add_filter('media_view_strings', 'wdm_custom_media_view_strings');
-
-
-/*  END SETTINGS MEDIA UPLOADER  */
 
 
 function testTemplateEmail () {
@@ -116,123 +27,207 @@ function testTemplateEmail () {
 add_shortcode('testTemplate', 'testTemplateEmail');
 
 
-remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
-remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
 
-function button_checkout_cart () {
-	echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="btn btn-primary btn-cart">' . esc_html__( 'Checkout', 'woocommerce' ) . '</a>';
-}
+/* BACKOFFICE MODIFICATIONS */
 
-function button_view_cart_link () {
-	echo '<a style="margin-top: 10px;" href="' . esc_url( wc_get_cart_url() ) . '" class="small-link">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
-}
+	function remove_footer_credits_admin() {
+		return '<a href="https://luzus.fr><i class="fa fa-rocket"></i>LUZUS.fr</a>';
+	}
 
-add_action( 'woocommerce_widget_shopping_cart_buttons', 'button_checkout_cart', 10 );
-add_action( 'woocommerce_widget_shopping_cart_buttons', 'button_view_cart_link', 20 );
+	add_filter('admin_footer_text', 'remove_footer_credits_admin');
+
+/* END BACKOFFICE MODIFICATIONS */
 
 
 
 
 
-function woocommerce_template_loop_product_description () {
-	
-	global $product;
-	//var_dump($product->post);
-	$productId = $product->get_id();
-	$productTitle = $product->post->post_title;
-	$productDescription = $product->post->post_content;
-	$maxDescriptionLength = 200;
-	$limitedDescription = substr($productDescription, 0, $maxDescriptionLength).' ...';
-	$productUrl = get_permalink( $productId );
-	
-	echo 
-		'<div class="productDescription" style="margin-top: 10px">
-			<a href="' . $productUrl . '" title="' . $productTitle . '">'
-			. esc_html($limitedDescription) . 
-			'</a>
-		</div>';
-	
-	return;
-}
+/* SPECIFIC CSS FOR NO ADMIN */
 
-add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop_product_description', 30 );
+	function no_admin_enqueue_styles() {
+
+		if( !current_user_can('administrator') ) {
+			wp_enqueue_style( 'noadmin', get_template_directory_uri().'-child/css/noadmin.css' );
+		}
+	}
+
+	add_action( 'wp_enqueue_scripts', 'no_admin_enqueue_styles' );
+
+/* END SPECIFIC CSS FOR NO ADMIN */
 
 
 
-function remove_footer_credits_admin() {
-    return '<a href="https://luzus.fr><i class="fa fa-rocket"></i>LUZUS.fr</a>';
-}
 
-add_filter('admin_footer_text', 'remove_footer_credits_admin');
 
-/* END CSS BACKOFFICE MODIFICATIONS */
+
+/*  SETTINGS MEDIA UPLOADER  */
+
+		function limit_upload_size( $file ) { //restrict file upload size for no admin user
+
+			if (!current_user_can('administrator')) {
+
+				$file_size_limit = 1024*4; // 1MB in KB
+
+				// exclude admins
+				if ( ! current_user_can( 'manage_options' ) ) {
+
+					$current_size = $file['size'];
+					$current_size = $current_size / 1024; //get size in KB
+
+					if ( $current_size > $file_size_limit ) {
+						$file['error'] = sprintf( __( 'ðŸ™€ OUPS: Votre photo dÃ©passe la limite autorisÃ©e de %d KB.' ), $file_size_limit );
+					}
+
+				}
+
+			}
+			// Set the desired file size limit
+			return $file;
+
+		}
+		add_filter ( 'wp_handle_upload_prefilter', 'limit_upload_size', 10, 1 );
+
+
+		function restict_mime($mimes) { //restrict file type to upload for no admin user
+
+			if(!current_user_can('administrator')){
+				$mimes = array( 
+							'jpg|jpeg|jpe' => 'image/jpeg', 
+							'png' => 'image/png', 
+				); 
+			}
+			return $mimes;
+		}
+
+		add_filter('upload_mimes','restict_mime'); 
+
+
+		function wdm_custom_media_view_strings( $strings ) {
+			if (!current_user_can('administrator')) {
+				//unset($strings['mediaLibraryTitle']);
+				//unset($strings['insertMediaTitle']);
+				unset($strings['filterByDate']);
+				unset($strings['filterByType']);
+				unset($strings['searchMediaLabel']);
+				//unset($strings['uploadFilesTitle']);
+				unset($strings['dragInfo']);
+				unset($strings['attachmentDetails']);
+				unset($strings['setFeaturedImageTitle']);
+				unset($strings['setFeaturedImage']);
+				unset($strings['imageDetailsTitle']);
+				unset($strings['imageReplaceTitle']);
+				unset($strings['imageDetailsCancel']);
+				unset($strings['editImage']);
+				//unset($strings['']);
+			}
+
+			return $strings;
+		}
+
+		add_filter('media_view_strings', 'wdm_custom_media_view_strings');
+
+/*  END SETTINGS MEDIA UPLOADER  */
+
+
+
+/* SETTINGS CART WIDGET */
+
+	remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
+	remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
+
+	function button_checkout_cart () {
+		echo '<a href="' . esc_url( wc_get_checkout_url() ) . '" class="btn btn-primary btn-cart">' . esc_html__( 'Checkout', 'woocommerce' ) . '</a>';
+	}
+
+	function button_view_cart_link () {
+		echo '<a style="margin-top: 10px;" href="' . esc_url( wc_get_cart_url() ) . '" class="small-link">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
+	}
+
+	add_action( 'woocommerce_widget_shopping_cart_buttons', 'button_checkout_cart', 10 );
+	add_action( 'woocommerce_widget_shopping_cart_buttons', 'button_view_cart_link', 20 );
+
+
+/* END SETTINGS CART WIDGET */
+
+
+	function woocommerce_template_loop_product_description () {
+
+		global $product;
+		//var_dump($product->post);
+		$productId = $product->get_id();
+		$productTitle = $product->post->post_title;
+		$productDescription = $product->post->post_content;
+		$maxDescriptionLength = 200;
+		$limitedDescription = substr($productDescription, 0, $maxDescriptionLength).' ...';
+		$productUrl = get_permalink( $productId );
+
+		echo 
+			'<div class="productDescription" style="margin-top: 10px">
+				<a href="' . $productUrl . '" title="' . $productTitle . '">'
+				. esc_html($limitedDescription) . 
+				'</a>
+			</div>';
+
+		return;
+	}
+
+	add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop_product_description', 30 );
+
 
 /* HEADER TECHMARKET */
 
-function techmarket_secondary_navigation() {
+	function techmarket_secondary_navigation() {
+		?>
+		<nav id="secondary-navigation" class="secondary-navigation" aria-label="Secondary Navigation" data-nav="flex-menu">
 
-    ?>
-    <nav id="secondary-navigation" class="secondary-navigation" aria-label="Secondary Navigation" data-nav="flex-menu">
-
-        <ul id="menu-secondary-menu" class="nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-5006" class="vendre menu-item menu-item-type-custom menu-item-object-custom menu-item-5006 animate-dropdown"><a title="VENDRE" href="/ma-boutique/new-product/">VENDRE</a></li>
-
-
-
-            <?php
-            if (is_user_logged_in() ) : ?>
-
-                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6642" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2773 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-6642 animate-dropdown dropdown active"><a title=" Mon Compte" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="https://www.luzus.fr/mon-compte/"><i class="tm tm-login-register"></i> Mon Compte <span class="caret"></span></a>
-                    <ul role="menu" class=" dropdown-menu">
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6647" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2773 current_page_item menu-item-6647 animate-dropdown active"><a title="Mon Compte" href="https://www.luzus.fr/mon-compte/"><i class="tm tm-login-register"></i> Mon Compte</a></li>
-                        <hr>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6643 animate-dropdown"><a title="Ma boutique" href="https://www.luzus.fr/ma-boutique/"><i class="tm tm-best-brands"></i> Ma boutique</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6644" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6644 animate-dropdown"><a title="Mes Messages" href="https://luzus.fr/mon-compte/support-tickets/"><i class="tm tm-feedback"></i> Mes Messages</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6645" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6645 animate-dropdown"><a title="Mes Achats" href="https://luzus.fr/mon-compte/mes-achats/"><i class="tm tm-shopping-bag"></i> Mes Achats</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a title="Mes informations" href="https://luzus.fr/mon-compte/infos-compte/"><i class="tm tm-listing-large"></i> Mes informations</a></li>
-                        <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a class="redLink" title="DÃ©connexion" href="https://luzus.fr/mon-compte/customer-logout/"><i class="tm tm-close"></i> DÃ©connexion</a></li>
-                    </ul>
-                </li>
-
-                <?php
-            else : ?>
-
-                <li class="menu-item"><a title="Inscription / Connexion" href="https://www.luzus.fr/mon-compte/"><i class="tm tm-laptop"></i>Inscription / Connexion</a></li>
-
-
-                <?php
-            endif; ?>
+			<ul id="menu-secondary-menu" class="nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-5006" class="vendre menu-item menu-item-type-custom menu-item-object-custom menu-item-5006 animate-dropdown"><a title="VENDRE" href="/ma-boutique/new-product/">VENDRE</a></li>
 
 
 
+				<?php
+				if (is_user_logged_in() ) : ?>
 
-    </nav><!-- #secondary-navigation -->
+					<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6642" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2773 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-6642 animate-dropdown dropdown active"><a title=" Mon Compte" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" href="https://www.luzus.fr/mon-compte/"><i class="tm tm-login-register"></i> Mon Compte <span class="caret"></span></a>
+						<ul role="menu" class=" dropdown-menu">
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6647" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2773 current_page_item menu-item-6647 animate-dropdown active"><a title="Mon Compte" href="https://www.luzus.fr/mon-compte/"><i class="tm tm-login-register"></i> Mon Compte</a></li>
+							<hr>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6643 animate-dropdown"><a title="Ma boutique" href="https://www.luzus.fr/ma-boutique/"><i class="tm tm-best-brands"></i> Ma boutique</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6644" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6644 animate-dropdown"><a title="Mes Messages" href="https://luzus.fr/mon-compte/support-tickets/"><i class="tm tm-feedback"></i> Mes Messages</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6645" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6645 animate-dropdown"><a title="Mes Achats" href="https://luzus.fr/mon-compte/mes-achats/"><i class="tm tm-shopping-bag"></i> Mes Achats</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a title="Mes informations" href="https://luzus.fr/mon-compte/infos-compte/"><i class="tm tm-listing-large"></i> Mes informations</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a class="redLink" title="DÃ©connexion" href="https://luzus.fr/mon-compte/customer-logout/"><i class="tm tm-close"></i> DÃ©connexion</a></li>
+						</ul>
+					</li>
 
-    <div id="user-image-secondary-navigation">
-        <?php
-        if (is_user_logged_in() ) :
-            $current_user = wp_get_current_user();
+					<?php
+				else : ?>
 
-            if ( ($current_user instanceof WP_User) ) {
-                echo get_avatar( $current_user->user_email, 25 );
-            }
-
-        endif;
-        ?>
-    </div>
-    <?php
-
-
-}
-
-add_action( 'techmarket_header_v1', 'techmarket_secondary_navigation', 30 );
+					<li class="menu-item"><a title="Inscription / Connexion" href="https://www.luzus.fr/mon-compte/"><i class="tm tm-laptop"></i>Inscription / Connexion</a></li>
 
 
-function wpMail_set_content_type(){
+					<?php
+				endif; ?>
 
-    return "text/html";
+		</nav><!-- #secondary-navigation -->
 
-}
-add_filter( 'wp_mail_content_type','wpMail_set_content_type' );
+		<div id="user-image-secondary-navigation">
+			<?php
+			if (is_user_logged_in() ) :
+				$current_user = wp_get_current_user();
+
+				if ( ($current_user instanceof WP_User) ) {
+					echo get_avatar( $current_user->user_email, 25 );
+				}
+
+			endif;
+			?>
+		</div>
+		<?php
+
+
+	}
+
+	add_action( 'techmarket_header_v1', 'techmarket_secondary_navigation', 30 );
 
 /* END HEADER TECHMARKET */
 
@@ -240,38 +235,38 @@ add_filter( 'wp_mail_content_type','wpMail_set_content_type' );
 
 /* FOOTER TECHMARKET */
 
-function techmarket_footer_site_info () {
+	function techmarket_footer_site_info () {
+		
+		$website_title_with_url     = sprintf( '<a href="%s">%s</a>', esc_url( home_url( '/' ) ), get_bloginfo( 'name' ) );
+		$footer_copyright_text      = apply_filters( 'techmarket_footer_copyright_text', sprintf( esc_html__( 'Copyright &copy; %s %s Theme. All rights reserved.', 'techmarket' ), date( 'Y' ), $website_title_with_url ) );
+		$footer_credit_text         = apply_filters( 'techmarket_footer_credit_text', sprintf( esc_html__( 'Made with %s', 'techmarket' ), '<i class="fa fa-heart"></i>' ) );
 
-    $website_title_with_url     = sprintf( '<a href="%s">%s</a>', esc_url( home_url( '/' ) ), get_bloginfo( 'name' ) );
-    $footer_copyright_text      = apply_filters( 'techmarket_footer_copyright_text', sprintf( esc_html__( 'Copyright &copy; %s %s Theme. All rights reserved.', 'techmarket' ), date( 'Y' ), $website_title_with_url ) );
-    $footer_credit_text         = apply_filters( 'techmarket_footer_credit_text', sprintf( esc_html__( 'Made with %s', 'techmarket' ), '<i class="fa fa-heart"></i>' ) );
+		if ( apply_filters( 'techmarket_footer_site_info', true ) ) : ?>
 
-    if ( apply_filters( 'techmarket_footer_site_info', true ) ) : ?>
+			<div class="site-info">
+			<div class="col-full">
+				<div class="copyright">
+					<?php echo 'Copyright Â© ' . date('Y') . ' <a href="https://luzus.fr" title="LUZUS.fr"/>LUZUS</a> | Tous droits rÃ©servÃ©s. ';?>
+				</div>
+				<div class="credit"><?php echo wp_kses_post( $footer_credit_text ); ?></div>
+			</div>
+			</div><?php
 
-        <div class="site-info">
-        <div class="col-full">
-            <div class="copyright">
-                <?php echo 'Copyright Â© ' . date('Y') . ' <a href="https://luzus.fr" title="LUZUS.fr"/>LUZUS</a> | Tous droits rÃ©servÃ©s. ';?>
-            </div>
-            <div class="credit"><?php echo wp_kses_post( $footer_credit_text ); ?></div>
-        </div>
-        </div><?php
+		endif;
 
-    endif;
+	}
 
-}
-
-add_action( 'techmarket_footer_v1', 'techmarket_footer_site_info', 50 );
+	add_action( 'techmarket_footer_v1', 'techmarket_footer_site_info', 50 );
 
 /* END FOOTER TECHMARKET */
 
 
-add_filter( 'woocommerce_product_subcategories_hide_empty', 'hide_empty_categories', 10, 1 );
-function hide_empty_categories ( $hide_empty ) {
-    $hide_empty  =  FALSE;
-    // You can add other logic here too
-    return $hide_empty;
-}
+	add_filter( 'woocommerce_product_subcategories_hide_empty', 'hide_empty_categories', 10, 1 );
+	function hide_empty_categories ( $hide_empty ) {
+		$hide_empty  =  FALSE;
+		// You can add other logic here too
+		return $hide_empty;
+	}
 
 
 
@@ -281,13 +276,12 @@ function hide_empty_categories ( $hide_empty ) {
 
 /* MODIFY DOKAN MENU ITEMS */
 
-function modify_menu_moncompte_dokan_add_seller_nav($urls)
-{
+function modify_menu_moncompte_dokan_add_seller_nav($urls) {
 
     $urls['dashboard']['icon'] = '<i class="fa fa-shopping-bag"></i>';
     $urls['products']['title'] = 'Mes annonces';
-    $urls['settings']['title'] = 'ParamÃ¨tres';
-    $urls['settings']['icon'] = '<i class="fa fa-cogs"></i>';
+    //$urls['settings']['title'] = 'ParamÃ¨tres';
+    //$urls['settings']['icon'] = '<i class="fa fa-cogs"></i>';
     $urls['products']['icon'] = '<i class="fa fa-desktop"></i>';
     $urls['orders']['title'] = 'Mes ventes';
     $urls['orders']['icon'] = '<i class="fa fa-list-ul "></i>';
@@ -301,16 +295,15 @@ add_filter('dokan_get_dashboard_nav', 'modify_menu_moncompte_dokan_add_seller_na
 
 
 /* END ADD DOKAN MENU ITEMS */
-function moncompte_dokan_add_seller_nav($common_links)
-{
+function moncompte_dokan_add_seller_nav($common_links) {
 
     $common_links = '<li class="dokan-common-links dokan-clearfix">
             <a title="' . __('Mon compte', 'dokan-lite') . '" class="tips" data-placement="top" href="' . dokan_get_navigation_url('mon-compte') . '"><i class="fa fa-arrow-left"></i></a>
-
-            <a title="' . __('Visit Store', 'dokan-lite') . '" class="tips" data-placement="top" href="' . dokan_get_store_url(get_current_user_id()) . '" target="_blank"><i class="fa fa-eye"></i></a>
-            
-            <a title="' . __('Log out', 'dokan-lite') . '" class="tips" data-placement="top" href="' . wp_logout_url(home_url()) . '"><i class="fa fa-power-off"></i></a>
         </li>';
+	
+	/*<a title="' . __('Visit Store', 'dokan-lite') . '" class="tips" data-placement="top" href="' . dokan_get_store_url(get_current_user_id()) . '" target="_blank"><i class="fa fa-eye"></i></a>
+            
+            <a title="' . __('Log out', 'dokan-lite') . '" class="tips" data-placement="top" href="' . wp_logout_url(home_url()) . '"><i class="fa fa-power-off"></i></a>*/
 
 
     return $common_links;
@@ -381,8 +374,7 @@ add_filter('dokan_get_dashboard_settings_nav', 'modify_sub_settings_dokan_add_se
 /* ADD MA BOUTIQUE ITEM (Ma boutique) MY ACCOUNT MENU */
 
 add_filter('woocommerce_account_menu_items', 'woocommerce_one_more_link');
-function woocommerce_one_more_link($menu_links)
-{
+function woocommerce_one_more_link($menu_links) {
 
     // we will hook "ma_boutique" later
     $new = array('ma_boutique' => 'Ma boutique');
@@ -577,7 +569,6 @@ function woocommerce_menu_mon_compte()
         'support-tickets' => __('Messages', 'woocommerce'),
         'ma_boutique' => __('Ma boutique', 'woocommerce'),
         'orders' => __('Mes achats', 'woocommerce'),
-        //'edit-address'       => __( 'Mes adresses', 'woocommerce' ),
         'porte-monnaie' => __('Mon porte-monnaie', 'woocommerce'),
         'infos-compte' => __('Mes informations', 'woocommerce'),
         'luzus-support' => __('Support LUZUS', 'woocommerce'),
