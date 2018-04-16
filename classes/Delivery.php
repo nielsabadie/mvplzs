@@ -12,7 +12,7 @@
 
  */
 
-Class Delivery
+class Delivery
 
 {
 
@@ -46,9 +46,9 @@ Class Delivery
 
     {
 
-        $key = "+XEomjeMKPpvF8wY/9cw88mtgS2E41Ay/uJhFnv5HhdNYeqwQwHssZOXOcdgoWMG";
+        $key = "SbxLXcuev+lGeQzS74MSyYvw7ko3jJY/3DhgP4x4zEMiSGCah58QJ7ie4x0zmtCS";
 
-        $request = wp_remote_get("https://api.laposte.fr/tarifenvoi/v1/?type=colis&poids=" . $weight, array(
+        $request = wp_remote_get("https://api.laposte.fr/tarifenvoi/v1/?type=colis&poids=" . $weight*1000, array(
 
             'headers' => array(
 
@@ -61,7 +61,8 @@ Class Delivery
         ));
 
         $result = json_decode($request['body']);
-
+		
+		
         return $result[0]->price;
 
     }
