@@ -11,7 +11,7 @@
 
       	<li><img src="https://www.luzus.fr/wp-content/uploads/2018/03/credit-card.svg" title="Carte Bancaire"/>Carte bancaire</li>
        	
-        <li><img src="https://www.luzus.fr/wp-content/uploads/2018/03/notes.svg" title="Carte Bancaire"/>Virement</li>
+        <!--<li><img src="https://www.luzus.fr/wp-content/uploads/2018/03/notes.svg" title="Carte Bancaire"/>Virement</li>-->
 	
         <!--<li><img src="https://www.luzus.fr/wp-content/uploads/2018/03/wallet.svg" title="Carte Bancaire"/>E-wallet Luzus</li>-->
 
