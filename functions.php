@@ -1614,9 +1614,9 @@ function woocommerce_custom_surcharge() {
     if ( is_admin() && ! defined( 'DOING_AJAX' ) )
         return;
 
-    $percentage = 0.04;
+    $percentage = 0.05;
     $surcharge = (( $woocommerce->cart->cart_contents_total + $woocommerce->cart->shipping_total ) * $percentage) + 0.75;
-    $surcharge =  $surcharge > 50 ? 50.00 : $surcharge;
+    //$surcharge =  $surcharge > 50 ? 50.00 : $surcharge;
     $woocommerce->cart->add_fee("Frais de service", $surcharge, true, '' );
 
 }
