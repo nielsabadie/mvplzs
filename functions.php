@@ -546,11 +546,7 @@ function luzus_support_content()
     ?>
     <div id="container-tickets">
         <div id="create-ticket">
-            <?php echo do_shortcode('[create_support]'); ?>
-        </div>
-
-        <div id="display-tickets">
-            <?php echo do_shortcode('[ticket]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="7560" title="Support Luzus"]'); ?>
         </div>
     </div>
     <?php
