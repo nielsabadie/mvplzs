@@ -168,4 +168,4 @@ text-align: center;
 }
 
 
-add_shortcode('mp_wallet', 'mpWallet');
+//add_shortcode('mp_wallet', 'mpWallet');

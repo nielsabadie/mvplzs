@@ -570,7 +570,7 @@ function woocommerce_menu_mon_compte()
         'support-tickets' => __('Messages', 'woocommerce'),
         'ma_boutique' => __('Ma boutique', 'woocommerce'),
         'orders' => __('Mes achats', 'woocommerce'),
-        'porte-monnaie' => __('Mon porte-monnaie', 'woocommerce'),
+        //'porte-monnaie' => __('Mon porte-monnaie', 'woocommerce'),
         'infos-compte' => __('Mes informations', 'woocommerce'),
         'luzus-support' => __('Support LUZUS', 'woocommerce'),
         'customer-logout' => __('Déconnexion', 'woocommerce'),
