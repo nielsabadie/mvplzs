@@ -329,21 +329,8 @@ do_action('dokan_new_product_wrap_before');
 
                                         <div style="padding: 20px 0 20px 0" class="shipping-mode">
                                             <h3>Poids du colis</h3>
-                                            
-                                            <div class="form-group">
-											  <label for="sel1">Select list (select one):</label>
-											  <select class="form-control select2 select2-container select2-container--default" id="sel1">
-												<option <?//= $product->get_weight() === '0.25' ? 'checked' : '' ?> value="0.25" id="value-250-g">250g</option>
-												<option <?//= $product->get_weight() === '0.50' ? 'checked' : '' ?> value="0.5" id="value-500-g">500g</option>
-												<option <?//= $product->get_weight() === '1' ? 'checked' : '' ?> value="1" id="value-1-kg">1kg</option>
-												<option <?//= $product->get_weight() === '2' ? 'checked' : '' ?> value="2" id="value-2-kg">2kg</option>
-												<option <?//= $product->get_weight() === '5' ? 'checked' : '' ?> value="5" id="value-5-kg">5kg</option>
-												<option <?//= $product->get_weight() === '10' ? 'checked' : '' ?> value="10" id="value-10-kg">10kg</option>
-												<option <?//= $product->get_weight() === '30' ? 'checked' : '' ?> value="30" id="value-30-kg">30kg max</option>
-											  </select>
-											</div>
 
-                                            <!--<div class="dokan-form-group-2">
+                                            <div class="dokan-form-group-2">
                                                 <input type="radio" name="product_weight" value="1" id="value-1-kg" required/><label style="margin-left: 5px" for="value-1-kg"> 1 kg max.</label>
                                                 <p>Convient parfaitement pour des petits objets comme un smartphone, une tablette, une montre connectée, etc.</p>
                                             </div>
@@ -361,9 +348,10 @@ do_action('dokan_new_product_wrap_before');
                                             <div class="dokan-form-group-2">
                                                 <input type="radio" name="product_weight" value="10" id="value-10-kg" required/><label style="margin-left: 5px" for="value-10-kg"> 10 kg max.</label>
                                                 <p>Convient pour des produits très lourds et volumineux.</p>
-                                            </div>-->
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
 
