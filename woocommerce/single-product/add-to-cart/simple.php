@@ -69,3 +69,11 @@ if ( $product->is_in_stock() ) : ?>
 
 <?php endif; ?>
 
+    
+<div class="w-100">
+    <?php $yithCompare = new YITH_Woocompare_Frontend;?>
+    <?php 
+        $productId = $product->get_id();
+        $yithCompare->add_compare_link($productId, array('button_or_link' => 'link', 'button_text' => '+ Comparer'));
+    ?>
+</div>
