@@ -151,32 +151,63 @@ add_shortcode('testTemplate', 'testTemplateEmail');
 /* END SETTINGS CART WIDGET */
 
 
-	function woocommerce_template_loop_product_description () {
+function woocommerce_template_loop_product_description () {
 
-		global $product;
-        var_dump($product);
-        $productAttributes = $product->get_attributes();
-        ?><br><br><br><hr><?php
-        var_dump($productAttributes);
+    global $product;	
+    //var_dump($product);
 
-		$productId = $product->get_id();
-		$productTitle = $product->post->post_title;
-		$productDescription = $product->post->post_content;
-		$maxDescriptionLength = 200;
-		$limitedDescription = substr($productDescription, 0, $maxDescriptionLength).' ...';
-		$productUrl = get_permalink( $productId );
+    $productId = $product->get_id();
+    $productTitle = $product->post->post_title;
+    $productDescription = $product->post->post_content;
+    $maxDescriptionLength = 200;
+    $limitedDescription = substr($productDescription, 0, $maxDescriptionLength).' ...';
+    $productUrl = get_permalink( $productId );
+    $productTags = $product->get_tags( $product );
 
-		echo 
-			'<div class="productDescription" style="margin-top: 10px">
-				<a href="' . $productUrl . '" title="' . $productTitle . '">'
-				. esc_html($limitedDescription) . 
-				'</a>
-			</div>';
+    echo 
+        '<div class="productDescription" style="margin-top: 10px">
+            <a href="' . $productUrl . '" title="' . $productTitle . '">'
+            . esc_html($limitedDescription) . 
+            '</a>
+        </div>';
 
-		return;
-	}
+    return;
+}
 
-	add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop_product_description', 30 );
+add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop_product_description', 30 );
+
+
+function woocommerce_template_loop_product_tags () {
+
+    global $product;	
+
+    // get product_tags of the current product
+    $current_tags = get_the_terms( get_the_ID(), 'product_tag' );
+    
+    //only start if we have some tags
+    if ( $current_tags && ! is_wp_error( $current_tags ) ) { 
+    
+        //create a list to hold our tags
+        echo '<ul class="product_tags">';
+    
+        //for each tag we create a list item
+        foreach ($current_tags as $tag) {
+    
+            $tag_title = $tag->name; // tag name
+            $tag_link = get_term_link( $tag );// tag archive link
+    
+            echo '<li><a href="'.$tag_link.'">'.$tag_title.'</a></li>';
+        }
+    
+        echo '</ul>';
+    }
+}
+
+add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop_product_tags', 50 );
+
+
+
+
 
 
 /* HEADER TECHMARKET */
