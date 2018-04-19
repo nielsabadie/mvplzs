@@ -154,7 +154,7 @@ add_shortcode('testTemplate', 'testTemplateEmail');
 	function woocommerce_template_loop_product_description () {
 
 		global $product;
-		//var_dump($product->post);
+		var_dump($product->post);
 		$productId = $product->get_id();
 		$productTitle = $product->post->post_title;
 		$productDescription = $product->post->post_content;
