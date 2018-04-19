@@ -871,48 +871,58 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 	<div class="container-fluid" id="mes-infos-list">
 		<div class="row">
-			<div class="col-sm-12 no-padding-left">
-				<p>
-					<strong>Nom : </strong></strong><span id="user_first_name"><?php echo $iban->OwnerName ?></span>
-				</p>
-			</div>
+		<?php var_dump($iban);?>
+			<?php if (!empty($iban)) {
+				?><div class="col-sm-12 no-padding-left">
+					<p>
+						<strong>Nom : </strong></strong><span id="user_first_name"><?php echo $iban->OwnerName ?></span>
+					</p>
+				</div>
 
-			<div class="col-sm-6 no-padding-left">
-				<p>
-					<strong>Adresse ligne 1 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine1 ?></span>
-				</p>
-				
-			</div>
+				<div class="col-sm-6 no-padding-left">
+					<p>
+						<strong>Adresse ligne 1 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine1 ?></span>
+					</p>
+					
+				</div>
 
-			<div class="col-sm-6 no-padding-left">
-				<p>
-					<strong>Adresse ligne 2 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine2 ?></span>
-				</p>
-			</div>
+				<div class="col-sm-6 no-padding-left">
+					<p>
+						<strong>Adresse ligne 2 : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->AddressLine2 ?></span>
+					</p>
+				</div>
 
-			<div class="col-sm-6 no-padding-left">
-				<p>
-					<strong>Code Postal : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->PostalCode ?></span>
-				</p>
-			</div>
+				<div class="col-sm-6 no-padding-left">
+					<p>
+						<strong>Code Postal : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->PostalCode ?></span>
+					</p>
+				</div>
 
-			<div class="col-sm-6 no-padding-left">
-				<p>
-					<strong>Ville : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->City ?></span>
-				</p>
-			</div>
+				<div class="col-sm-6 no-padding-left">
+					<p>
+						<strong>Ville : </strong><span id="user_last_name"><?php echo $iban->OwnerAddress->City ?></span>
+					</p>
+				</div>
 
-			<div class="col-sm-12 no-padding-left">
-				<p>
-					<strong>IBAN : </strong><span id="billing_phone"><?php echo $iban->Details->IBAN?></span>
-				</p>
-			</div>
+				<div class="col-sm-12 no-padding-left">
+					<p>
+						<strong>IBAN : </strong><span id="billing_phone"><?php echo $iban->Details->IBAN?></span>
+					</p>
+				</div>
 
-			<div class="col-sm-12 no-padding-left">
-				<p>
-					<strong>BIC : </strong><?php echo $iban->Details->BIC ?>
-				</p>
-			</div>
+				<div class="col-sm-12 no-padding-left">
+					<p>
+						<strong>BIC : </strong><?php echo $iban->Details->BIC ?>
+					</p>
+				</div><?php
+
+			} else {
+				?><div class="col-sm-12 no-padding-left">
+					<p>
+						<strong>Aucune information bancaire nous est transmise pour récupérer votre argent.</strong>
+					</p>
+				</div><?php
+			};?>
 		</div>
 	</div>
 
