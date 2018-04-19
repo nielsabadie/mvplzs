@@ -871,7 +871,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 	<div class="container-fluid" id="mes-infos-list">
 		<div class="row">
-		<?php var_dump($iban);?>
+		<?php //var_dump($iban);?>
 			<?php if (!empty($iban)) {
 				?><div class="col-sm-12 no-padding-left">
 					<p>
@@ -919,7 +919,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			} else {
 				?><div class="col-sm-12 no-padding-left">
 					<p>
-						<strong>Aucune information bancaire nous est transmise pour récupérer votre argent.</strong>
+						<strong>Aucune information bancaire nous est transmise pour vous permettre de récupérer votre argent.</strong>
 					</p>
 				</div><?php
 			};?>
