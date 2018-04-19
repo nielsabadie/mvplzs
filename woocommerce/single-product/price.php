@@ -69,6 +69,8 @@ echo '</pre>';*/
 
 //singleProductAttribute($product, 'pa_brand', 'Marque');
 
+singleProductAttribute($product, 'pa_anciennete', 'Anciennetée');
+
 singleProductAttribute($product, 'pa_etat', 'Etat');
 
 singleProductAttribute($product, 'pa_color', 'Couleur');
