@@ -69,7 +69,7 @@ echo '</pre>';*/
 
 //singleProductAttribute($product, 'pa_brand', 'Marque');
 
-singleProductAttribute($product, 'pa_anciennete', 'Anciennetée');
+singleProductAttribute($product, 'pa_anciennete', 'Ancienneté');
 
 singleProductAttribute($product, 'pa_etat', 'Etat');
 
