@@ -870,3 +870,17 @@ p {
 .order-reference {
     display: none !important;
 }
+
+
+/* KYC MY INFORMATIONS PAGE */
+
+.kyc_list_documents_banner.light {
+    background-color: #084399;
+}
+
+.kyc_list_documents_ul .kyc.not_sent::after {
+    background-color: #FF9700;
+}
+
+
+/* END KYC MY INFORMATIONS PAGE */

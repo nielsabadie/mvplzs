@@ -680,7 +680,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 							if($mp->get_mp_user($mp_user_id)->KYCLevel == "REGULAR") {
 								echo '
 							<div class="dokan-alert dokan-alert-success" id="d_v_address_feedback">
-								Votre compte est verifié
+								Votre compte est verifié 👍
 							</div>
 							';
 
@@ -690,7 +690,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 								?>
 								<!-- Button trigger modal -->
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#verifyIdModal">
+								<button style="display: block" type="button" class="btn btn-second" data-toggle="modal" data-target="#verifyIdModal">
 								Vérifier mon compte
 								</button>
 
