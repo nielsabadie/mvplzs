@@ -793,11 +793,14 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 														echo $provider_info['displayName'] ?></a></div>
 
-												<?php if ( !empty($provider_info['email']) ) {
-													echo '<p style="display:inline-block">E-mail : </p>';
-												}
-												?>
-												<div class="dokan-w8"><?php echo $provider_info['email'] ?></div>
+												
+												<div class="dokan-w8">	
+													<?php if ( !empty($provider_info['email']) ) {
+														echo '<p style="display:inline-block">E-mail : </p>';
+													}
+													?>
+													<?php echo $provider_info['email'] ?>
+												</div>
 											</div>
 
 											<div class="dokan_verify_dc_button">
