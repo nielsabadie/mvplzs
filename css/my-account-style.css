@@ -875,11 +875,13 @@ p {
 /* KYC MY INFORMATIONS PAGE */
 
 .kyc_list_documents_banner.light {
-    background-color: #084399;
+    background-color: #084399 !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
 }
 
 .kyc_list_documents_ul .kyc.not_sent::after {
-    background-color: #FF9700;
+    color: #FF9700 !important;
 }
 
 

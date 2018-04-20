@@ -690,7 +690,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 								?>
 								<!-- Button trigger modal -->
-								<button style="display: block" type="button" class="btn btn-second" data-toggle="modal" data-target="#verifyIdModal">
+								<button style="display: block; margin-bottom: 20px;" type="button" class="btn btn-second" data-toggle="modal" data-target="#verifyIdModal">
 								Vérifier mon compte
 								</button>
 
@@ -770,7 +770,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 								<?php if ( !isset( $provider_info ) || $provider_info == '' ) { ?>
 									<a href="<?php echo add_query_arg( array( 'dokan_auth' => $provider ) ); ?>">
-										<button class="btn btn-default .btn-sm btn-second">
+										<button style="display: block; margin-bottom: 8px;" class="btn btn-default .btn-sm btn-second">
 											<?php
 											_e( 'Connect ', 'dokan' );
 											echo ucwords( $provider );
