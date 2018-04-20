@@ -772,7 +772,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 									<a href="<?php echo add_query_arg( array( 'dokan_auth' => $provider ) ); ?>">
 										<button style="display: block; margin-bottom: 8px;" class="btn btn-default .btn-sm btn-second">
 											<?php
-											if ($provider == 'facebook') { echo '<i class="fa fa-facebook-square" ></i>'; } elseif ($provider == 'twitter') { echo '<i class="fa fa-twitter-square" ></i>'; } elseif ($provider == 'google') { echo '<i class="fa fa-google-plus-square" ></i>'; }
+											if ($provider == 'facebook') { echo '<i style="margin-right:5px" class="fa fa-facebook" ></i>'; } elseif ($provider == 'twitter') { echo '<i style="margin-right:5px" class="fa fa-twitter" ></i>'; } elseif ($provider == 'google') { echo '<i style="margin-right:5px" class="fa fa-google-plus" ></i>'; }
 											_e( 'Connect ', 'dokan' );
 											echo ucwords( $provider );
 											?>
