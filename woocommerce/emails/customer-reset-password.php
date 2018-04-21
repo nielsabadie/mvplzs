@@ -643,7 +643,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
    
    
-   
    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
         <tr>
@@ -659,6 +658,22 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <td class="mcnDividerBlockInner" style="padding: 18px;">
                 <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
 -->
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
+    <tbody class="mcnButtonBlockOuter">
+        <tr>
+            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
+                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 3px;background-color: #3AB5E7;">
+                    <tbody>
+                        <tr>
+                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Helvetica; font-size: 18px; padding: 18px;">
+                                <a class="mcnButton " title="Voir le produit" href="<?php echo $data['product_link']?>" target="_blank" style="font-weight: bold;letter-spacing: -0.5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Voir / Modérer le produit</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </td>
         </tr>
     </tbody>
@@ -696,8 +711,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            Merci de votre confiance et à très bientôt,<br>
-							<em><strong>L'équipe LUZUS</strong></em>
+                            Message automatisé lors de la création d'un produit par un utilisateur.
                         </td>
                     </tr>
                 </tbody></table>
@@ -878,8 +892,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <strong>Envie de parler avec un humain ?</strong><br>
 hello@luzus.fr<br>
 <br>
-Vous recevez cet email car nous nous sommes rencontrés sur l'Internet mondial<br>
-									<unsubscribe style="color: #888888; text-decoration: underline;"></unsubscribe> </td></tr></tbody></table></td></tr></tbody></table></td>
+Vous recevez cet email car nous nous sommes rencontrés sur l'Internet mondial </td></tr></tbody></table></td></tr></tbody></table></td>
 										</tr>
 									</table>
 									<!--[if (gte mso 9)|(IE)]>
