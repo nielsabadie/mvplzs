@@ -21,24 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }?>
 
 
-
-
-<?php
-/**
- * Product published Email.
- *
- * An email sent to the vendor when a new Product is published from pending.
- *
- * @class       Dokan_Email_Product_Published
- * @version     2.6.8
- * 
- */
-
-if ( ! defined( 'ABSPATH' ) ) {
-    exit;
-}?>
-
-
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 	<head>
@@ -689,22 +671,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <td class="mcnDividerBlockInner" style="padding: 18px;">
                 <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
 -->
-            </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 3px;background-color: #3AB5E7;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Helvetica; font-size: 18px; padding: 18px;">
-                                <a class="mcnButton " title="Voir mon produit" href="<?php echo $data['product_url']?>" target="_blank" style="font-weight: bold;letter-spacing: -0.5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Voir mon produit</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </td>
         </tr>
     </tbody>
