@@ -303,7 +303,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	@section Footer Interior Style
 	*/
 		.footerContainer{
-			/*@editable*/background-color:transparent;
+			/*@editable*/background-color:#333333;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
@@ -318,7 +318,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	@section Footer Text
 	*/
 		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
-			/*@editable*/color:#FFFFFF;
+			/*@editable*/color:#333333;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:12px;
 			/*@editable*/line-height:150%;
@@ -610,10 +610,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                    	 
                      <tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            Hello,
+                            Hello,<br><br>
                             <?php _e( 'Someone requested that the password be reset for the following account:', 'woocommerce' ); ?>
-                            <?php printf( __( 'Username: %s', 'woocommerce' ), $user_login ); ?>
-                            <?php _e( 'If this was a mistake, just ignore this email and nothing will happen.', 'woocommerce' ); ?>
+                            <?php printf( __( 'Username: %s', 'woocommerce' ), $user_login ); ?><br><br>
+                            <?php _e( 'If this was a mistake, just ignore this email and nothing will happen.', 'woocommerce' ); ?><br><br>
                             <?php _e( 'To reset your password, visit the following address:', 'woocommerce' ); ?>
                         </td>
                     </tr>
@@ -658,22 +658,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <td class="mcnDividerBlockInner" style="padding: 18px;">
                 <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
 -->
-            </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 3px;background-color: #3AB5E7;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Helvetica; font-size: 18px; padding: 18px;">
-                                <a class="mcnButton " title="Voir le produit" href="<?php echo $data['product_link']?>" target="_blank" style="font-weight: bold;letter-spacing: -0.5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Voir / Modérer le produit</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
             </td>
         </tr>
     </tbody>
@@ -783,7 +767,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                                             
                                                                             
                                                                                 <td align="left" valign="middle" class="mcnFollowTextContent" style="padding-left:5px;">
-                                                                                    <a href="http://www.facebook.com" target="" style="font-family: Helvetica;font-size: 14px;text-decoration: none;color: #FFFFFF;">L'union fait la force</a>
+                                                                                    <a href="http://www.facebook.com" target="" style="font-family: Helvetica;font-size: 14px;text-decoration: none;color: #333333;">L'union fait la force</a>
                                                                                 </td>
                                                                             
                                                                         </tr>
@@ -819,7 +803,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                                             
                                                                             
                                                                                 <td align="left" valign="middle" class="mcnFollowTextContent" style="padding-left:5px;">
-                                                                                    <a href="http://www.youtube.com" target="" style="font-family: Helvetica;font-size: 14px;text-decoration: none;color: #FFFFFF;">On fait des vidéos bizarres</a>
+                                                                                    <a href="http://www.youtube.com" target="" style="font-family: Helvetica;font-size: 14px;text-decoration: none;color: #333333;">On fait des vidéos bizarres</a>
                                                                                 </td>
                                                                             
                                                                         </tr>
