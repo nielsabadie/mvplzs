@@ -318,7 +318,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	@section Footer Text
 	*/
 		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{
-			/*@editable*/color:#333333;
+			/*@editable*/color:#FFFFFF;
 			/*@editable*/font-family:Helvetica;
 			/*@editable*/font-size:12px;
 			/*@editable*/line-height:150%;
