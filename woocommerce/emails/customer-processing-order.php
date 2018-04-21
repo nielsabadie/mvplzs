@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }?>
 
+
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 	<head>
@@ -511,7 +512,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }</style></head>
     <body>
 		<!--*|IF:MC_PREVIEW_TEXT|*-->
-		<!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">👏 Félicitations, votre achat est en cours !</span><!--<![endif]-->
+		<!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">[Notification] Nouveau produit</span><!--<![endif]-->
 		<!--*|END:IF|*-->
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
@@ -609,18 +610,20 @@ if ( ! defined( 'ABSPATH' ) ) {
                    	 
                      <tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                           	<p>👋 Hello,</p>
-                            <?php _e( "Your order has been received and is now being processed. Your order details are shown below for your reference:", 'woocommerce' ); ?><br><br>
-                            <hr>
+						<p>👋 Hello,</p>
+						<?php _e( "Your order has been received and is now being processed. Your order details are shown below for your reference:", 'woocommerce' ); ?><br><br>
                         </td>
                     </tr>
                     <tr>
                     	<td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            <?php do_action( 'woocommerce_email_order_details', $order, $sent_to_admin, $plain_text, $email );
+							<?php do_action( 'woocommerce_email_order_details', $order, $sent_to_admin, $plain_text, $email );
 
 							do_action( 'woocommerce_email_order_meta', $order, $sent_to_admin, $plain_text, $email );
 
 							do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email );?>
+                            
+						   <?php do_action( 'woocommerce_email_footer', $email );?>
+						   
                         </td>
                     </tr>
                 </tbody></table>
@@ -641,6 +644,24 @@ if ( ! defined( 'ABSPATH' ) ) {
    
    
    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
+    <tbody class="mcnDividerBlockOuter">
+        <tr>
+            <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
+                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
+                    <tbody><tr>
+                        <td>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--            
+                <td class="mcnDividerBlockInner" style="padding: 18px;">
+                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
     <tbody class="mcnDividerBlockOuter">
         <tr>
             <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
@@ -875,6 +896,5 @@ Vous recevez cet email car nous nous sommes rencontrés sur l'Internet mondial<b
         </center>
     </body>
 </html>
-
 
 <?php
