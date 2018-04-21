@@ -922,3 +922,14 @@ input[type=submit] {
 .deleteAccount:hover::before {
     content: '😭';
 }
+
+
+/* Track Order / Suivi Livraison */
+
+.woocommerce .track_order,
+#post-464 .woocommerce-order-details {
+    padding: 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
