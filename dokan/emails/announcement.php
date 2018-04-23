@@ -296,7 +296,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	@section Footer Interior Style
 	*/
 		.footerContainer{
-			/*@editable*/background-color:transparent;
+			/*@editable*/background-color:#333333;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
@@ -505,7 +505,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }</style></head>
     <body>
 		<!--*|IF:MC_PREVIEW_TEXT|*-->
-		<!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">Ça bouge chez Luzus</span><!--<![endif]-->
+		<!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">[Annonce] Ça bouge chez Luzus !</span><!--<![endif]-->
 		<!--*|END:IF|*-->
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
@@ -596,20 +596,20 @@ if ( ! defined( 'ABSPATH' ) ) {
                     
                    	 <tr>
                    	 	<td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                       	<h1><?php echo $email_heading ?> ⚡️</h1><br>
+                       	<h1 style="text-align:left"><?php echo $email_heading ?></h1><br>
                        	<hr>
                        </td>
                    	 </tr>
                    	 
                      <tr>
-                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            Hello,<br><br>
+						<td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+							Hello,<br><br>
 							<?php echo $data['message'] ?>
-                        </td>
+						</td>
                     </tr>
                     <tr>
-                    	<td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                           
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+                            <?php do_action( 'woocommerce_email_footer', $email );?>
                         </td>
                     </tr>
                 </tbody></table>
@@ -626,40 +626,35 @@ if ( ! defined( 'ABSPATH' ) ) {
     </tbody>
 </table>
 
-   
-   
-   
-   <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnDividerBlock" style="min-width:100%;">
-    <tbody class="mcnDividerBlockOuter">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
         <tr>
-            <td class="mcnDividerBlockInner" style="min-width:100%; padding:18px;">
-                <table class="mcnDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+              	<!--[if mso]>
+				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+				<tr>
+				<![endif]-->
+			    
+				<!--[if mso]>
+				<td valign="top" width="600" style="width:600px;">
+				<![endif]-->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="mcnTextContentContainer">
                     <tbody><tr>
-                        <td>
-                            <span></span>
+                        
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+                            Merci de votre confiance et à très bientôt,<br>
+							<em><strong>L'équipe LUZUS</strong></em>
                         </td>
                     </tr>
                 </tbody></table>
-<!--            
-                <td class="mcnDividerBlockInner" style="padding: 18px;">
-                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
--->
-            </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnButtonBlock" style="min-width:100%;">
-    <tbody class="mcnButtonBlockOuter">
-        <tr>
-            <td style="padding-top:0; padding-right:18px; padding-bottom:18px; padding-left:18px;" valign="top" align="center" class="mcnButtonBlockInner">
-                <table border="0" cellpadding="0" cellspacing="0" class="mcnButtonContentContainer" style="border-collapse: separate !important;border-radius: 3px;background-color: #3AB5E7;">
-                    <tbody>
-                        <tr>
-                            <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Helvetica; font-size: 18px; padding: 18px;">
-                                <a class="mcnButton " title="Voir l'annonce" <?php echo sprintf( __( 'href="%s"', 'dokan' ), $data['announcement_url'] ) ?> target="_blank" style="font-weight: bold;letter-spacing: -0.5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Voir l'annonce</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+                
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
             </td>
         </tr>
     </tbody>
@@ -678,38 +673,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <td class="mcnDividerBlockInner" style="padding: 18px;">
                 <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
 -->
-            </td>
-        </tr>
-    </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
-    <tbody class="mcnTextBlockOuter">
-        <tr>
-            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
-                    <tbody><tr>
-                        
-                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            Merci de votre confiance et à très bientôt,<br>
-							<em><strong>L'équipe LUZUS</strong></em>
-                        </td>
-                    </tr>
-                </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
             </td>
         </tr>
     </tbody>
@@ -879,8 +842,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <strong>Envie de parler avec un humain ?</strong><br>
 hello@luzus.fr<br>
 <br>
-Vous recevez cet email car nous nous sommes rencontrés sur l'Internet mondial<br>
-									<unsubscribe style="color: #888888; text-decoration: underline;"></unsubscribe> </td></tr></tbody></table></td></tr></tbody></table></td>
+Vous recevez cet email car nous nous sommes rencontrés sur l'Internet mondial </td></tr></tbody></table></td></tr></tbody></table></td>
 										</tr>
 									</table>
 									<!--[if (gte mso 9)|(IE)]>
