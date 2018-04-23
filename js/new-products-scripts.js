@@ -217,5 +217,6 @@ jQuery('document').ready(function($) {
     $("<hr>").insertAfter($(options[0]));
 
     $('.select2-product_cat-result-hxad-2057').remove();
+    $('#product_cat option[value="2057 "]').remove();
 
 });
