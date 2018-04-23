@@ -767,6 +767,15 @@ p {
     color: #000000 !important;
 }
 
+
+/*New product form page*/
+
+#post-3919 .dokan-dashboard-header,
+#post-3919 .dokan-dashboard-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
 .formRow .right .col {
     background: #ffffff;
     border-radius: 2px;

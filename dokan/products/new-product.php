@@ -88,7 +88,6 @@ do_action('dokan_new_product_wrap_before');
                                         
                                         	<h2>Que vendez-vous ?</h2>
                                             <hr>
-                                            <br>
                                         
                                             <div class="row formArea">
                                             	<div id="formCategory" class="col col-sm-12">
@@ -155,7 +154,7 @@ do_action('dokan_new_product_wrap_before');
 
 														<?php
                                                         $category_args = array(
-                                                            'show_option_none' => '- Âge de votre produit -',
+                                                            'show_option_none' => 'Âge de votre produit',
                                                             'hierarchical'     => 1,
                                                             'hide_empty'       => 0,
                                                             'parent'           => 0,
