@@ -753,6 +753,28 @@ p {
 }
 
 
+/* DOKAN "MA BOUTIQUE" MENU */
+
+.dokan-dashboard-menu {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+/* END DOKAN "MA BOUTIQUE" MENU */
+
+.postid-7658 .dokan-pro-edit-breadcrumb,
+.postid-7658 .dokan-edit-sidebar,
+.postid-7658 .toggle-sidebar-container {
+    background-color: #FFFFFF;
+}
+
+.postid-7658 .dokan-form-container {
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+
+
 /* ADD NEW PRODUCT FORM */
 
 .formRow .left {
