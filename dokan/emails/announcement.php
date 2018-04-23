@@ -642,7 +642,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            Merci de votre confiance et à très bientôt,<br>
+                            À très bientôt,<br>
 							<em><strong>L'équipe LUZUS</strong></em>
                         </td>
                     </tr>
