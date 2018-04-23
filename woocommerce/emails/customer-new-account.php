@@ -692,11 +692,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!--[if mso]>
 				<td valign="top" width="600" style="width:600px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                            Merci de votre confiance et à très bientôt,<br>
+                            À très bientôt,<br>
 							<em><strong>L'équipe LUZUS</strong></em>
                         </td>
                     </tr>

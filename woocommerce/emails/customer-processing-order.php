@@ -512,7 +512,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }</style></head>
     <body>
 		<!--*|IF:MC_PREVIEW_TEXT|*-->
-		<!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">[Notification] Nouveau produit</span><!--<![endif]-->
+		<!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">Merci pour votre achat sur Luzus.</span><!--<![endif]-->
 		<!--*|END:IF|*-->
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
@@ -610,7 +610,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                    	 
                      <tr>
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-						<p>👋 Hello,</p>
+						<p>👋 Bonjour,</p>
 						<?php _e( "Your order has been received and is now being processed. Your order details are shown below for your reference:", 'woocommerce' ); ?><br><br>
                         </td>
                     </tr>
@@ -691,7 +691,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!--[if mso]>
 				<td valign="top" width="600" style="width:600px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
