@@ -609,7 +609,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     
                    	 <tr>
                    	 	<td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                       	<h1><?php echo $email_heading ?></h1><br>
+                       	<h1 style="text-align:left"><?php echo $email_heading ?></h1><br>
                        	<hr>
                        </td>
                    	 </tr>
@@ -704,7 +704,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<!--[if mso]>
 				<td valign="top" width="600" style="width:600px;">
 				<![endif]-->
-                <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
