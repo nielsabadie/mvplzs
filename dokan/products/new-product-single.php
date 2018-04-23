@@ -567,7 +567,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
                                         <?php
 
                                         $category_args = array(
-                                            'show_option_none' => 'Âge de votre produit',
+                                            'show_option_none' => '- Âge de votre produit -',
                                             'hierarchical'     => 1,
                                             'hide_empty'       => 0,
                                             'parent'           => 0,
