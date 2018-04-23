@@ -303,7 +303,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	@section Footer Interior Style
 	*/
 		.footerContainer{
-			/*@editable*/background-color:transparent;
+			/*@editable*/background-color:#333333;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
