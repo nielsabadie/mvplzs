@@ -775,6 +775,10 @@ p {
     display: none !important;
 }
 
+#product_cat option["value=2057"] {
+    display: none !important;
+}
+
 
 /*New product form page*/
 
