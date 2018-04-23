@@ -456,7 +456,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
                                         </label>
 
-                                        <input type="hidden" name="dokan_product_id" id="dokan-edit-product-id" value="<?= $post_id; ?>"/>
+                                        <input type="hidden" name="dokan_product_id" id="dokan-edit-product-id" value="<?= $post_id; ?>" maxlength="55"/>
 
                                         <?php dokan_post_input_box($post_id, 'post_title', array('placeholder' => 'Product name..', 'value' => $post->post_title)); ?>
 
@@ -502,9 +502,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
                                         </label>
 
-                                        <textarea class="post_content wp-editor-area" style="height: 150px" cols="40" name="post_content" id="post_content"
-
-                                                  placeholder="Décrivez votre produit et ses caractéristiques techniques en détail. N’oubliez pas de mentionner les éventuels défauts existants !"><?= $post->post_content ?></textarea>
+                                        <textarea class="post_content wp-editor-area" style="height: 150px" cols="40" name="post_content" id="post_content" placeholder="Décrivez votre produit et ses caractéristiques techniques en détail. N’oubliez pas de mentionner les éventuels défauts existants !" maxlength="1600"><?= $post->post_content ?></textarea>
 
                                     </div>
 

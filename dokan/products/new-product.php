@@ -88,6 +88,7 @@ do_action('dokan_new_product_wrap_before');
                                         
                                         	<h2>Que vendez-vous ?</h2>
                                             <hr>
+                                            <br>
                                         
                                             <div class="row formArea">
                                             	<div id="formCategory" class="col col-sm-12">
@@ -216,14 +217,14 @@ do_action('dokan_new_product_wrap_before');
 											<div id="formTitle" class="dokan-form-group col col-sm-12">  
                                             	
                                                 	<label for="post_title" class="dokan-form-label infobulle">Titre de l’annonce</label>
-                                                    <input class="dokan-form-control infobulle" name="post_title" id="post-title" type="text" placeholder="Ex : Drone aérien Parrot BeBop" required>	
+                                                    <input class="dokan-form-control infobulle" name="post_title" id="post-title" type="text" placeholder="Ex : Drone aérien Parrot BeBop" maxlength="55" required>	
                                                 
                                             </div>
                                             
                                             <div id="formDescription" class="dokan-form-group col col-sm-12">
                                                     
                                                 	<label for="post_content" class="control-label">Description détaillée</label>
-													<textarea class="post_content wp-editor-area" style="height: 150px" cols="40" name="post_content" id="post_content" placeholder="Décrivez votre produit et ses caractéristiques techniques en détail. N’oubliez pas de mentionner les éventuels défauts existants !" value="<?= dokan_posted_textarea('post_content') ?>"></textarea>
+													<textarea class="post_content wp-editor-area" style="height: 150px" cols="40" name="post_content" id="post_content" placeholder="Décrivez votre produit et ses caractéristiques techniques en détail. N’oubliez pas de mentionner les éventuels défauts existants !" value="<?= dokan_posted_textarea('post_content') ?>" maxlength="1600"></textarea>
                                              
                                             </div>
                                             
