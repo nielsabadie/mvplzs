@@ -164,7 +164,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
 
 
-        <div class="dokan-dashboard-content dokan-product-edit">
+        <div id="edit-product-page" class="dokan-dashboard-content dokan-product-edit">
 
 
 

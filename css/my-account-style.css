@@ -763,7 +763,7 @@ p {
 
 /* END DOKAN "MA BOUTIQUE" MENU */
 
-.dokan-product-edit {
+#edit-product-page {
     background-color: #FFFFFF !important;
     box-shadow: 0px 0px 3px 0px rgba( 0, 0, 0, 0.2);
     margin-left: 10px;
