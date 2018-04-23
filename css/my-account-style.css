@@ -755,25 +755,24 @@ p {
 
 /* ADD NEW PRODUCT FORM */
 
-.hoverHelper {
-    position: absolute;
-    right: 0px;
-}
-
-.hoverHelper div {
-    background: #ffffff;
-    border-radius: 2px;
-    box-shadow: 0px 0px 3px 1px rgba( 0, 0, 0, 0.2);
-    padding: 20px;
-    /*margin-top: 30px;*/
-}
-
-.hoverHelperArea {
+.formRow .left {
     background: #ffffff;
     border-radius: 2px;
     padding: 20px;
     margin-bottom: 30px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.formRow .left label {
+    color: #000000 !important;
+}
+
+.formRow .right .col {
+    background: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px 1px rgba( 0, 0, 0, 0.2);
+    padding: 20px;
+    /*margin-top: 30px;*/
 }
 
 

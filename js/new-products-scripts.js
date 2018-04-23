@@ -147,23 +147,69 @@ function checkForSubCategory(categoryId, dropdownIndex) {
 
 
 jQuery('document').ready(function($) {
-    $('#newProductCategory').hover(function() { $('#hoverNewProductCategory').delay(100).fadeIn(400); }, function() { $('#hoverNewProductCategory').fadeOut(100); });
 
-    $('#newProductCondition').hover(function() { $('#hoverNewProductCondition').delay(100).fadeIn(400); }, function() { $('#hoverNewProductCondition').fadeOut(100); });
+    $('#formCategory').hover(
+        function() { $('#formCategoryHover').delay(100).fadeIn(400); },
+        function() { $('#formCategoryHover').fadeOut(100); }
+    );
 
-    $('#newProductTitle').hover(function() { $('#hoverNewProductTitle').delay(100).fadeIn(400); }, function() { $('#hoverNewProductTitle').fadeOut(100); });
+    $('#formBrand').hover(
+        function() { $('#formBrandHover').delay(100).fadeIn(400); },
+        function() { $('#formBrandHover').fadeOut(100); }
+    );
 
-    $('#newProductDescription').hover(function() { $('#hoverNewProductDescription').delay(100).fadeIn(400); }, function() { $('#hoverNewProductDescription').fadeOut(100); });
+    $('#formCondition').hover(
+        function() { $('#formConditionHover').delay(100).fadeIn(400); },
+        function() { $('#formConditionHover').fadeOut(100); }
+    );
 
-    $('#newProductOriginalPrice').hover(function() { $('#hoverNewProductOriginalPrice').delay(100).fadeIn(400); }, function() { $('#hoverNewProductOriginalPrice').fadeOut(100); });
+    $('#formSeniority').hover(
+        function() { $('#formSeniorityHover').delay(100).fadeIn(400); },
+        function() { $('#formSeniorityHover').fadeOut(100); }
+    );
 
-    $('#newProductYourPrice').hover(function() { $('#hoverNewProductYourPrice').delay(100).fadeIn(400); }, function() { $('#hoverNewProductYourPrice').fadeOut(100); });
 
-    $('#newProductShippingMode').hover(function() { $('#hoverNewProductShippingMode').delay(100).fadeIn(400); }, function() { $('#hoverNewProductShippingMode').fadeOut(100); });
+    $('#formTitle').hover(
+        function() { $('#formTitleHover').delay(100).fadeIn(400); },
+        function() { $('#formTitleHover').fadeOut(100); }
+    );
 
-    var marginToHeight = $('#firstShippingZone').outerHeight();
+    var marginToHeightFormDescription = $('#formTitle').outerHeight() + $('#descriptionTitle').outerHeight() + 60;
 
-    $('#newProductShippingWeight').hover(function() { $('#hoverNewProductShippingWeight').css('marginTop', marginToHeight).delay(100).fadeIn(400); }, function() { $('#hoverNewProductShippingWeight').fadeOut(100).css('marginTop', 0); });
+    $('#formDescription').hover(
+        function() { $('#formDescriptionHover').css('marginTop', marginToHeightFormDescription).delay(100).fadeIn(400); },
+        function() { $('#formDescriptionHover').fadeOut(100).css('marginTop', 0); }
+    );
 
-    $('#newProductPicture').hover(function() { $('#hoverNewProductPicture').delay(100).fadeIn(400); }, function() { $('#hoverNewProductPicture').fadeOut(100); });
+
+    $('#formOriginalPrice').hover(
+        function() { $('#formOriginalPriceHover').delay(100).fadeIn(400); },
+        function() { $('#formOriginalPriceHover').fadeOut(100); }
+    );
+
+    var marginToHeightFormYourPrice = $('#formYourPrice').outerHeight() + $('#PriceTitle').outerHeight() + 60;
+
+    $('#formYourPrice').hover(
+        function() { $('#formYourPriceHover').css('marginTop', marginToHeightFormYourPrice).delay(100).fadeIn(400); },
+        function() { $('#formYourPriceHover').fadeOut(100).css('marginTop', 0); }
+    );
+
+
+    $('#formShippingMode').hover(
+        function() { $('#formShippingModeHover').delay(100).fadeIn(400); },
+        function() { $('#formShippingModeHover').fadeOut(100); }
+    );
+
+
+    $('#formShippingWeight').hover(
+        function() { $('#formShippingWeightHover').delay(100).fadeIn(400); },
+        function() { $('#formShippingWeightHover').fadeOut(100); }
+    );
+
+
+    $('#formPicture').hover(
+        function() { $('#formPictureHover').delay(100).fadeIn(400); },
+        function() { $('#formPictureHover').fadeOut(100); }
+    );
+
 });
