@@ -558,6 +558,38 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
 
 
+                                    <!-- Product seniority -->
+
+                                    <div class="dokan-form-group">
+
+                                        <label for="product_seniority" class="dokan-form-label">Ancienneté</label>
+
+                                        <?php
+
+                                        $category_args = array(
+                                            'show_option_none' => 'Âge de votre produit',
+                                            'hierarchical'     => 1,
+                                            'hide_empty'       => 0,
+                                            'parent'           => 0,
+                                            'name'             => 'pa_anciennete',
+                                            'taxonomy'         => 'pa_anciennete',
+                                            'title_li'         => '',
+                                            'class'            => 'product_cat dokan-form-control dokan-select2',
+                                            'exclude'          => '',
+                                        );
+
+                                        $category_args['selected'] = get_term_by('name', $product->get_attribute('pa_brand'), 'pa_brand')->term_id;
+
+                                        wp_dropdown_categories(apply_filters('dokan_product_cat_dropdown_args', $category_args));
+
+                                        ?>
+
+                                    </div>
+
+                                    <!-- end Product seniority -->
+
+
+
                                     <!-- Product etat -->
 
                                     <div class="dokan-form-group">
