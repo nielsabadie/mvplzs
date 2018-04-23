@@ -248,6 +248,36 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
                 </header>
 
+				<div class="toggle-sidebar-container">
+
+                    <div class="dokan-post-status dokan-toggle-sidebar">
+                        <label for="post_status"><?php _e( 'Product Status:', 'dokan' ); ?> : </label>
+                
+                        <?php $pending_class = $post->post_status == 'pending' ? '  dokan-label dokan-label-warning': ''; ?>
+                        <span style="font-weight: bold" class="dokan-toggle-selected-display<?php echo $pending_class; ?>"><?php echo dokan_get_post_status( $post->post_status ); ?></span>
+                    </div>
+                
+                    <div class="product-type dokan-toggle-sidebar">
+                        
+                
+                        <?php
+                        $supported_types = apply_filters( 'dokan_product_type_selector', array(
+                            'simple'    => __( 'Simple product', 'dokan' ),
+                        ) );
+                
+                        if ( $terms = wp_get_object_terms( $post->ID, 'product_type' ) ) {
+                            $product_type = sanitize_title( current( $terms )->name );
+                        } else {
+                            $product_type = 'simple';
+                        }
+                
+                
+                        if ( !array_key_exists( $product_type, $supported_types) ) {
+                            $product_type = 'simple';
+                        }
+                        ?>
+                    </div> <!-- .product-type -->
+                </div>
 
 
                 <?php if (dokan_is_seller_enabled(get_current_user_id())) { ?>
@@ -764,8 +794,6 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
                         </div>
 
                     </div>
-
-            </div>
 
         <hr>
 
