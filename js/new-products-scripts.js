@@ -212,4 +212,10 @@ jQuery('document').ready(function($) {
         function() { $('#formPictureHover').fadeOut(100); }
     );
 
+    var options = $('#formBrand option');
+    $(options[1468]).insertAfter($(options[0]));
+    $("<hr>").insertAfter($(options[0]));
+
+    $('.select2-product_cat-result-hxad-2057').remove();
+
 });
