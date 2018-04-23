@@ -88,7 +88,6 @@ do_action('dokan_new_product_wrap_before');
                                         
                                         	<h2>Que vendez-vous ?</h2>
                                             <hr>
-                                            <br>
                                         
                                             <div class="row formArea">
                                             	<div id="formCategory" class="col col-sm-12">
