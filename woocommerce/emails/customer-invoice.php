@@ -18,14 +18,14 @@
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
-} ?>
+} 
 
 /**
  * Executes the e-mail header.
  *
  * @hooked WC_Emails::email_header() Output the email header
  */
-
+?>
 
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -609,7 +609,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     
                    	 <tr>
                    	 	<td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
-                       	<h1>do_action( 'woocommerce_email_header', $email_heading, $email ); ?></h1><br>
+                       	<h1><?php do_action( 'woocommerce_email_header', $email_heading, $email ); ?></h1><br>
                        	<hr>
                        </td>
                    	 </tr>
@@ -709,6 +709,39 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <td class="mcnDividerBlockInner" style="padding: 18px;">
                 <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
 -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnTextBlock" style="min-width:100%;">
+    <tbody class="mcnTextBlockOuter">
+        <tr>
+            <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
+              	<!--[if mso]>
+				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+				<tr>
+				<![endif]-->
+			    
+				<!--[if mso]>
+				<td valign="top" width="600" style="width:600px;">
+				<![endif]-->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                    <tbody><tr>
+                        
+                        <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
+                            Merci de votre confiance et à très bientôt,<br>
+							<em><strong>L'équipe LUZUS</strong></em>
+                        </td>
+                    </tr>
+                </tbody></table>
+				<!--[if mso]>
+				</td>
+				<![endif]-->
+                
+				<!--[if mso]>
+				</tr>
+				</table>
+				<![endif]-->
             </td>
         </tr>
     </tbody>
