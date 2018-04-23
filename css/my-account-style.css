@@ -756,7 +756,7 @@ p {
 /* DOKAN "MA BOUTIQUE" MENU */
 
 .dokan-dashboard-menu {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF !important;
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -764,7 +764,7 @@ p {
 /* END DOKAN "MA BOUTIQUE" MENU */
 
 .postid-7658 .dokan-product-edit {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF !important;
     box-shadow: 0px 0px 3px 0px rgba( 0, 0, 0, 0.2);
 }
 
