@@ -428,33 +428,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
                                     <div class="dokan-form-group">
 
-                                        <label for="post_title" class="dokan-form-label">Titre de l’annonce
-
-                                            <div class="infobulle">
-
-                                                <div class="infobulle">
-
-                                                    <i class="fa fa-question-circle" aria-hidden="true" data-title=""></i>
-
-                                                    <div class="infobulletext">
-
-                                                        <p>Un titre complet est composé des éléments suivants&nbsp;:<br><strong>Catégorie</strong> + <strong>Type</strong> + <strong>Marque</strong><br><br>
-
-
-
-                                                            Exemple : Drone aérien DJI Spark Mini en parfait état<br>
-
-                                                            Mauvais exemple : Super drone pas cher
-
-                                                        </p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                        </label>
+                                        <label for="post_title" class="dokan-form-label">Titre de l’annonce</label>
 
                                         <input type="hidden" name="dokan_product_id" id="dokan-edit-product-id" value="<?= $post_id; ?>" maxlength="55"/>
 
@@ -470,37 +444,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
                                     <div class="dokan-form-group">
 
-                                        <label for="post_content" class="control-label">Description détaillée
-
-                                            <div class="infobulle">
-
-                                                <div class="infobulle">
-
-                                                    <i class="fa fa-question-circle" aria-hidden="true" data-title=""></i>
-
-                                                    <div class="infobulletext">
-
-                                                        <p>
-
-                                                            Nos conseils pour bien décrire votre produit :<br>
-
-                                                            - Saisissez les <strong>caractéristiques</strong> techniques (disponibles sur le site officiel de la marque)<br>
-
-                                                            - Indiquez les <strong>accessoires fournis</strong> (emballage, chargeur, batterie…)<br>
-
-                                                            - Si vous disposez toujours de la <strong>facture</strong> ou si le produit est encore <strong>sous garantie</strong>, mentionnez-le !<br>
-
-                                                            - Soyez toujours <strong>honnête</strong> sur l’état réel de votre produit et indiquez clairement les <strong>défauts éventuels</strong>
-
-                                                        </p>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                        </label>
+                                        <label for="post_content" class="control-label">Description détaillée</label>
 
                                         <textarea class="post_content wp-editor-area" style="height: 150px" cols="40" name="post_content" id="post_content" placeholder="Décrivez votre produit et ses caractéristiques techniques en détail. N’oubliez pas de mentionner les éventuels défauts existants !" maxlength="1600"><?= $post->post_content ?></textarea>
 
@@ -592,37 +536,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
                                     <div class="dokan-form-group">
 
-
-
-                                        <label for="product_at" class="dokan-form-label">
-
-                                            État de votre objet
-
-                                            <div class="infobulle">
-
-                                                <i class="fa fa-question-circle" aria-hidden="true" data-title=""></i>
-
-                                                <div class="infobulletext">
-
-
-
-                                                    <p><strong>Neuf :</strong> produit sous emballage d’origine, jamais ouvert.</p>
-
-                                                    <p><strong>Très bon état :</strong> produit intact absence de rayures, chocs et traces d’usures.</p>
-
-                                                    <p><strong>Bon état :</strong> présence de micro-rayures et légères traces d’usures (ex : frottement). Cet usure ne doit pas impacter le bon usage du produit.</p>
-
-                                                    <p><strong>État moyen :</strong> appareil entièrement fonctionnel. Présence de rayures, de légères déformations ou de traces d’usures prononcées.</p>
-
-                                                    <p><strong>Mauvais état :</strong> appareil présentant des dysfonctionnements ou ne fonctionnant pas peut importe l’état de l’enveloppe externe.</p>
-
-                                                </div>
-
-                                            </div>
-
-                                        </label>
-
-
+                                        <label for="product_at" class="dokan-form-label">État de votre objet</label>
 
                                         <?php
 
@@ -726,19 +640,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
                                             <label for="product_cat" style="font-weight: 500; font-size: 1.2em; margin-left: 3px" class="dokan-form-label">Colissimo</label>
 
-                                            <p>Déposez votre produit dans un bureau de poste de votre choix et avancez les frais qui vous seront remboursés par votre acheteur.</p>
-
-                                        </div>
-
-
-
-                                        <div class="dokan-form-group-2">
-
-                                            <input style="display: inline-block" onchange="$(this).val() === 'false' ? $(this).val('false') : $(this).val('true')" type="checkbox" name="pa_mondial_relay" value="true" <?= $product->get_attribute('pa_mondial_relay') === 'true' ? 'checked' : '' ?>/>
-
-                                            <label for="product_cat" style="font-weight: 500; font-size: 1.2em; margin-left: 3px" class="dokan-form-label">Mondial Relay</label>
-
-                                            <p>Déposez votre produit dans un point relais de votre choix et avancez les frais qui vous seront remboursés par votre acheteur.</p>
+                                            <p>Déposez votre produit dans le bureau de poste de votre choix et avancez les frais qui vous seront remboursés par votre acheteur.</p>
 
                                         </div>
 
@@ -750,7 +652,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 
                                             <label for="product_cat" style="font-weight: 500; font-size: 1.2em; margin-left: 3px" class="dokan-form-label">Remise en main propre</label>
 
-                                            <p>Une fois la transaction effectuée, vous recevrez les coordonnées de l’acheteur afin d’organiser un rendez-vous près de chez vous.</p>
+                                            <p>Echangez vos coordonnées directement avec l’acheteur afin d’organiser un rendez-vous près de chez vous pour lui remettre le produit (paiement en ligne non disponible).</p>
 
                                         </div>
 
@@ -761,16 +663,15 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
                                             <h3>Poids du colis</h3>
                                             
                                             <div class="form-group">
-											  <label for="sel1">Select list (select one):</label>
-											  <select class="form-control" id="sel1">
-												<option <?= $product->get_weight() === '0.25' ? 'checked' : '' ?> value="0.25" id="value-250-g">250g max</option>
-												<option <?= $product->get_weight() === '0.50' ? 'checked' : '' ?> value="0.5" id="value-500-g">500g max</option>
-												<option <?= $product->get_weight() === '1' ? 'checked' : '' ?> value="1" id="value-1-kg">1kg max</option>
-												<option <?= $product->get_weight() === '2' ? 'checked' : '' ?> value="2" id="value-2-kg">2kg max</option>
-												<option <?= $product->get_weight() === '5' ? 'checked' : '' ?> value="5" id="value-5-kg">5kg max</option>
-												<option <?= $product->get_weight() === '10' ? 'checked' : '' ?> value="10" id="value-10-kg">10kg max</option>
-												<option <?= $product->get_weight() === '30' ? 'checked' : '' ?> value="30" id="value-30-kg">30kg max</option>
-											  </select>
+                                                <select class="product_cat dokan-form-control dokan-select2" id="sel1">
+                                                    <option <? $product->get_weight() === '0.25' ? 'checked' : '' ?> name="product_weight" value="0.25" id="value-250-g">< 250g</option>
+                                                    <option <? $product->get_weight() === '0.50' ? 'checked' : '' ?> name="product_weight" value="0.5" id="value-500-g">< 500g</option>
+                                                    <option <? $product->get_weight() === '1' ? 'checked' : '' ?> name="product_weight" value="1" id="value-1-kg">< 1kg</option>
+                                                    <option <? $product->get_weight() === '2' ? 'checked' : '' ?> name="product_weight" value="2" id="value-2-kg">< 2kg</option>
+                                                    <option <? $product->get_weight() === '5' ? 'checked' : '' ?> name="product_weight" value="5" id="value-5-kg">< 5kg</option>
+                                                    <option <? $product->get_weight() === '10' ? 'checked' : '' ?> name="product_weight" value="10" id="value-10-kg">< 10kg</option>
+                                                    <option <? $product->get_weight() === '30' ? 'checked' : '' ?> name="product_weight" value="30" id="value-30-kg">< 30kg max</option>
+											    </select>	
 											</div>
 
 
