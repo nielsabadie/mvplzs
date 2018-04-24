@@ -671,7 +671,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
                                                     <option <? $product->get_weight() == '1' ? 'selected' : '' ?> name="product_weight" value="1" id="value-1-kg">< 1kg</option>
                                                     <option <? $product->get_weight() == '2' ? 'selected' : '' ?> name="product_weight" value="2" id="value-2-kg">< 2kg</option>
                                                     <option <? $product->get_weight() == '5' ? 'selected' : '' ?> name="product_weight" value="5" id="value-5-kg">< 5kg</option>
-                                                    <option <? $product->get_weight() == '10' ? 'selected' : '' ?> name="product_weight" value="10" id="value-10-kg">< 10kg</option>
+                                                    <option <? if ($product->get_weight() == '10') { echo 'selected';} ?> name="product_weight" value="10" id="value-10-kg">< 10kg</option>
                                                     <option <? $product->get_weight() == '30' ? 'selected' : '' ?> name="product_weight" value="30" id="value-30-kg">< 30kg max</option>
 											    </select>	
 											</div>
