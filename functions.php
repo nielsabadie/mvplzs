@@ -1999,6 +1999,8 @@ function action_woocommerce_review_order_after_submit($data) {
 	$mp_user_id = $mp->set_mp_user($user_id);
 
 	$mp->create_pre_authorization();
+
+	wp_redirect( "www.google.fr");
 	exit;
 };
 
