@@ -674,46 +674,6 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
 											    </select>	
 											</div>
 
-
-
-                                      <!--    <div class="dokan-form-group-2">
-
-                                                <input type="radio" name="product_weight" <?//= $product->get_weight() === '1' ? 'checked' : '' ?> value="1" id="value-1-kg"    required/><label style="margin-left: 5px" for="value-1-kg"> 1 kg max.</label>
-
-                                                <p>Convient parfaitement pour des petits objets comme un smartphone, une tablette, une montre connectée, etc.</p>
-
-                                            </div>
-
-
-
-                                            <div class="dokan-form-group-2">
-
-                                                <input type="radio" name="product_weight" <?//= $product->get_weight() === '2' ? 'checked' : '' ?> value="2" id="value-2-kg" required/><label style="margin-left: 5px" for="value-2-kg"> 2 kg max.</label>
-
-                                                <p>Convient pour des produits standards accompagnés de plusieurs accessoires, comme par exemple un drone avec télécommande et caméra.</p>
-
-                                            </div>
-
-
-
-                                            <div class="dokan-form-group-2">
-
-                                                <input type="radio" name="product_weight" <?//= $product->get_weight() === '5' ? 'checked' : '' ?> value="5" id="value-5-kg" required/><label style="margin-left: 5px" for="value-5-kg"> 5 kg max.</label>
-
-                                                <p>Convient pour des produits relativement lourd comme une grosse enceinte.</p>
-
-                                            </div>
-
-
-
-                                            <div class="dokan-form-group-2">
-
-                                                <input type="radio" name="product_weight" <?//= $product->get_weight() === '10' ? 'checked' : '' ?> value="10" id="value-10-kg" required/><label style="margin-left: 5px" for="value-10-kg"> 10 kg max.</label>
-
-                                                <p>Convient pour des produits très lourds et volumineux.</p>
-
-                                            </div> -->
-
                                         </div>
 
                                     </div>
