@@ -1991,3 +1991,13 @@ function  addStoreButton() {
 add_action( 'dokan_dashboard_left_widgets', 'addStoreButton', 90 );
 add_action( 'myaccount_dashboard_after', 'addStoreButton' );
 
+
+// define the woocommerce_review_order_after_submit callback
+function action_woocommerce_review_order_after_submit($data) {
+	var_dump($data);
+	exit;
+};
+
+// add the action
+add_action( 'woocommerce_review_order_after_submit', 'action_woocommerce_review_order_after_submit', 10, 0 );
+
