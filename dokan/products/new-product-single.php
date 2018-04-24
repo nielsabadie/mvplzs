@@ -661,6 +661,8 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
                                         <div style="padding: 20px 0 20px 0" class="shipping-mode">
 
                                             <h3>Poids du colis</h3>
+
+                                            <?php var_dump($product->get_weight()); ?>
                                             
                                             <div class="form-group">
                                                 <select class="product_cat dokan-form-control dokan-select2" id="sel1">
