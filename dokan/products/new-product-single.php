@@ -520,7 +520,7 @@ do_action('dokan_edit_product_wrap_before', $post, $post_id);
                                             'exclude'          => '',
                                         );
 
-                                        $category_args['selected'] = get_term_by('name', $product->get_attribute('pa_brand'), 'pa_brand')->term_id;
+                                        $category_args['selected'] = get_term_by('name', $product->get_attribute('pa_anciennete'), 'pa_anciennete')->term_id;
 
                                         wp_dropdown_categories(apply_filters('dokan_product_cat_dropdown_args', $category_args));
 
