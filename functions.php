@@ -9,6 +9,14 @@
 /**
  * Include all your custom code here
  */
+ 
+
+function redirectAfterAddNewProduct() {
+	
+	return 'https://www.luzus.fr/ma-boutique/products/';
+}
+
+add_filter ('dokan_add_new_product_redirect', 'redirectAfterAddNewProduct');
 
 
 function wpMail_set_content_type(){
@@ -76,7 +84,7 @@ add_shortcode('testTemplate', 'testTemplateEmail');
 					$current_size = $current_size / 1024; //get size in KB
 
 					if ( $current_size > $file_size_limit ) {
-						$file['error'] = sprintf( __( '😱 OUPS: Votre photo dépasse la limite autorisée de %d KB.' ), $file_size_limit );
+						$file['error'] = sprintf( __( 'ðŸ˜± OUPS: Votre photo dÃ©passe la limite autorisÃ©e de %d KB.' ), $file_size_limit );
 					}
 
 				}
@@ -231,7 +239,7 @@ add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6644" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6644 animate-dropdown"><a title="Mes Messages" href="https://luzus.fr/mon-compte/support-tickets/"><i class="tm tm-feedback"></i> Mes Messages</a></li>
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6645" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6645 animate-dropdown"><a title="Mes Achats" href="https://luzus.fr/mon-compte/mes-achats/"><i class="tm tm-shopping-bag"></i> Mes Achats</a></li>
 							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a title="Mes informations" href="https://luzus.fr/mon-compte/infos-compte/"><i class="tm tm-listing-large"></i> Mes informations</a></li>
-							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a class="redLink" title="Déconnexion" href="https://luzus.fr/mon-compte/customer-logout/"><i class="tm tm-close"></i> Déconnexion</a></li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="secondary-menu-item-6646" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6646 animate-dropdown"><a class="redLink" title="DÃ©connexion" href="https://luzus.fr/mon-compte/customer-logout/"><i class="tm tm-close"></i> DÃ©connexion</a></li>
 						</ul>
 					</li>
 
@@ -282,7 +290,7 @@ add_action( 'woocommerce_after_list_view_item_title', 'woocommerce_template_loop
 			<div class="site-info">
 			<div class="col-full">
 				<div class="copyright">
-					<?php echo 'Copyright © ' . date('Y') . ' <a href="https://luzus.fr" title="LUZUS.fr"/>LUZUS</a> | Tous droits réservés. ';?>
+					<?php echo 'Copyright Â© ' . date('Y') . ' <a href="https://luzus.fr" title="LUZUS.fr"/>LUZUS</a> | Tous droits rÃ©servÃ©s. ';?>
 				</div>
 				<div class="credit"><?php echo wp_kses_post( $footer_credit_text ); ?></div>
 			</div>
@@ -316,7 +324,7 @@ function modify_menu_moncompte_dokan_add_seller_nav($urls) {
 
     $urls['dashboard']['icon'] = '<i class="fa fa-shopping-bag"></i>';
     $urls['products']['title'] = 'Mes annonces';
-    //$urls['settings']['title'] = 'Paramètres';
+    //$urls['settings']['title'] = 'ParamÃ¨tres';
     //$urls['settings']['icon'] = '<i class="fa fa-cogs"></i>';
     $urls['products']['icon'] = '<i class="fa fa-desktop"></i>';
     $urls['orders']['title'] = 'Mes ventes';
@@ -604,7 +612,7 @@ function woocommerce_menu_mon_compte()
         //'porte-monnaie' => __('Mon porte-monnaie', 'woocommerce'),
         'infos-compte' => __('Mes informations', 'woocommerce'),
         'luzus-support' => __('Support LUZUS', 'woocommerce'),
-        'customer-logout' => __('Déconnexion', 'woocommerce'),
+        'customer-logout' => __('DÃ©connexion', 'woocommerce'),
     );
     return $moncompte;
 }
@@ -713,7 +721,7 @@ function my_woocommerce_edit_account_form()
 
     ?>
     <fieldset>
-        <legend>Informations complémentaires</legend>
+        <legend>Informations complÃ©mentaires</legend>
         <div class="row">
             <div class="col-sm-12 form-group">
 
@@ -729,7 +737,7 @@ function my_woocommerce_edit_account_form()
         <div class="row" id="user-nationality">
             <div class="col-sm-12 form-group">
                 <label for="user_nationality">
-                    Nationalité / Lieu de naissance <span class="required">*</span>
+                    NationalitÃ© / Lieu de naissance <span class="required">*</span>
                 </label>
 
                 <select id="dropdown-nationality" name="user_nationality" id="user_nationality" value="<?php echo $user_nationality; ?>" class="form-control dokan-form-control dokan-select2">
@@ -739,9 +747,9 @@ function my_woocommerce_edit_account_form()
                         'FR' => 'France',
                         'AF' => 'Afghanistan',
                         'ZA' => 'Afrique du Sud',
-                        'AX' => 'Aland, Îles',
+                        'AX' => 'Aland, ÃŽles',
                         'AL' => 'Albanie',
-                        'DZ' => 'Algérie',
+                        'DZ' => 'AlgÃ©rie',
                         'DE' => 'Allemagne',
                         'AD' => 'Andorre',
                         'AO' => 'Angola',
@@ -750,107 +758,107 @@ function my_woocommerce_edit_account_form()
                         'AG' => 'Antigua-Et-Barbuda',
                         'SA' => 'Arabie Saoudite',
                         'AR' => 'Argentine',
-                        'AM' => 'Arménie',
+                        'AM' => 'ArmÃ©nie',
                         'AW' => 'Aruba',
                         'AU' => 'Australie',
                         'AT' => 'Autriche',
-                        'AZ' => 'Azerbaïdjan',
+                        'AZ' => 'AzerbaÃ¯djan',
                         'BS' => 'Bahamas',
-                        'BH' => 'Bahreïn',
+                        'BH' => 'BahreÃ¯n',
                         'BD' => 'Bangladesh',
                         'BB' => 'Barbade',
-                        'BY' => 'Bélarus',
+                        'BY' => 'BÃ©larus',
                         'BE' => 'Belgique',
                         'BZ' => 'Belize',
-                        'BJ' => 'Bénin',
+                        'BJ' => 'BÃ©nin',
                         'BM' => 'Bermudes',
                         'BT' => 'Bhoutan',
                         'BO' => 'Bolivie',
                         'BQ' => 'Bonaire, Saint-Eustache et Saba',
-                        'BA' => 'Bosnie-Herzégovine',
+                        'BA' => 'Bosnie-HerzÃ©govine',
                         'BW' => 'Botswana',
-                        'BV' => 'Bouvet, Île',
-                        'BR' => 'Brésil',
+                        'BV' => 'Bouvet, ÃŽle',
+                        'BR' => 'BrÃ©sil',
                         'BN' => 'Brunei Darussalam',
                         'BG' => 'Bulgarie',
                         'BF' => 'Burkina Faso',
                         'BI' => 'Burundi',
-                        'KY' => 'Caïmans, Îles',
+                        'KY' => 'CaÃ¯mans, ÃŽles',
                         'KH' => 'Cambodge',
                         'CM' => 'Cameroun',
                         'CA' => 'Canada',
                         'CV' => 'Cap-Vert',
-                        'CF' => 'République Centrafricaine',
+                        'CF' => 'RÃ©publique Centrafricaine',
                         'CL' => 'Chili',
                         'CN' => 'Chine',
-                        'CX' => 'Christmas, Île',
+                        'CX' => 'Christmas, ÃŽle',
                         'CY' => 'Chypre',
-                        'CC' => 'Cocos (Keeling), Îles',
+                        'CC' => 'Cocos (Keeling), ÃŽles',
                         'CO' => 'Colombie',
                         'KM' => 'Comores',
                         'CG' => 'Congo',
-                        'CD' => 'Congo, République démocratique du',
-                        'CK' => 'Cook, Îles',
-                        'KR' => 'Corée du Sud',
-                        'KP' => 'Corée du Nord',
+                        'CD' => 'Congo, RÃ©publique dÃ©mocratique du',
+                        'CK' => 'Cook, ÃŽles',
+                        'KR' => 'CorÃ©e du Sud',
+                        'KP' => 'CorÃ©e du Nord',
                         'CR' => 'Costa Rica',
-                        'CI' => 'Côte d\'Ivoire',
+                        'CI' => 'CÃ´te d\'Ivoire',
                         'HR' => 'Croatie',
                         'CU' => 'Cuba',
-                        'CW' => 'Curaçao',
+                        'CW' => 'CuraÃ§ao',
                         'DK' => 'Danemark',
                         'DJ' => 'Djibouti',
-                        'DO' => 'République dominicaine',
+                        'DO' => 'RÃ©publique dominicaine',
                         'DM' => 'Dominique',
-                        'EG' => 'Égypte',
+                        'EG' => 'Ã‰gypte',
                         'SV' => 'El Salvador',
-                        'AE' => 'Émirats Arabes Unis',
-                        'EC' => 'Équateur',
-                        'ER' => 'Érythrée',
+                        'AE' => 'Ã‰mirats Arabes Unis',
+                        'EC' => 'Ã‰quateur',
+                        'ER' => 'Ã‰rythrÃ©e',
                         'ES' => 'Espagne',
                         'EE' => 'Estonie',
-                        'US' => 'États-Unis',
-                        'ET' => 'Éthiopie',
-                        'FK' => 'Malouines, Îles',
-                        'FO' => 'Féroé, Îles',
+                        'US' => 'Ã‰tats-Unis',
+                        'ET' => 'Ã‰thiopie',
+                        'FK' => 'Malouines, ÃŽles',
+                        'FO' => 'FÃ©roÃ©, ÃŽles',
                         'FJ' => 'Fidji',
                         'FI' => 'Finlande',
                         'GA' => 'Gabon',
                         'GM' => 'Gambie',
-                        'GE' => 'Géorgie',
-                        'GS' => 'Géorgie du Sud-et-les Îles Sandwich du Sud',
+                        'GE' => 'GÃ©orgie',
+                        'GS' => 'GÃ©orgie du Sud-et-les ÃŽles Sandwich du Sud',
                         'GH' => 'Ghana',
                         'GI' => 'Gibraltar',
-                        'GR' => 'Grèce',
+                        'GR' => 'GrÃ¨ce',
                         'GD' => 'Grenade',
                         'GL' => 'Groenland',
                         'GP' => 'Guadeloupe',
                         'GU' => 'Guam',
                         'GT' => 'Guatemala',
                         'GG' => 'Guernesey',
-                        'GN' => 'Guinée',
-                        'GW' => 'Guinée-Bissau',
-                        'GQ' => 'Guinée équatoriale',
+                        'GN' => 'GuinÃ©e',
+                        'GW' => 'GuinÃ©e-Bissau',
+                        'GQ' => 'GuinÃ©e Ã©quatoriale',
                         'GY' => 'Guyana',
-                        'GF' => 'Guyane française',
-                        'HT' => 'Haïti',
-                        'HM' => 'Heard-et-MacDonald, Îles',
+                        'GF' => 'Guyane franÃ§aise',
+                        'HT' => 'HaÃ¯ti',
+                        'HM' => 'Heard-et-MacDonald, ÃŽles',
                         'HN' => 'Honduras',
                         'HK' => 'Hong Kong',
                         'HU' => 'Hongrie',
-                        'IM' => 'Île De Man',
-                        'UM' => 'Îles mineures éloignées des États-Unis',
-                        'VG' => 'Îles Vierges britanniques',
-                        'VI' => 'Îles Vierges des États-Unis',
+                        'IM' => 'ÃŽle De Man',
+                        'UM' => 'ÃŽles mineures Ã©loignÃ©es des Ã‰tats-Unis',
+                        'VG' => 'ÃŽles Vierges britanniques',
+                        'VI' => 'ÃŽles Vierges des Ã‰tats-Unis',
                         'IN' => 'Inde',
-                        'ID' => 'Indonésie',
+                        'ID' => 'IndonÃ©sie',
                         'IR' => 'Iran',
                         'IQ' => 'Iraq',
                         'IE' => 'Irlande',
                         'IS' => 'Islande',
-                        'IL' => 'Israël',
+                        'IL' => 'IsraÃ«l',
                         'IT' => 'Italie',
-                        'JM' => 'Jamaïque',
+                        'JM' => 'JamaÃ¯que',
                         'JP' => 'Japon',
                         'JE' => 'Jersey',
                         'JO' => 'Jordanie',
@@ -858,131 +866,131 @@ function my_woocommerce_edit_account_form()
                         'KE' => 'Kenya',
                         'KG' => 'Kirghizistan',
                         'KI' => 'Kiribati',
-                        'KW' => 'Koweït',
+                        'KW' => 'KoweÃ¯t',
                         'LA' => 'Laos',
                         'LS' => 'Lesotho',
                         'LV' => 'Lettonie',
                         'LB' => 'Liban',
-                        'LR' => 'Libéria',
+                        'LR' => 'LibÃ©ria',
                         'LY' => 'Libye',
                         'LI' => 'Liechtenstein',
                         'LT' => 'Lituanie',
                         'LU' => 'Luxembourg',
                         'MO' => 'Macao',
-                        'MK' => 'Macédoine',
+                        'MK' => 'MacÃ©doine',
                         'MG' => 'Madagascar',
                         'MY' => 'Malaisie',
                         'MW' => 'Malawi',
                         'MV' => 'Maldives',
                         'ML' => 'Mali',
                         'MT' => 'Malte',
-                        'MP' => 'Mariannes du Nord, Îles',
+                        'MP' => 'Mariannes du Nord, ÃŽles',
                         'MA' => 'Maroc',
-                        'MH' => 'Marshall, Îles',
+                        'MH' => 'Marshall, ÃŽles',
                         'MQ' => 'Martinique',
                         'MU' => 'Maurice',
                         'MR' => 'Mauritanie',
                         'YT' => 'Mayotte',
                         'MX' => 'Mexique',
-                        'FM' => 'Micronésie, États fédérés de',
+                        'FM' => 'MicronÃ©sie, Ã‰tats fÃ©dÃ©rÃ©s de',
                         'MD' => 'Moldavie',
                         'MC' => 'Monaco',
                         'MN' => 'Mongolie',
-                        'ME' => 'Monténégro',
+                        'ME' => 'MontÃ©nÃ©gro',
                         'MS' => 'Montserrat',
                         'MZ' => 'Mozambique',
                         'MM' => 'Myanmar',
                         'NA' => 'Namibie',
                         'NR' => 'Nauru',
-                        'NP' => 'Népal',
+                        'NP' => 'NÃ©pal',
                         'NI' => 'Nicaragua',
                         'NE' => 'Niger',
-                        'NG' => 'Nigéria',
-                        'NU' => 'Niué',
-                        'NF' => 'Norfolk, Île',
-                        'NO' => 'Norvège',
-                        'NC' => 'Nouvelle-Calédonie',
-                        'NZ' => 'Nouvelle-Zélande',
-                        'IO' => 'Territoire britannique de l\'Océan Indien',
+                        'NG' => 'NigÃ©ria',
+                        'NU' => 'NiuÃ©',
+                        'NF' => 'Norfolk, ÃŽle',
+                        'NO' => 'NorvÃ¨ge',
+                        'NC' => 'Nouvelle-CalÃ©donie',
+                        'NZ' => 'Nouvelle-ZÃ©lande',
+                        'IO' => 'Territoire britannique de l\'OcÃ©an Indien',
                         'OM' => 'Oman',
                         'UG' => 'Ouganda',
-                        'UZ' => 'Ouzbékistan',
+                        'UZ' => 'OuzbÃ©kistan',
                         'PK' => 'Pakistan',
                         'PW' => 'Palaos',
                         'PS' => 'Palestine, Etat de',
                         'PA' => 'Panama',
-                        'PG' => 'Papouasie-Nouvelle-Guinée',
+                        'PG' => 'Papouasie-Nouvelle-GuinÃ©e',
                         'PY' => 'Paraguay',
                         'NL' => 'Pays-Bas',
-                        'PE' => 'Pérou',
+                        'PE' => 'PÃ©rou',
                         'PH' => 'Philippines',
                         'PN' => 'Pitcairn',
                         'PL' => 'Pologne',
-                        'PF' => 'Polynésie française',
+                        'PF' => 'PolynÃ©sie franÃ§aise',
                         'PR' => 'Porto Rico',
                         'PT' => 'Portugal',
                         'QA' => 'Qatar',
-                        'RE' => 'Réunion',
+                        'RE' => 'RÃ©union',
                         'RO' => 'Roumanie',
                         'GB' => 'Royaume-Uni',
                         'RU' => 'Russie',
                         'RW' => 'Rwanda',
                         'EH' => 'Sahara Occidental',
-                        'BL' => 'Saint-Barthélemy',
-                        'SH' => 'Sainte-Hélène',
+                        'BL' => 'Saint-BarthÃ©lemy',
+                        'SH' => 'Sainte-HÃ©lÃ¨ne',
                         'LC' => 'Sainte-Lucie',
                         'KN' => 'Saint-Kitts-Et-Nevis',
                         'SM' => 'Saint-Marin',
-                        'MF' => 'Saint-Martin (Antilles françaises)',
+                        'MF' => 'Saint-Martin (Antilles franÃ§aises)',
                         'SX' => 'Saint-Martin (Royaume des Pays-Bas)',
                         'PM' => 'Saint-Pierre-Et-Miquelon',
-                        'VA' => 'Vatican, État de la Cité du',
+                        'VA' => 'Vatican, Ã‰tat de la CitÃ© du',
                         'VC' => 'Saint-Vincent-et-les Grenadines',
-                        'SB' => 'Salomon, Îles',
+                        'SB' => 'Salomon, ÃŽles',
                         'WS' => 'Samoa',
-                        'AS' => 'Samoa américaines',
-                        'ST' => 'Sao Tomé-et-Principe',
-                        'SN' => 'Sénégal',
+                        'AS' => 'Samoa amÃ©ricaines',
+                        'ST' => 'Sao TomÃ©-et-Principe',
+                        'SN' => 'SÃ©nÃ©gal',
                         'RS' => 'Serbie',
                         'SC' => 'Seychelles',
                         'SL' => 'Sierra Leone',
                         'SG' => 'Singapour',
                         'SK' => 'Slovaquie',
-                        'SI' => 'Slovénie',
+                        'SI' => 'SlovÃ©nie',
                         'SO' => 'Somalie',
                         'SD' => 'Soudan',
                         'SS' => 'Soudan du Sud',
                         'LK' => 'Sri Lanka',
-                        'SE' => 'Suède',
+                        'SE' => 'SuÃ¨de',
                         'CH' => 'Suisse',
                         'SR' => 'Suriname',
                         'SJ' => 'Svalbard et Jan Mayen',
                         'SZ' => 'Swaziland',
                         'SY' => 'Syrie',
                         'TJ' => 'Tadjikistan',
-                        'TW' => 'Taïwan',
+                        'TW' => 'TaÃ¯wan',
                         'TZ' => 'Tanzanie',
                         'TD' => 'Tchad',
-                        'CZ' => 'République Tchèque',
-                        'TF' => 'Terres australes et antarctiques françaises',
-                        'TH' => 'Thaïlande',
+                        'CZ' => 'RÃ©publique TchÃ¨que',
+                        'TF' => 'Terres australes et antarctiques franÃ§aises',
+                        'TH' => 'ThaÃ¯lande',
                         'TL' => 'Timor Oriental',
                         'TG' => 'Togo',
                         'TK' => 'Tokelau',
                         'TO' => 'Tonga',
-                        'TT' => 'Trinité-et-Tobago',
+                        'TT' => 'TrinitÃ©-et-Tobago',
                         'TN' => 'Tunisie',
-                        'TM' => 'Turkménistan',
-                        'TC' => 'Turks-et-Caïcos, Îles',
+                        'TM' => 'TurkmÃ©nistan',
+                        'TC' => 'Turks-et-CaÃ¯cos, ÃŽles',
                         'TR' => 'Turquie',
                         'TV' => 'Tuvalu',
                         'UA' => 'Ukraine',
                         'UY' => 'Uruguay',
                         'VU' => 'Vanuatu',
                         'VE' => 'Venezuela',
-                        'VN' => 'Viêt Nam',
+                        'VN' => 'ViÃªt Nam',
                         'WF' => 'Wallis et Futuna',
-                        'YE' => 'Yémen',
+                        'YE' => 'YÃ©men',
                         'ZM' => 'Zambie',
                         'ZW' => 'Zimbabwe',
                     );
@@ -1062,9 +1070,9 @@ function product_page_payment_services_details() {
         <img style="display: inline-block; margin-right:5px;" src="https://www.luzus.fr/wp-content/uploads/2018/03/check.svg" width="25px" title="Logo-Protection-Luzus"/>
         <a class="linkDark" style="display: inline-block; font-size: 1.1em; font-family: var(--font-family1); font-weight: bold;" href="/comment-ca-marche/" title="">Protection garantie par Luzus</a>
         <ul>
-            <li>Achats en ligne 100% sécurisés</li>
-            <li>Paiement déclenché après réception du produit</li>
-            <li>Remboursement intégral des objets non-conformes</li>
+            <li>Achats en ligne 100% sÃ©curisÃ©s</li>
+            <li>Paiement dÃ©clenchÃ© aprÃ¨s rÃ©ception du produit</li>
+            <li>Remboursement intÃ©gral des objets non-conformes</li>
             <li>Service clients par chat ou email</li>
         </ul>
     </div>';
@@ -1140,7 +1148,7 @@ function show_user_profil_role($user_id) {
 
     endif ;
 
-    /* -- âˆ† -- User Role -- âˆ† -- */
+    /* -- Ã¢Ë†â€  -- User Role -- Ã¢Ë†â€  -- */
 
     ?><hr style="margin-top: 20px;"><?php
 
@@ -1151,9 +1159,9 @@ function show_user_profil_role($user_id) {
     endif ;
 
 
-    /* -- âˆ‘ -- End User Role -- âˆ‘ -- */
+    /* -- Ã¢Ë†â€˜ -- End User Role -- Ã¢Ë†â€˜ -- */
 
-    /* -- âˆ† -- User City -- âˆ† -- */
+    /* -- Ã¢Ë†â€  -- User City -- Ã¢Ë†â€  -- */
 
     if ( !empty($user_meta [billing_city][0] ) ) :
 
@@ -1161,9 +1169,9 @@ function show_user_profil_role($user_id) {
 
     endif;
 
-    /* -- âˆ‘ -- End User City -- âˆ‘ -- */
+    /* -- Ã¢Ë†â€˜ -- End User City -- Ã¢Ë†â€˜ -- */
 
-    /* -- âˆ† -- User Store -- âˆ† -- */
+    /* -- Ã¢Ë†â€  -- User Store -- Ã¢Ë†â€  -- */
 
     if ( AsgarosForumPermissions::getForumRole($user_id) === 'Utilisateur' ) :
 
@@ -1171,7 +1179,7 @@ function show_user_profil_role($user_id) {
 
     endif;
 
-    /* -- âˆ‘ -- End User Store -- âˆ‘ -- */
+    /* -- Ã¢Ë†â€˜ -- End User Store -- Ã¢Ë†â€˜ -- */
 }
 
 add_action('asgarosforum_custom_profile_content', 'show_user_profil_role', 10, 2);
@@ -1278,14 +1286,14 @@ function um_modifications_callback() {
             '_mc4wp_review_notice_dismissed' => $mc4wp_review,
         ));
 
-        $message = '<i class="fa fa-check"></i> Vos informations ont été mises à jour.';
+        $message = '<i class="fa fa-check"></i> Vos informations ont Ã©tÃ© mises Ã Â jour.';
         $return = array('message' => $message);
         wp_json_encode ($return, 1);
         return wp_send_json_success($return);
 
     } elseif (!empty($user_id) || !empty($user_nicename) || !empty($first_name) || !empty($last_name) || !empty($user_email)) {
 
-        $message = '<i class="fa fa-times"></i> Veuillez remplir tous les champs requis marqués par un *';
+        $message = '<i class="fa fa-times"></i> Veuillez remplir tous les champs requis marquÃ©s par un *';
         $return = array('message' => $message);
         wp_json_encode ($return, 1);
         return wp_send_json_error($return);
@@ -1329,14 +1337,14 @@ function um_edit_billing_address_callback() {
             'ID' => $user_id,
         ) );
 
-        $message = '<i class="fa fa-check"></i> Vos informations ont été mises à jour.';
+        $message = '<i class="fa fa-check"></i> Vos informations ont Ã©tÃ© mises Ã  jour.';
         $return = array('message' => $message);
         wp_json_encode ($return, 1);
         return wp_send_json_success($return);
 
     } elseif (!empty($user_id) || !empty($billing_first_name) || !empty($billing_last_name) || !empty($billing_address_1) || !empty($billing_postcode) || !empty($billing_city) ) {
 
-        $message = '<i class="fa fa-times"></i> Veuillez remplir tous les champs requis marqués par un *';
+        $message = '<i class="fa fa-times"></i> Veuillez remplir tous les champs requis marquÃ©s par un *';
         $return = array('message' => $message);
         wp_json_encode ($return, 1);
         return wp_send_json_error($return);
@@ -1381,13 +1389,13 @@ function um_edit_shipping_address_callback() {
             'ID' => $user_id,
         ) );
 
-        $message = '<i class="fa fa-check"></i> Vos informations ont été mises à  jour.';
+        $message = '<i class="fa fa-check"></i> Vos informations ont Ã©tÃ© mises Ã Â  jour.';
         $return = array('message' => $message);
         wp_json_encode ($return, 1);
         return wp_send_json_success($return);
 
     } elseif ( !empty($user_id) || !empty($shipping_first_name) || !empty($shipping_last_name) || !empty($shipping_address_1) || !empty($shipping_postcode) || !empty($shipping_city) ) {
-        $message = '<i class="fa fa-times"></i> Veuillez remplir tous les champs requis marqués par un *';
+        $message = '<i class="fa fa-times"></i> Veuillez remplir tous les champs requis marquÃ©s par un *';
         $return = array('message' => $message);
         wp_json_encode ($return, 1);
         return wp_send_json_error($return);
@@ -1421,7 +1429,7 @@ function um_edit_password_callback() {
 
 
     if ( !empty( $pass1 ) && !wp_check_password( $pass_cur, $current_user->user_pass, $current_user->ID ) ) {
-        $message = '<i class="fa fa-times"></i> Votre mot de passe actuel est erroné.';
+        $message = '<i class="fa fa-times"></i> Votre mot de passe actuel est erronÃ©.';
         $return = array('message' => $message);
 
         wp_json_encode ($return, 1);
@@ -1478,14 +1486,14 @@ function um_edit_password_callback() {
                 'user_pass' => $user->user_pass,
             ) );
 
-            $message = '<i class="fa fa-check"></i> Votre mot de passe a été modifié avec succès.';
+            $message = '<i class="fa fa-check"></i> Votre mot de passe a Ã©tÃ© modifiÃ© avec succÃ¨s.';
             $return = array('message' => $message);
             wp_json_encode ($return, 1);
             return wp_send_json_success($return);
 
         } else {
 
-            $message = '<i class="fa fa-times"></i> Votre nouveau mot de passe doit contenir :<ul><li>Minimum 8 caractères</li><li>Au moins une minuscule</li><li>Au moins une majuscule</li><li>Au moins un chiffre</li></ul>';
+            $message = '<i class="fa fa-times"></i> Votre nouveau mot de passe doit contenir :<ul><li>Minimum 8 caractÃ¨res</li><li>Au moins une minuscule</li><li>Au moins une majuscule</li><li>Au moins un chiffre</li></ul>';
             $return = array('message' => $message);
             wp_json_encode ($return, 1);
             return wp_send_json_error($return);
@@ -1525,7 +1533,7 @@ add_action('wp_enqueue_scripts', 'enqueueDatePicker', 100);
 /**
  * Pass the required AJAX WordPress URL into scripts.
  *
- * @author Lucas Strà¼bi <lucas.strubi@gmail.com>
+ * @author Lucas StrÃ Â¼bi <lucas.strubi@gmail.com>
  */
 function enqueueNewProductScripts()
 {
@@ -1544,7 +1552,7 @@ add_action('wp_enqueue_scripts', 'enqueueNewProductScripts', 100);
 
 
 /*
- * Mise à  jour de mangopay-woocommerce désactivée
+ * Mise Ã Â  jour de mangopay-woocommerce dÃ©sactivÃ©e
  */
 
 function stop_plugin_update( $value ) {
@@ -1598,10 +1606,10 @@ function wooc_validate_extra_register_fields( $username, $email, $validation_err
         $validation_errors->add( 'user_birthday_error', __('Veuillez entrer une date de naissance valide','woocommerce') );
     }
     if ($age < 18)
-        $validation_errors->add( 'user_birthday_error', __('Vous devez être majeur pour vous inscrire','woocommerce') );
+        $validation_errors->add( 'user_birthday_error', __('Vous devez Ãªtre majeur pour vous inscrire','woocommerce') );
 
     if ($user_nationality != "FR")
-        $validation_errors->add( 'user_nationality_error', __('Vous devez résider en France pour vous inscrire ' . $user_birthday,'woocommerce'));
+        $validation_errors->add( 'user_nationality_error', __('Vous devez rÃ©sider en France pour vous inscrire ' . $user_birthday,'woocommerce'));
 
 
     return $validation_errors;
@@ -1657,7 +1665,7 @@ function woocommerce_custom_surcharge() {
 }
 
 
-/* redirection après inscription/connexion */
+/* redirection aprÃ¨s inscription/connexion */
 
 function custom_registration_redirect_after_registration() {
     return home_url('/mon-compte');
@@ -1720,7 +1728,7 @@ function new_action_add_shipping() {
     $shipping_number   = ( trim( stripslashes( $_POST['shipping_number'] ) ) );
     $shipped_date      = ( trim( $_POST['shipped_date'] ) );
 
-    $ship_info = 'Ajout du numéro de suivi: ' . $shipping_number . '<br />';
+    $ship_info = 'Ajout du numÃ©ro de suivi: ' . $shipping_number . '<br />';
 
     if ( $shipping_number == '' ){
         die();
@@ -1843,7 +1851,7 @@ function addNavigationHelpCenter () {
             'Paiement & Transfert', 
             'Retours & Annulations', 
             'Evaluation & Notation', 
-            'Confiance & Sécurité', 
+            'Confiance & SÃ©curitÃ©', 
             'Mon compte', 
             'Inscription & Connexion', 
             'Forum', 
@@ -1851,16 +1859,16 @@ function addNavigationHelpCenter () {
 
         'infos' => Array ( 
             'Les tips pour optimiser vos ventes !', 
-            'Comment dénicher la perle rare ?', 
+            'Comment dÃ©nicher la perle rare ?', 
             'Les infos sur la logistique.', 
-            'Comment payer ou récupérer son argent.', 
-            'Un problème avec un produit ?' , 
-            'Les détails sur les petites étoiles.', 
+            'Comment payer ou rÃ©cupÃ©rer son argent.', 
+            'Un problÃ¨me avec un produit ?' , 
+            'Les dÃ©tails sur les petites Ã©toiles.', 
             'Notre objectif c\'est votre satisfaction.', 
-            'Les détails sur le paramétrage de votre compte Luzus.',
+            'Les dÃ©tails sur le paramÃ©trage de votre compte Luzus.',
             'Comment s\'inscrire ou se connecter, c\'est par ici.',
-            'Utiliser de manière efficace le Forum !', 
-            'La réponse à vos questions les plus spécifiques.' ),
+            'Utiliser de maniÃ¨re efficace le Forum !', 
+            'La rÃ©ponse Ã  vos questions les plus spÃ©cifiques.' ),
 
         'iconUrl'  => Array ( 
             'https://www.luzus.fr/wp-content/uploads/2018/03/open-store.svg',
@@ -1907,7 +1915,7 @@ function addHelpCenterCards () {
             'Paiement & Transfert', 
             'Retours & Annulations', 
             'Evaluation & Notation', 
-            'Confiance & Sécurité', 
+            'Confiance & SÃ©curitÃ©', 
             'Mon compte', 
             'Inscription & Connexion', 
             'Forum', 
@@ -1915,16 +1923,16 @@ function addHelpCenterCards () {
 
         'infos' => Array ( 
             'Les tips pour optimiser vos ventes !', 
-            'Comment dénicher la perle rare ?', 
+            'Comment dÃ©nicher la perle rare ?', 
             'Les infos sur la logistique.', 
-            'Comment payer ou récupérer son argent.', 
-            'Un problème avec un produit ?' , 
-            'Les détails sur les petites étoiles.', 
+            'Comment payer ou rÃ©cupÃ©rer son argent.', 
+            'Un problÃ¨me avec un produit ?' , 
+            'Les dÃ©tails sur les petites Ã©toiles.', 
             'Notre objectif c\'est votre satisfaction.', 
-            'Les détails sur le paramétrage de votre compte Luzus.',
+            'Les dÃ©tails sur le paramÃ©trage de votre compte Luzus.',
             'Comment s\'inscrire ou se connecter, c\'est par ici.',
-            'Utiliser de manière efficace le Forum !', 
-            'La réponse à vos questions les plus spécifiques.' ),
+            'Utiliser de maniÃ¨re efficace le Forum !', 
+            'La rÃ©ponse Ã  vos questions les plus spÃ©cifiques.' ),
 
         'iconUrl'  => Array ( 
             'https://www.luzus.fr/wp-content/uploads/2018/03/open-store.svg',
