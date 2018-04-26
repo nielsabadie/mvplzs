@@ -38,11 +38,10 @@ GENERAL STYLE */
 
 /*On my-account dashboard*/
 
-#verif-box,
-#store-box {
+#verif-box {
     margin: auto;
     padding: 20px 0;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -685,6 +684,7 @@ p {
 
 #unsubscribe-link:hover {
     color: var(--off-white) !important;
+    background-color: var(--dark-grey) !important;
 }
 
 
@@ -812,8 +812,6 @@ p {
     flex-direction: row;
     justify-content: center;
     margin: 20px 0;
-    padding: 20px;
-    background-color: var(--light-grey);
 }
 
 #dashboardMyAccount li {

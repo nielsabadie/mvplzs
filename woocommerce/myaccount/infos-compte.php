@@ -1,5 +1,3 @@
-<meta charset="utf-8"/>
-
 <?php if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -878,9 +876,8 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<div class="container-fluid" id="mes-infos-list">
 		<div class="row">
 		<?php //var_dump($iban);?>
-			<?php if (!empty($iban->OwnerName) && !empty($iban->OwnerAddress->AddressLine1) && !empty($iban->OwnerAddress->PostalCode) && !empty($iban->OwnerAddress->City) && !empty($iban->Details->IBAN) && !empty($iban->Details->BIC ) ) {
-				?>
-                <div class="col-sm-12 no-padding-left">
+			<?php if (!empty($iban)) {
+				?><div class="col-sm-12 no-padding-left">
 					<p>
 						<strong>Nom : </strong></strong><span id="user_first_name"><?php echo $iban->OwnerName ?></span>
 					</p>
@@ -913,7 +910,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 				<div class="col-sm-12 no-padding-left">
 					<p>
-						<strong>IBAN : </strong><span id="billing_phone"><?php echo $iban->Details->IBAN ?></span>
+						<strong>IBAN : </strong><span id="billing_phone"><?php echo $iban->Details->IBAN?></span>
 					</p>
 				</div>
 
@@ -923,32 +920,18 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 					</p>
 				</div><?php
 
-			} elseif ( empty( $iban->OwnerName ) || empty( $OwnerAddress->AddressLine1 ) || empty( $iban->OwnerAddress->PostalCode ) || empty( $iban->OwnerAddress->City ) ) {
-				
-				?>
-                	<strong>Des informations sont manquantes pour vous permettre de récupérer l'argent disponible sur votre e-wallet.</strong>
-				<?php
-				
-			} elseif ( empty( $iban->Details->IBAN ) || empty( $iban->Details->BIC ) ) {
-				
-				?>
-                	<strong>Votre IBAN et BIC n'ont pas été renseignés. Merci de bien vouloir nous les communiquer pour nous permettre de vous transférer votre argent.</strong>
-				<?php
-				
 			} else {
-				
 				?><div class="col-sm-12 no-padding-left">
 					<p>
 						<strong>Aucune information bancaire nous est transmise pour vous permettre de récupérer votre argent.</strong>
 					</p>
 				</div><?php
-				
 			};?>
 		</div>
 	</div>
 
 	<div class="row" style="margin-top: 20px;">
-		<div class="col-sm-12">
+		<div class="col-sm-12 no-padding-left">
 			<button type="button" class="btn btn-default .btn-sm btn-second" data-toggle="modal" data-target="#modif-infos-bank"><?php echo $iban ? "Modifier" : "Ajouter"?> mes informations bancaires</button>
 		</div>
 
@@ -973,34 +956,34 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 							<div class="col-md-12">
 								<div class="form-group">
 									<label for="user_bank_name">Nom</label>
-									<input type="tel" class="form-control" name="user_bank_name" id="user_bank_name" value="<?php if ( empty( $iban->OwnerName ) ) { echo esc_attr( $user_firstname . ' ' . $user_lastname ); } else { echo $iban->OwnerName; } ?>" required />
+									<input type="tel" class="form-control" name="user_bank_name" id="user_bank_name" value="<?php echo $iban->OwnerName ?>"/>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label for="user_bank_adress_f">Adresse 1*</label>
-									<input type="text" class="form-control" name="user_bank_adress_f" id="user_bank_adress_f" value="<?php if ( empty( $iban->OwnerAddress->AddressLine1 ) ) { echo esc_attr( $user_meta["billing_address_1"][0] ); } else { echo $iban->OwnerAddress->AddressLine1; } ?>" required />
+									<label for="user_bank_adress_f">Adresse 1* <small>(public)</small></label>
+									<input type="text" class="form-control" name="user_bank_adress_f" id="user_bank_adress_f" value="<?php echo $iban->OwnerAddress->AddressLine1 ?>" required />
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="user_bank_adress_s">Adresse 2*</label>
-									<input type="text" class="form-control" name="user_bank_adress_s" id="user_bank_adress_s" value="<?php if ( empty( $iban->OwnerAddress->AddressLine2 ) ) { echo esc_attr( $user_meta["billing_address_2"][0] ); } else { echo $iban->OwnerAddress->AddressLine2; } ?>" />
+									<input type="text" class="form-control" name="user_bank_adress_s" id="user_bank_adress_s" value="<?php echo $iban->OwnerAddress->AddressLine2 ?>" required/>
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="user_bank_postal">Code postal*</label>
-									<input type="text" class="form-control" name="user_bank_postal" id="user_bank_postal" value="<?php if ( empty( $iban->OwnerAddress->PostalCode ) ) { echo esc_attr( $user_meta["billing_postcode"][0] ); } else { echo $iban->OwnerAddress->PostalCode ; } ?>" required/>
+									<input type="text" class="form-control" name="user_bank_postal" id="user_bank_postal" value="<?php echo $iban->OwnerAddress->PostalCode ?>" required/>
 								</div>
 							</div>
 
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="user_bank_city">Ville*</label>
-									<input type="text" class="form-control" name="user_bank_city" id="user_bank_city" value="<?php if ( empty( $iban->OwnerAddress->City ) ) { echo esc_attr( $user_meta["billing_city"][0] ); } else { echo $iban->OwnerAddress->City ; } ?>" required/>
+									<input type="text" class="form-control" name="user_bank_city" id="user_bank_city" value="<?php echo $iban->OwnerAddress->City ?>" required/>
 								</div>
 							</div>
 
@@ -1049,7 +1032,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<div class="row" style="padding-bottom: 16px; padding-top: 20px;">
 		<div class="col-sm-12 no-padding-left">
 
-			<a id="unsubscribe-link" class="btn btn-second" href="/desinscription" title="Me désinscrire">
+			<a id="unsubscribe-link" class="btn btn-default .btn-sm btn-second" href="/desinscription" title="Me désinscrire">
 				<i class="fa fa-trash" aria-hidden="true"></i> Supprimer mon compte
 			</a>
 

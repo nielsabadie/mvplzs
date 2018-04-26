@@ -38,64 +38,67 @@ $dokanDashboardPosts = $dokanDashboard->post_counts;
 
 <div id="wrapper-my-account">
 	<div class="container-left">
-		<div class='account-user-info user-header'>	
-			<div id="hello-my-account">
-				<div>
-                    <h1 style="display: inline-block; color: var(--dark-grey);">
-                    <!--Conditional Hello or Bonsoir-->
-                        <?php date_default_timezone_set("Europe/Paris");
-                        $hour_day = date('H');
-                            if( $hour_day >= 4 AND $hour_day < 17 ) {
-                                echo('👋 Hello ');
-                            }
-                            else {
-                                echo('🌔 Bonsoir ');
-                            } ?> 
-                    
-                    	<span style="color: var(--secondary-color);"><?php echo $current_user->user_firstname ; ?></span>,
-                    </h1> 
+		<div class='account-user-info user-header'>
+				
+					
+				<div id="hello-my-account">
+					<div>
+						<h1 style="display: inline-block; color: var(--dark-grey);">
+						<!--Conditional Hello or Bonsoir-->
+							<?php date_default_timezone_set("Europe/Paris");
+							$hour_day = date('H');
+								if( $hour_day >= 4 AND $hour_day < 17 ) {
+									echo('👋 Hello ');
+								}
+								else {
+									echo('🌔 Bonsoir ');
+								} ?> 
+						
+						<span style="color: var(--secondary-color);"><?php echo $current_user->user_firstname ; ?></span>,
+						</h1> 
+					</div>
 				</div>
-			</div>
-		</div>
+			 </div>
 	
 			<p style="font-size: 0.95em; font-weight: 500;">
 				Bienvenue sur votre espace personnel ! Faites comme chez-vous : <a style="font-size: 0.95em; font-weight: 600;" class="linkBlue" href="/ma-boutique/products/" title="Gérez vos annnonces">gérez vos annonces</a>, <a style="font-size: 0.95em; font-weight: 600;" class="linkBlue" href="/mon-compte/mes-achats/" title="Suivez vos commandes">suivez la livraison de vos commandes</a>, <a style="font-size: 0.95em; font-weight: 600;" class="linkBlue" href="/mon-compte/porte-monnaie/" title="Récupérer mon argent"></a>procédez à un virement sur votre compte bancaire et notez les autres membres.
 				Vous avez vu quelque chose qui cloche ? <a style="font-size: 0.95em; font-weight: 600;" class="linkBlue" href="https://zetoolbox.typeform.com/to/DsYdIz" title="Donnez-nous votre feedback" rel="nofollow">Donnez-nous votre feedback</a> pour améliorer Luzus et agrandir notre communauté !
 			</p>
 			
-            <div id="store-box">
-            	<?php do_action( 'myaccount_dashboard_after' ); ?>
-            </div>	
+		
+			<ul id="dashboardMyAccount">
+				<li>Annonces en ligne<br> 
+					<span class="badge badge-primary">
+						<?php echo number_format_i18n( $dokanDashboardPosts->{'publish'}, 0 ); ?>
+					</span>
+				</li>
+
+				<li>Ventes Terminées<br> 
+					<span class="badge badge-primary">
+						<?php echo number_format_i18n( $dokanDashboardCount->{'wc-completed'}, 0 ); ?>
+					</span>
+				</li>
+
+				<li>Ventes en cours<br>
+					<span class="badge badge-primary">
+						<?php echo number_format_i18n( $dokanDashboardCount->{'wc-processing'}, 0 ); ?>	
+					</span>
+				</li>
+			</ul>
+
+			<?php do_action( 'myaccount_dashboard_after' ); ?>
 			
-			<?php 
-				if (is_user_logged_in() &&  empty($seller_profile['dokan_verification']['facebook']) && (empty($seller_profile['dokan_verification']['google'])) && empty($seller_profile['dokan_verification']['twitter'])) { ?>
-                    <div id="verif-box">
-                        <a class="btn btn-default .btn-sm btn-second" href="/mon-compte/infos-compte/#verification" title="Vérifier mon compte"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Vérifier mon compte</a> 
-                    </div><?php
-                } ?>
-                
-                
-            <ul id="dashboardMyAccount">
-                <li>Annonces en ligne<br> 
-                    <span class="badge badge-primary">
-                        <?php echo number_format_i18n( $dokanDashboardPosts->{'publish'}, 0 ); ?>
-                    </span>
-                </li>
-    
-                <li>Ventes Terminées<br> 
-                    <span class="badge badge-primary">
-                        <?php echo number_format_i18n( $dokanDashboardCount->{'wc-completed'}, 0 ); ?>
-                    </span>
-                </li>
-    
-                <li>Ventes en cours<br>
-                    <span class="badge badge-primary">
-                        <?php echo number_format_i18n( $dokanDashboardCount->{'wc-processing'}, 0 ); ?>	
-                    </span>
-                </li>
-            </ul>
+			
+			<?php if (is_user_logged_in() &&  empty($seller_profile['dokan_verification']['facebook']) && (empty($seller_profile['dokan_verification']['google'])) && empty($seller_profile['dokan_verification']['twitter'])) { ?>
+				<div id="verif-box">
+					<a class="btn btn-default .btn-sm btn-second" href="/mon-compte/infos-compte/#verification" title="Vérifier mon compte"><i class="fa fa-check-circle-o" aria-hidden="true"></i> Vérifier mon compte</a> 
+				</div>
+			<?php } ?>
+			
+			
 	</div>
-	
+
+
 	<div class='container-right'>
     	
     	
