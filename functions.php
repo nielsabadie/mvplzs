@@ -1993,7 +1993,7 @@ add_action( 'myaccount_dashboard_after', 'addStoreButton' );
 
 
 // define the woocommerce_review_order_after_submit callback
-//function action_woocommerce_review_order_after_submit($data) {
+function action_woocommerce_review_order_after_submit($data) {
 /*	$mp = mpAccess::getInstance();
 	$user_id = get_current_user_id();
 	$mp_user_id = $mp->set_mp_user($user_id);
@@ -2002,7 +2002,8 @@ add_action( 'myaccount_dashboard_after', 'addStoreButton' );
 
 	wp_redirect( "www.google.fr");
 	exit;*/
-//};
+};
 
-//add_action( 'woocommerce_review_order_after_submit', 'action_woocommerce_review_order_after_submit', 10, 0 );
+// add the action
+add_action( 'woocommerce_review_order_after_submit', 'action_woocommerce_review_order_after_submit', 10, 0 );
 
