@@ -17,7 +17,7 @@
     <ul class="listDeliverySolutions">
 
         <li>
-        	<img src="https://www.luzus.fr/wp-content/uploads/2018/03/Colissimo_Logo_ST.svg" title="Colissimo"/><span class="deliveryTitle">Colissimo (<?php echo Delivery::getPrice($product->get_weight());?> €)</span> : L'expédition se fait sous 5 jours par Colissimo avec suivi. Ainsi, vous pouvez suivre à tout moment l’état d’avancement de votre colis.
+        	<img src="https://www.luzus.fr/wp-content/uploads/2018/03/Colissimo_Logo_ST.svg" title="Colissimo"/><span class="deliveryTitle">Colissimo (<?php// echo Delivery::getPrice($product->get_weight());?> €)</span> : L'expédition se fait sous 5 jours par Colissimo avec suivi. Ainsi, vous pouvez suivre à tout moment l’état d’avancement de votre colis.
         </li>
 
 
