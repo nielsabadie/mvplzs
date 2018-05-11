@@ -139,7 +139,7 @@ add_shortcode('testTemplate', 'testTemplateEmail');
 
 
 
-/* SETTINGS CART WIDGET */
+/* SETTINGS CART WIDGET
 
 	remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
 	remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
@@ -156,7 +156,7 @@ add_shortcode('testTemplate', 'testTemplateEmail');
 	add_action( 'woocommerce_widget_shopping_cart_buttons', 'button_view_cart_link', 20 );
 
 
-/* END SETTINGS CART WIDGET */
+ END SETTINGS CART WIDGET */
 
 
 function woocommerce_template_loop_product_description () {
@@ -547,7 +547,7 @@ add_action('woocommerce_account_infos-compte_endpoint', 'infos_compte_content');
 /* END ADD MA BOUTIQUE ITEM (Infos compte) MY ACCOUNT MENU */
 
 
-/* ADD MA BOUTIQUE ITEM (Support client) MY ACCOUNT MENU */
+/* ADD MA BOUTIQUE ITEM (Support client) MY ACCOUNT MENU
 
 function luzus_add_luzus_support_endpoint()
 {
@@ -608,10 +608,10 @@ function woocommerce_menu_mon_compte()
         'mon-compte' => __('Mon compte', 'woocommerce'),
         'support-tickets' => __('Messages', 'woocommerce'),
         'ma_boutique' => __('Ma boutique', 'woocommerce'),
-        'orders' => __('Mes achats', 'woocommerce'),
+        /*'orders' => __('Mes achats', 'woocommerce'),*/
         //'porte-monnaie' => __('Mon porte-monnaie', 'woocommerce'),
         'infos-compte' => __('Mes informations', 'woocommerce'),
-        'luzus-support' => __('Support LUZUS', 'woocommerce'),
+        /*'luzus-support' => __('Support LUZUS', 'woocommerce'),*/
         'customer-logout' => __('Déconnexion', 'woocommerce'),
     );
     return $moncompte;

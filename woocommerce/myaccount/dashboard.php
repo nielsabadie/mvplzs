@@ -82,17 +82,17 @@ $dokanDashboardPosts = $dokanDashboard->post_counts;
                     </span>
                 </li>
     
-                <li>Ventes Terminées<br> 
+                <!--<li>Ventes Terminées<br> 
                     <span class="badge badge-primary">
-                        <?php echo number_format_i18n( $dokanDashboardCount->{'wc-completed'}, 0 ); ?>
+                        <?php// echo number_format_i18n( $dokanDashboardCount->{'wc-completed'}, 0 ); ?>
                     </span>
                 </li>
     
                 <li>Ventes en cours<br>
                     <span class="badge badge-primary">
-                        <?php echo number_format_i18n( $dokanDashboardCount->{'wc-processing'}, 0 ); ?>	
+                        <?php// echo number_format_i18n( $dokanDashboardCount->{'wc-processing'}, 0 ); ?>	
                     </span>
-                </li>
+                </li>-->
             </ul>
 	</div>
 	
