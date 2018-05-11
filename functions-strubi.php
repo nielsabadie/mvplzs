@@ -583,7 +583,7 @@ function productTabs($tabs)
     );
 
 
-
+    /*
     $tabs['payement_tab'] = array(
 
         'title' => 'Paiement',
@@ -592,7 +592,7 @@ function productTabs($tabs)
 
         'callback' => 'payementTabContent'
 
-    );
+    );*/
 
     return $tabs;
 
@@ -610,13 +610,13 @@ function deliveryTabContent()
 
 
 
-function payementTabContent()
+/*function payementTabContent()
 
 {
 
     include('templates/product-tabs/payment.php');
 
-}
+}*/
 
 
 

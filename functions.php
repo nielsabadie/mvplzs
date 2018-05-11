@@ -1,4 +1,4 @@
-
+<meta
 <?php
 /**
  * Techmarket Child
@@ -1062,7 +1062,7 @@ function techmarket_single_product_meta_description() {
 
 
 
-add_action( 'woocommerce_single_product_summary', 'product_page_payment_services_details', 70 );
+/*add_action( 'woocommerce_single_product_summary', 'product_page_payment_services_details', 70 );
 
 function product_page_payment_services_details() {
     echo '
@@ -1077,7 +1077,7 @@ function product_page_payment_services_details() {
         </ul>
     </div>';
     return;
-}
+}*/
 
 
 
