@@ -304,13 +304,11 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<?php foreach ( $get_addresses as $name => $title ) : ?>
 
 			<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
-				<header class="woocommerce-Address-title title">
 
 					<a class="link-label-luzus" data-toggle="modal" data-target="<?php echo ($name == 'billing') ? '#billing-address' : (($name == 'shipping') ? '#shipping-address' : '#') ?>" class="edit">
 						<?php _e( 'Edit', 'woocommerce' ); ?>
 					</a>
 
-				</header>
 				<?php
 				$address = wc_get_account_formatted_address( $name );
 				if ($address == NULL) {
