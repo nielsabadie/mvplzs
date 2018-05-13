@@ -548,7 +548,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			<div class="dokan-panel dokan-panel-default">
 				<div class="dokan-panel-body">
 					<div class="dokan-verify-links">
-						<?php
+						<?php/*
 						$mp = mpAccess::getInstance();
 						$user_id = get_current_user_id();
 						$mp_user_id = $mp->set_mp_user($user_id);
@@ -595,7 +595,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 							
 							<?php	
 							}
-						} ?>
+						} */?>
 
 
 						<?php
