@@ -297,10 +297,6 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	$col    = 1;
 	?>
 
-	<p>
-		<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'woocommerce' ) ); ?>
-	</p>
-
 	<?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) : ?>
 	<div class="u-columns woocommerce-Addresses col2-set addresses">
 		<?php endif; ?>
@@ -309,7 +305,6 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 			<div class="u-column<?php echo ( ( $col = $col * -1 ) < 0 ) ? 1 : 2; ?> col-<?php echo ( ( $oldcol = $oldcol * -1 ) < 0 ) ? 1 : 2; ?> woocommerce-Address">
 				<header class="woocommerce-Address-title title">
-					<h3><?php echo $title; ?></h3>
 
 					<a class="link-label-luzus" data-toggle="modal" data-target="<?php echo ($name == 'billing') ? '#billing-address' : (($name == 'shipping') ? '#shipping-address' : '#') ?>" class="edit">
 						<?php _e( 'Edit', 'woocommerce' ); ?>
