@@ -24,10 +24,11 @@ global $product;
 $author     = get_user_by( 'id', $product->post->post_author );
 	$store_info = dokan_get_store_info( $author->ID );
 	$user_info = get_userdata ($author->ID);
+	$user_meta_info = get_user_meta ($author->ID);
 	$nickname = $user_info->nickname;
 	$user_avatar = get_avatar ( $user_info );
+	$user_city = get_user_meta( $author->ID, 'billing_city', true )
 
-	
 	?>
     
     <div id="productUserDetails">
@@ -35,15 +36,45 @@ $author     = get_user_by( 'id', $product->post->post_author );
 			
 			if ( !empty( $store_info['store_name'] ) ) {
 				if ( !empty ($user_avatar)) { 
-					'<span>' . printf( '<a href="%s">%s</a>', dokan_get_store_url( $author->ID ),get_avatar ($user_info, 25) . ' <p style="display:inline-block">' . $nickname . '</p></span>' );
+					'<span>' . printf( '<a href="%s">%s</a>', dokan_get_store_url( $author->ID ),get_avatar ($user_info, 25) . ' 						<p style="display:inline-block">' . $nickname . '</p></span>' );
 				} else {
 					'<span><i class="fa fa-user"></i> <p style="display:inline-block">' . $nickname . '</p></span>';
 				}
 			}; ?>
-			
 		</span>
+           
+         <?php 
+		 
+		 	$rating = dokan_get_seller_rating($author->ID);
 
-        <?php printf( '<a style="margin-bottom: 20px; font-size: 0.7em; display:block;" class="btn btn-secondary" href="%s">%s</a>', dokan_get_store_url( $author->ID ),'Contacter le vendeur' );?>
+			if (!$rating['count']) {
+				echo __('No rating yet', 'dokan-lite');
+				return;
+			}
+		 
+			$short_text = _n('%s rating from %d review', '%s rating from %d reviews', $rating['count'], 'dokan-lite');
+			$text = sprintf(__('Rated %s out of %d', 'dokan-lite'), $rating['rating'], number_format(5));
+			$width = ($rating['rating'] / 5) * 100;
+			
+			
+			$review_small_text = sprintf(' - <i style="color:#ff9700" class="fa fa-star"></i> ' . $rating['rating'] . '/5 (' . $rating['count'] . ")");
+			
+			if (function_exists('dokan_get_review_url')) {
+				$review_small_text = sprintf('<a href="%s">%s</a>', esc_url(dokan_get_review_url($authorId)), $review_small_text);
+			}
+			?>
+			
+			<span class="text"><?= $review_small_text; ?></span>
+                
+                <?php if ( !empty ($user_city)  ) {
+                 echo '<span class="details"> - <a target="_blank" href="https://www.google.fr/maps/place/' . $user_city . '/" title=" Où se trouve ' . $user_city . ' ?"><i class="fa fa-map-marker"></i> ' . ' ' . $user_city . '</a> </span>';
+                } ?>
+				
+				
+            
+        
+
+        
 		
 	</div>
 
@@ -122,5 +153,6 @@ echo '</div>';
 
 
 	
-<p style="margin-top: 15px; margin-bottom: 0px !important" class="price"><?php echo $product->get_price_html(); ?></p>
+<p style="margin-top: 15px; margin-bottom: 15px !important" class="price"><?php echo $product->get_price_html(); ?></p>
 
+<?php printf( '<a style="display:block;" class="btn btn-primary" href="%s">%s</a>', dokan_get_store_url( $author->ID ),'Contacter le vendeur' );?>
