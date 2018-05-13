@@ -368,6 +368,7 @@ function suppressions_menu_moncompte_dokan_add_seller_nav($urls)
     unset($urls['withdraw']);
     unset($urls ['support']);
     unset($urls ['settings']);
+    unset($urls ['orders']);
 
     return $urls;
 }
