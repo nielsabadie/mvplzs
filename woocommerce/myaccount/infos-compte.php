@@ -311,6 +311,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 					</a>
 
 				</header>
+				
 				<?php
 				$address = wc_get_account_formatted_address( $name );
 				if ($address == NULL) {
