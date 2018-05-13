@@ -326,8 +326,8 @@ function modify_menu_moncompte_dokan_add_seller_nav($urls) {
     $urls['products']['title'] = 'Mes annonces';
     //$urls['settings']['title'] = 'Paramètres';
     //$urls['settings']['icon'] = '<i class="fa fa-cogs"></i>';
-    $urls['products']['icon'] = '<i class="fa fa-desktop"></i>';
-    $urls['orders']['title'] = 'Mes ventes';
+    //$urls['products']['icon'] = '<i class="fa fa-desktop"></i>';
+    //$urls['orders']['title'] = 'Mes ventes';
     $urls['orders']['icon'] = '<i class="fa fa-list-ul "></i>';
     //$urls['support']['icon'] = '<i class="fa fa-commenting-o "></i>';
     //$urls['support']['title'] = 'Messages';
@@ -448,7 +448,7 @@ function woocommerce_new_link_hook_endpoint($url, $endpoint, $value, $permalink)
 
 /* END ADD MA BOUTIQUE ITEM (Ma boutique) MY ACCOUNT MENU */
 
-/* ADD MA BOUTIQUE ITEM (Porte-Monnaie) MY ACCOUNT MENU */
+/* ADD MA BOUTIQUE ITEM (Porte-Monnaie) MY ACCOUNT MENU
 
 function luzus_add_porte_monnaie_endpoint()
 {
