@@ -31,7 +31,6 @@ $user_nicename =  $user->user_nicename;
 
 $user_pass = $user_data->user_pass;
 //var_dump($user_data);
-$user_birthday = date_i18n( get_option( 'date_format' ), strtotime( get_user_meta( $user_id, 'user_birthday', true ) ) );
 $user_phone = $user_meta['billing_phone'][0];
 //$mango = mpAccess::getInstance();
 //var_dump($mango->get_mp_user($user_id));
@@ -107,12 +106,6 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			<div class="col-sm-6 no-padding-left">
 				<p>
 					<strong>Téléphone : </strong><span id="billing_phone"><?php echo esc_attr($user_phone); ?></span>
-				</p>
-			</div>
-
-			<div class="col-sm-6 no-padding-left">
-				<p>
-					<strong>Date de naissance : </strong><?php echo esc_attr($user_birthday); ?>
 				</p>
 			</div>
 
