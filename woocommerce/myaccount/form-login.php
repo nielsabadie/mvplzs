@@ -89,7 +89,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			        <?php// _e( 'I am a professional', 'dokan-lite' ); ?> 
 			    </label>
 		    
-    		</p>-->
+    		</p>
 
     		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide" id="type-entreprise" style="display:none;">
             	<label for="type_professional">Type d'entreprise <span class="required">*</span></label>
@@ -98,7 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             	<option value="auto-entreprise">Auto-entreprise</option>
             	<option value="association">Association</option>
             	</select>
-        	</p>
+        	</p>-->
 
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
 
@@ -141,7 +141,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php  endif; ?>
 
              
-                <?php
+                <?php/*
                   $value = '';
                   if( ! empty( $_POST['user_birthday'] ) ) {
                       $value = esc_attr( $_POST['user_birthday'] );
@@ -149,12 +149,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                   if( $wp_user_id = get_current_user_id() ){
                       $value = date_i18n( $this->supported_format( get_option( 'date_format' ) ), strtotime( get_user_meta( $wp_user_id, 'user_birthday', true ) ) );
                   }
-                  ?>
+                  */?>
                   <?php // do_action( 'bp_user_birthday_errors' ); ?>
-                  <p class="form-row form-row-wide">
-                      <label for="reg_user_birthday"><?php _e( 'Birthday', 'mangopay' ); ?> <span class="required">*</span></label>
-                      <input type="text" class="input-text calendar" name="user_birthday" id="reg_user_birthday" value="<?php echo $value; ?>" />
-                  </p>
+                  <!-- <p class="form-row form-row-wide">
+                      <label for="reg_user_birthday"><?php// _e( 'Birthday', 'mangopay' ); ?> <span class="required">*</span></label>
+                      <input type="text" class="input-text calendar" name="user_birthday" id="reg_user_birthday" value="<?php// echo $value; ?>" />
+                  </p> -->
 
 			 <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
             <label for="user_nationality">Pays <span class="required">*</span></label>
