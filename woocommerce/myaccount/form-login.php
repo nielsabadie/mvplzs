@@ -112,6 +112,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="reg_firstname"><?php _e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
 				<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="billing_first_name" id="reg_firstname" placeholder="Chuck" value="<?php echo ( ! empty( $_POST['billing_first_name'] ) ) ? esc_attr( $_POST['billing_first_name'] ) : ''; ?>" />
+                <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="first_name" id="reg_firstname" placeholder="Chuck" value="<?php echo ( ! empty( $_POST['first_name'] ) ) ? esc_attr( $_POST['first_name'] ) : ''; ?>" />
 			</p>
 
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
