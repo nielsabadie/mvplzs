@@ -78,18 +78,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 
-			<p class="form-row form-group type_account">
+			<!--<p class="form-row form-group type_account">
 			    <label class="radio">
 			        <input type="radio" id="individual" name="user_mp_status" value="individual" checked>
-			        <?php _e( 'I am an individual', 'dokan-lite' ); ?> 
+			        <?php// _e( 'I am an individual', 'dokan-lite' ); ?> 
 			    </label>
 
 			    <label class="radio">
 			        <input type="radio" id="professionnal" name="user_mp_status" value="professional">
-			        <?php _e( 'I am a professional', 'dokan-lite' ); ?> 
+			        <?php// _e( 'I am a professional', 'dokan-lite' ); ?> 
 			    </label>
 		    
-    		</p>
+    		</p>-->
 
     		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide" id="type-entreprise" style="display:none;">
             	<label for="type_professional">Type d'entreprise <span class="required">*</span></label>
